@@ -2,20 +2,18 @@
 
 ## Screenshot
 
-![image](https://i.imgur.com/cCWOTvp.png)
+![image](https://i.imgur.com/j4j5ngs.png)
+![image](https://i.imgur.com/yMsRp3w.png)
+![image](https://i.imgur.com/4e7tfu5.png)
 
 ## Dependencies (install before apply the config)
-
-[Rofi themes](https://github.com/adi1090x/rofi)
 
 [Picom](https://github.com/yshui/picom)
 
 [Sweet Dark (GTK theme)](https://github.com/EliverLara/Sweet)
 
-[Roboto font](https://fonts.google.com/specimen/Roboto)
-
 [Flameshot](https://flameshot.org/)
 
 [Rofi themes](https://github.com/adi1090x/rofi)
 
-[Bumblebee status bar](https://github.com/tobi-wan-kenobi/bumblebee-status)
+[Polybar](https://github.com/polybar/polybar)
