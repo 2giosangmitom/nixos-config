@@ -152,5 +152,8 @@ bindsym $mod+r mode "resize"
 # Picom
 exec_always --no-startup-id exec picom --config ~/.config/picom/picom.conf
 
+# Screenshot
+bindsym Print exec flameshot gui
+
 # polybar
 exec_always --no-startup-id exec ~/.config/polybar/launch.sh
