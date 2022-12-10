@@ -153,4 +153,4 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id exec picom --config ~/.config/picom/picom.conf
 
 # polybar
-exec_always --no-startup-id exec bash ~/.config/polybar/launch.sh
+exec_always --no-startup-id exec ~/.config/polybar/launch.sh
