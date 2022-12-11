@@ -32,6 +32,12 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
 
+# Audio
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
+bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
+bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
+bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
