@@ -157,3 +157,6 @@ bindsym Print exec flameshot gui
 
 # polybar
 exec_always --no-startup-id exec ~/.config/polybar/launch.sh
+
+# Fix cursor
+exec_always --no-startup-id exec xsetroot -cursor_name left_ptr
