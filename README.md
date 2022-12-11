@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![image](https://i.imgur.com/j4j5ngs.png)
+![image](https://i.imgur.com/fqWMudh.png)
 ![image](https://i.imgur.com/yMsRp3w.png)
 ![image](https://i.imgur.com/4e7tfu5.png)
 
