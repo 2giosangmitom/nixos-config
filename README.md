@@ -10,8 +10,6 @@
 
 [Picom](https://github.com/yshui/picom)
 
-[Sweet Dark (GTK theme)](https://github.com/EliverLara/Sweet)
-
 [Flameshot](https://flameshot.org/)
 
 [Rofi themes](https://github.com/adi1090x/rofi)
