@@ -8,9 +8,12 @@ font pango:Roboto 9
 exec --no-startup-id dex --autostart --environment i3
 
 # Gaps
+gaps outer 0
 gaps inner 5
-gaps outer 2
 title_align center
+default_border none
+default_floating_border none
+hide_edge_borders both
 
 # Disable title bars
 for_window [class=".*"] border pixel 2
@@ -18,7 +21,7 @@ for_window [class=".*"] border pixel 2
 workspace_layout default
 
 # Set background
-exec_always feh --bg-scale ~/.local/share/Background/1920x1080.png
+exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
