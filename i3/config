@@ -1,16 +1,17 @@
 # Set mod key
 set $mod Mod4
 
-# Font
+# Font (Global)
 font pango:Roboto 9
-
-#Start i3-wm
-exec --no-startup-id dex --autostart --environment i3
 
 # Gaps
 gaps outer 0
 gaps inner 5
+
+# Tiltle bar text alignment
 title_align center
+
+# Border settings
 default_border none
 default_floating_border none
 hide_edge_borders both
@@ -18,7 +19,8 @@ hide_edge_borders both
 # Disable title bars
 for_window [class=".*"] border pixel 2
 
-workspace_layout default
+# Only enable gaps on a workspace when there is at least one container
+## smart_gaps on
 
 # Set background
 exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
@@ -26,47 +28,61 @@ exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# Color                 border  backgr. text    indicator child_border
+client.focused          #DA6E89 #DA6E89 #FFFFFF #98C379   #DA6E89
+client.focused_inactive #61AFEF #61AFEF #1E222A #98C379   #61AFEF
+client.unfocused        #2C3038 #2C3038 #FFFFFF #98C379   #2C3038
+client.urgent           #C678DD #C678DD #FFFFFF #98C379   #C678DD
+client.placeholder      #1E222A #1E222A #FFFFFF #98C379   #1E222A
+client.background       #1E222A
 
-# kill focused window
+# Start a terminal
+bindsym $mod+Return exec alacritty
+
+# Kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
 
-# Audio
+# Function keys
+bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
+bindsym XF86MonBrightnessDown 	exec --no-startup-id "brightness --dec"
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
 bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
 bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
 bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
+bindsym XF86AudioNext 			exec --no-startup-id "mpc next"
+bindsym XF86AudioPrev 			exec --no-startup-id "mpc prev"
+bindsym XF86AudioPlay 			exec --no-startup-id "mpc toggle"
+bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# Move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+t split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -135,16 +151,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -155,8 +161,78 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+# Move mode
+mode "Move" {
+        # These bindings trigger as soon as you enter the Move mode
+
+        bindsym Left move left 20px
+        bindsym Down move down  20px
+        bindsym Up move up 20px
+        bindsym Right move right 20px
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+m mode "default"
+}
+bindsym $mod+Shift+m mode "Move"
+
+# Gaps mode
+set $mode_gaps Gaps: (o)uter, (i)nner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+##-- Workspace Rules ------------------------
+assign [class="Lxappearance|Nitrogen"] 6
+assign [class="Pavucontrol|Xfce4-power-manager-settings"] 6
+
+##-- Window Rules ------------------------
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="alacritty-float"] floating enable
+for_window [class="Pcmanfm|Onboard|Yad"] floating enable
+for_window [class="Lxappearance|Nitrogen"] floating enable
+for_window [class="Pavucontrol|Xfce4-power-manager-settings|Nm-connection-editor"] floating enable
+for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
+for_window [class="Kvantum Manager|qt5ct"] floating enable
+for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
 # Picom
 exec_always --no-startup-id exec picom --config ~/.config/picom/picom.conf
