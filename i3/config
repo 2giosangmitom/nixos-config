@@ -36,75 +36,92 @@ client.urgent           #C678DD #C678DD #FFFFFF #98C379   #C678DD
 client.placeholder      #1E222A #1E222A #FFFFFF #98C379   #1E222A
 client.background       #1E222A
 
-# Start a terminal
-bindsym $mod+Return exec alacritty
+##-- Key bindings -------------------------
 
-# Kill focused window
-bindsym $mod+q kill
+    # Start a terminal
+    bindsym $mod+Return exec alacritty
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
+    # Kill focused window
+    bindsym $mod+q kill
 
-# Function keys
-bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
-bindsym XF86MonBrightnessDown 	exec --no-startup-id "brightness --dec"
-bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
-bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
-bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
-bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
-bindsym XF86AudioNext 			exec --no-startup-id "mpc next"
-bindsym XF86AudioPrev 			exec --no-startup-id "mpc prev"
-bindsym XF86AudioPlay 			exec --no-startup-id "mpc toggle"
-bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
+    # Start Rofi
+    bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
 
-# Change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+    # Function keys
+    bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
+    bindsym XF86MonBrightnessDown 	exec --no-startup-id "brightness --dec"
+    bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
+    bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
+    bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
+    bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
+    bindsym XF86AudioNext 			exec --no-startup-id "mpc next"
+    bindsym XF86AudioPrev 			exec --no-startup-id "mpc prev"
+    bindsym XF86AudioPlay 			exec --no-startup-id "mpc toggle"
+    bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
 
-# Alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+    # Screenshot
+    bindsym Print exec flameshot gui
 
-# Move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left  move left
-bindsym $mod+Shift+Down  move down
-bindsym $mod+Shift+Up    move up
-bindsym $mod+Shift+Right move right
+    # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+    bindsym $mod+Shift+r restart
 
-# split in horizontal orientation
-bindsym $mod+t split h
+    # Exit i3 (logs you out of your X session)
+    bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# split in vertical orientation
-bindsym $mod+v split v
+##-- Moving around -------------------------
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+    # Change focus
+    bindsym $mod+h focus left
+    bindsym $mod+j focus down
+    bindsym $mod+k focus up
+    bindsym $mod+l focus right
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+    # Alternatively, you can use the cursor keys:
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+    # Move focused window
+    bindsym $mod+Shift+h move left
+    bindsym $mod+Shift+j move down
+    bindsym $mod+Shift+k move up
+    bindsym $mod+Shift+l move right
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+    # Alternatively, you can use the cursor keys:
+    bindsym $mod+Shift+Left  move left
+    bindsym $mod+Shift+Down  move down
+    bindsym $mod+Shift+Up    move up
+    bindsym $mod+Shift+Right move right
 
-# focus the parent container
-bindsym $mod+a focus parent
+    # Split in horizontal orientation
+    bindsym $mod+b split h
 
-# We use variables to avoid repeating the names in multiple places.
+    # Split in vertical orientation
+    bindsym $mod+v split v
+
+    # Enter fullscreen mode for the focused container
+    bindsym $mod+f fullscreen toggle
+
+    # Change container layout (stacked, tabbed, toggle split)
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Toggle tiling / floating
+    bindsym $mod+Shift+space floating toggle
+
+    # Change focus between tiling / floating windows
+    bindsym $mod+space focus mode_toggle
+
+    # Focus the parent container
+    bindsym $mod+a focus parent
+
+##-- Workspaces ------------------ 
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -116,7 +133,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -128,7 +145,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -140,14 +157,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -237,10 +248,7 @@ for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 # Picom
 exec_always --no-startup-id exec picom --config ~/.config/picom/picom.conf
 
-# Screenshot
-bindsym Print exec flameshot gui
-
-# polybar
+# Polybar
 exec_always --no-startup-id exec ~/.config/polybar/launch.sh
 
 # Fix cursor
