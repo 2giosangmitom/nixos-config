@@ -7,3 +7,8 @@ if status is-login
         exec startx /usr/bin/i3 -- -keeptty
     end
 end
+
+function on_exit --on-process %self
+    builtin history clear
+end
+on_exit
