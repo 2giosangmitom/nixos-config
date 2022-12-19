@@ -245,11 +245,5 @@ for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
 for_window [class="Kvantum Manager|qt5ct"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
-# Picom
-exec_always --no-startup-id exec picom --config ~/.config/picom/picom.conf
-
-# Polybar
-exec_always --no-startup-id exec ~/.config/polybar/launch.sh
-
-# Fix cursor
-exec_always --no-startup-id exec xsetroot -cursor_name left_ptr
+# Autostart
+exec_always ~/.config/i3/autostart.sh
