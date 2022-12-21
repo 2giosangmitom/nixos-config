@@ -249,12 +249,10 @@ exec "bash ~/.config/i3/autostart.sh"
 exec "picom --config ~/.config/picom/picom.conf"
 
 # Polybar
-exec "bash ~/.config/polybar/launch.sh"
+exec_always "bash ~/.config/polybar/launch.sh"
 
 # Fix cursor
-exec "xsetroot -cursor_name left_ptr"
+exec_always "xsetroot -cursor_name left_ptr"
 
 # Set background
-exec feh --bg-scale ~/.local/share/backgrounds/yo.jpg
-
-
+exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
