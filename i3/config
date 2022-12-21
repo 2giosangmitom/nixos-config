@@ -45,7 +45,7 @@ client.background       #1E222A
     bindsym $mod+q kill
 
     # Start Rofi
-    bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
+    bindsym $mod+d exec --no-startup-id exec bash ~/.config/rofi/launcher/launch.sh
 
     # Function keys
     bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
