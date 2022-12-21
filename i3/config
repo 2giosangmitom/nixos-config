@@ -20,10 +20,7 @@ hide_edge_borders both
 for_window [class=".*"] border pixel 2
 
 # Only enable gaps on a workspace when there is at least one container
-## smart_gaps on
-
-# Set background
-exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
+smart_gaps on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -45,7 +42,7 @@ client.background       #1E222A
     bindsym $mod+q kill
 
     # Start Rofi
-    bindsym $mod+d exec --no-startup-id exec bash ~/.config/rofi/launcher/launch.sh
+    bindsym $mod+d exec --no-startup-id "bash ~/.config/rofi/launcher/launch.sh"
 
     # Function keys
     bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
@@ -69,7 +66,7 @@ client.background       #1E222A
     bindsym $mod+Shift+r restart
 
     # Exit i3
-    bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/launch.sh
+    bindsym $mod+Shift+e exec --no-startup-id "bash ~/.config/rofi/powermenu/launch.sh"
 
 ##-- Moving around -------------------------
 
@@ -246,12 +243,18 @@ for_window [class="Kvantum Manager|qt5ct"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
 # Autostart
-exec_always --no-startup-id bash ~/.config/i3/autostart.sh
+exec "bash ~/.config/i3/autostart.sh"
+
 # Picom
-exec_always picom --config ~/.config/picom/picom.conf
+exec "picom --config ~/.config/picom/picom.conf"
 
 # Polybar
-exec_always bash ~/.config/polybar/launch.sh
+exec "bash ~/.config/polybar/launch.sh"
 
 # Fix cursor
-exec_always xsetroot -cursor_name left_ptr
+exec "xsetroot -cursor_name left_ptr"
+
+# Set background
+exec feh --bg-scale ~/.local/share/backgrounds/yo.jpg
+
+
