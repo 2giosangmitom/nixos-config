@@ -243,16 +243,4 @@ for_window [class="Kvantum Manager|qt5ct"] floating enable
 for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
 # Autostart
-exec "bash ~/.config/i3/autostart.sh"
-
-# Picom
-exec "picom --config ~/.config/picom/picom.conf"
-
-# Polybar
-exec_always "bash ~/.config/polybar/launch.sh"
-
-# Fix cursor
-exec_always "xsetroot -cursor_name left_ptr"
-
-# Set background
-exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
+exec_always "bash ~/.config/i3/autostart.sh"

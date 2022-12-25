@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # Flameshot
-if [[ `pidof flameshot` ]]; then
-    pkill flameshot
-fi
-
-flameshot
+killall -q flameshot
+while pgrep -u $UID -x flameshot >/dev/null; do sleep 1; done
+flameshot &
 
 # Dunst
 if [[ `pidof dunst` ]]; then
@@ -13,3 +11,17 @@ if [[ `pidof dunst` ]]; then
 fi
 
 dunst -config ~/.config/dunst/dunstrc &
+
+# Picom
+killall -q picom
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+picom --config ~/.config/picom/picom.conf &
+
+# Polybar
+bash ~/.config/polybar/launch.sh &
+
+# Fix cursor
+xsetroot -cursor_name left_ptr
+
+# Set background
+feh --bg-scale ~/.local/share/backgrounds/yo.jpg
