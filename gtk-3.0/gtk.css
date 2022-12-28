@@ -16,8 +16,7 @@ window#whiskermenu-window treeview>* {
 	-gtk-icon-transform: scale(0.75);
 }
 
-VteTerminal,
-TerminalScreen {
+VteTerminal, TerminalScreen {
     border: none;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
