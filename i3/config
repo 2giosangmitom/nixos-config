@@ -12,15 +12,16 @@ gaps inner 5
 title_align center
 
 # Border settings
-default_border none
-default_floating_border none
 hide_edge_borders both
 
 # Disable title bars
 for_window [class=".*"] border pixel 2
 
 # Only enable gaps on a workspace when there is at least one container
-smart_gaps on
+# smart_gaps on
+
+# Smart borders
+smart_borders on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -36,13 +37,13 @@ client.background       #1E222A
 ##-- Key bindings -------------------------
 
     # Start a terminal
-    bindsym $mod+Return exec alacritty
+    bindsym $mod+Return exec --no-startup-id alacritty
 
     # Kill focused window
     bindsym $mod+q kill
 
     # Start Rofi
-    bindsym $mod+d exec --no-startup-id "bash ~/.config/rofi/launcher/launch.sh"
+    bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
 
     # Function keys
     bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
@@ -57,7 +58,7 @@ client.background       #1E222A
     bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
 
     # Screenshot
-    bindsym Print exec flameshot gui
+    bindsym Print exec --no-startup-id flameshot gui
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -66,7 +67,7 @@ client.background       #1E222A
     bindsym $mod+Shift+r restart
 
     # Exit i3
-    bindsym $mod+Shift+e exec --no-startup-id "bash ~/.config/rofi/powermenu/launch.sh"
+    bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/powermenu/launch.sh
 
 ##-- Moving around -------------------------
 
@@ -227,20 +228,5 @@ mode "$mode_gaps" {
 
 bindsym $mod+Shift+g mode "$mode_gaps"
 
-##-- Workspace Rules ------------------------
-assign [class="Lxappearance|Nitrogen"] 6
-assign [class="Pavucontrol|Xfce4-power-manager-settings"] 6
-
-##-- Window Rules ------------------------
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [class="alacritty-float"] floating enable
-for_window [class="Pcmanfm|Onboard|Yad"] floating enable
-for_window [class="Lxappearance|Nitrogen"] floating enable
-for_window [class="Pavucontrol|Xfce4-power-manager-settings|Nm-connection-editor"] floating enable
-for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
-for_window [class="Kvantum Manager|qt5ct"] floating enable
-for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
-
 # Autostart
-exec_always "bash ~/.config/i3/autostart.sh"
+exec_always --no-startup-id ~/.config/i3/autostart.sh
