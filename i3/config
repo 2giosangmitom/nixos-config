@@ -18,7 +18,7 @@ hide_edge_borders both
 for_window [class=".*"] border pixel 2
 
 # Only enable gaps on a workspace when there is at least one container
-# smart_gaps on
+smart_gaps on
 
 # Smart borders
 smart_borders on
