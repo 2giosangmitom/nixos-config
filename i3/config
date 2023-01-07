@@ -8,6 +8,9 @@ font pango:Roboto 9
 gaps outer 0
 gaps inner 5
 
+# Start i3
+exec --no-startup-id dex --autostart --environment i3
+
 # Tiltle bar text alignment
 title_align center
 
