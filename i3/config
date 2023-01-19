@@ -8,9 +8,6 @@ font pango:Roboto 9
 gaps outer 0
 gaps inner 5
 
-# Start i3
-exec --no-startup-id dex --autostart --environment i3
-
 # Tiltle bar text alignment
 title_align center
 
@@ -25,6 +22,9 @@ smart_gaps on
 
 # Smart borders
 smart_borders on
+
+# Background
+exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -47,18 +47,6 @@ client.background       #1E222A
 
     # Start Rofi
     bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
-
-    # Function keys
-    bindsym XF86MonBrightnessUp 	exec --no-startup-id "brightness --inc"
-    bindsym XF86MonBrightnessDown 	exec --no-startup-id "brightness --dec"
-    bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
-    bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
-    bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
-    bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
-    bindsym XF86AudioNext 			exec --no-startup-id "mpc next"
-    bindsym XF86AudioPrev 			exec --no-startup-id "mpc prev"
-    bindsym XF86AudioPlay 			exec --no-startup-id "mpc toggle"
-    bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
 
     # Screenshot
     bindsym Print exec --no-startup-id flameshot gui
@@ -175,61 +163,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Move mode
-mode "Move" {
-        # These bindings trigger as soon as you enter the Move mode
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-        bindsym Left move left 20px
-        bindsym Down move down  20px
-        bindsym Up move up 20px
-        bindsym Right move right 20px
+# Picom
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+m mode "default"
-}
-bindsym $mod+Shift+m mode "Move"
+# Dunst
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
-# Gaps mode
-set $mode_gaps Gaps: (o)uter, (i)nner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "$mode_gaps"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "$mode_gaps"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "$mode_gaps"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-# Autostart
-exec_always --no-startup-id ~/.config/i3/autostart.sh
+# Fix cursors
+exec_always --no-startup-id xsetroot -cursor_name left_ptr
