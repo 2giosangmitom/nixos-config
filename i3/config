@@ -24,7 +24,8 @@ smart_gaps on
 smart_borders on
 
 # Background
-exec_always feh --bg-scale ~/.local/share/backgrounds/yo.jpg
+exec --no-startup-id feh --bg-scale ~/.local/share/backgrounds/yo.png
+exec --no-startup-id exec bash $HOME/.fehbg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -164,13 +165,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 # Picom
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Dunst
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Fix cursors
-exec_always --no-startup-id xsetroot -cursor_name left_ptr
+exec --no-startup-id xsetroot -cursor_name left_ptr
+
+# Flameshot
+exec --no-startup-id flameshot
