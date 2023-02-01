@@ -58,9 +58,6 @@ client.background       #1E222A
     # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
     bindsym $mod+Shift+r restart
 
-    # Exit i3
-    bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/powermenu/launch.sh
-
 ##-- Moving around -------------------------
 
     # Change focus
