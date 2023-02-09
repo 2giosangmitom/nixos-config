@@ -1,163 +1,143 @@
-# Set mod key
+# Set mod key (use Mod1 for Alt)
 set $mod Mod4
 
-# Font (Global)
+# Font
 font pango:Roboto 9
 
-# Gaps
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Settings
 gaps outer 0
 gaps inner 5
-
-# Tiltle bar text alignment
+smart_gaps on
+smart_borders on
 title_align center
-
-# Border settings
-hide_edge_borders both
-
-# Disable title bars
+default_border pixel 2
+default_floating_border pixel 2
 for_window [class=".*"] border pixel 2
 
-# Only enable gaps on a workspace when there is at least one container
-smart_gaps on
-
-# Smart borders
-smart_borders on
-
 # Background
-exec_always --no-startup-id feh --bg-scale ~/.local/share/backgrounds/yo.png
-exec_always --no-startup-id exec bash $HOME/.fehbg
+exec_always --no-startup-id ~/.fehbg
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# Class			border     background     text     indicator     child_border
+client.focused		#8148EC    #8148EC	  #FFFFFF  #33CFA2	 #8148EC
+client.focused_inactive #61AFEF	   #61AFEF 	  #1E222A  #33CFA2	 #61AFEF
+client.unfocused	#2C3038    #2C3038 	  #FFFFFF  #98C379   	 #2C3038
+client.urgent		#C678DD    #C678DD 	  #FFFFFF  #98C379   	 #C678DD
+client.placeholder	#1E222A    #1E222A        #FFFFFF  #98C379   	 #1E222A
 
-# Color                 border  backgr. text    indicator child_border
-client.focused          #DA6E89 #DA6E89 #FFFFFF #98C379   #DA6E89
-client.focused_inactive #61AFEF #61AFEF #1E222A #98C379   #61AFEF
-client.unfocused        #2C3038 #2C3038 #FFFFFF #98C379   #2C3038
-client.urgent           #C678DD #C678DD #FFFFFF #98C379   #C678DD
-client.placeholder      #1E222A #1E222A #FFFFFF #98C379   #1E222A
-client.background       #1E222A
-
-##-- Key bindings -------------------------
+### Key bindings
 
     # Start a terminal
     bindsym $mod+Return exec --no-startup-id alacritty
 
-    # Kill focused window
-    bindsym $mod+q kill
-
     # Start Rofi
     bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launch.sh
 
-    # Screenshot
-    bindsym Print exec --no-startup-id flameshot gui
+    # Kill focused window
+    bindsym $mod+q kill
+
+    # Mouse button for dragging.
+    floating_modifier $mod
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+    # Restart i3
     bindsym $mod+Shift+r restart
 
-##-- Moving around -------------------------
+# Moving around:
 
-    # Change focus
-    bindsym $mod+h focus left
-    bindsym $mod+j focus down
-    bindsym $mod+k focus up
-    bindsym $mod+l focus right
-
-    # Alternatively, you can use the cursor keys:
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # Move focused window
-    bindsym $mod+Shift+h move left
-    bindsym $mod+Shift+j move down
-    bindsym $mod+Shift+k move up
-    bindsym $mod+Shift+l move right
-
-    # Alternatively, you can use the cursor keys:
-    bindsym $mod+Shift+Left  move left
-    bindsym $mod+Shift+Down  move down
-    bindsym $mod+Shift+Up    move up
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
-    # Split in horizontal orientation
-    bindsym $mod+b split h
+# Workspaces:
 
-    # Split in vertical orientation
-    bindsym $mod+v split v
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
 
-    # Enter fullscreen mode for the focused container
-    bindsym $mod+f fullscreen toggle
+# Layout stuff:
 
-    # Change container layout (stacked, tabbed, toggle split)
+    # Horizontal and vertical splits
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
-    # Toggle tiling / floating
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
-    # Change focus between tiling / floating windows
+    # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
 
-    # Focus the parent container
+    # Move focus to the parent container
     bindsym $mod+a focus parent
 
-##-- Workspaces ------------------ 
-
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-# Switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-
-# Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
-
-
-# Resize window (you can also use the mouse for that)
+# Resizing containers:
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
 
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -165,10 +145,4 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Picom
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
-
-# Fix cursors
-exec_always --no-startup-id xsetroot -cursor_name left_ptr
-
-# Flameshot
-exec_always --no-startup-id flameshot
+exec_always --no-startup-id ~/.config/picom/launch.sh

@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 dir="$HOME/.config/rofi/launcher"
 
 ## Run
