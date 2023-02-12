@@ -15,18 +15,18 @@ window:
     lines: 30
 
   padding:
-    x: 0 
+    x: 0
     y: 0
 
   decorations: full
   startup_mode: Windowed
   dynamic_title: true
 
-## scrolling
+  ## scrolling
   history: 10000
   multiplier: 3
 
-## Background opacity
+  ## Background opacity
   opacity: 1.0
 
 ## Cursor
