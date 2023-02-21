@@ -1,8 +1,3 @@
-## Import files (Colors, Fonts, Etc)
-import:
-  - ~/.config/alacritty/colors.yml
-  - ~/.config/alacritty/fonts.yml
-
 ## Set environment variables
 env:
   TERM: alacritty
@@ -39,3 +34,40 @@ cursor:
 
 ## Live config reload
 live_config_reload: true
+
+## Colors configuration
+colors:
+  # Default colors
+  primary:
+    background: '#0E110F'
+    foreground: '#c8ccd4'
+
+  # Normal colors
+  normal:
+    black: '#1e222a'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#e5c07b'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
+
+  # Bright colors
+  bright:
+    black: '#545862'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#e5c07b'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#c8ccd4'
+
+font:
+  normal:
+    family: 'JetBrainsMono Nerd Font'
+    style: Regular
+  size: 10
+
+shell: /usr/bin/fish
