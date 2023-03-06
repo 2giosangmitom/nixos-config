@@ -1,7 +1,7 @@
 ## Set environment variables
 env:
   TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: '1.0'
+  WINIT_X11_SCALE_FACTOR: "1.0"
 
 ## Terminal window settings
 window:
@@ -39,35 +39,35 @@ live_config_reload: true
 colors:
   # Default colors
   primary:
-    background: '#0E110F'
-    foreground: '#c8ccd4'
+    background: "#0E110F"
+    foreground: "#c8ccd4"
 
   # Normal colors
   normal:
-    black: '#1e222a'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#e5c07b'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
+    black: "#1e222a"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#e5c07b"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#abb2bf"
 
   # Bright colors
   bright:
-    black: '#545862'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#e5c07b'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#c8ccd4'
+    black: "#545862"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#e5c07b"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#c8ccd4"
 
 font:
   normal:
-    family: 'JetBrainsMono Nerd Font'
-    style: Regular
+    family: JetBrainsMono Nerd Font
+    style: Medium
   size: 10
 
 shell: /usr/bin/fish
