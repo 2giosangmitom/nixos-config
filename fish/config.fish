@@ -6,3 +6,5 @@ function on_exit --on-process %self
     builtin history clear
 end
 on_exit
+
+export GPG_TTY=$(tty)
