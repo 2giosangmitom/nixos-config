@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Dot files</h1>
-    <p>My Arch Linux set up</p>
+    <p>My Arch Linux set up for i3wm</p>
 </div>
 
 <div>
