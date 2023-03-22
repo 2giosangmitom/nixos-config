@@ -152,3 +152,6 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 
 # Fix cursor
 exec --no-startup-id xsetroot -cursor_name left_ptr
+
+# Dunst
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc &
