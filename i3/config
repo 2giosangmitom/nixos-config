@@ -2,16 +2,13 @@
 set $mod Mod4
 
 # Font
-font pango:Roboto Regular 10
+font pango:Roboto 9
 
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-
-# Restore background
-exec --no-startup-id ~/.fehbg
 
 # Settings
 gaps outer 0
@@ -21,22 +18,23 @@ smart_borders on
 title_align center
 default_border pixel 2
 default_floating_border pixel 2
+for_window [class=".*"] border pixel 2
 focus_follows_mouse no
 
-# Class                       border     background     text     indicator     child_border
-client.focused		          #8148EC    #8148EC	    #FFFFFF  #33CFA2	   #8148EC
-client.focused_inactive       #61AFEF    #61AFEF 	    #1E222A  #33CFA2	   #61AFEF
-client.unfocused	          #2C3038    #2C3038 	    #FFFFFF  #98C379   	   #2C3038
-client.urgent		          #C678DD    #C678DD 	    #FFFFFF  #98C379   	   #C678DD
-client.placeholder	          #1E222A    #1E222A        #FFFFFF  #98C379   	   #1E222A
+# Class                      border        background      text         indicator      child_border
+client.focused               #8148EC       #8148EC         #FFFFFF      #33CFA2        #8148EC
+client.focused_inactive      #61AFEF       #61AFEF         #1E222A      #33CFA2        #61AFEF
+client.unfocused             #2C3038       #2C3038         #FFFFFF      #98C379        #2C3038
+client.urgent                #C678DD       #C678DD         #FFFFFF      #98C379        #C678DD
+client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379        #1E222A
 
 ### Key bindings
 
     # Start a terminal
     bindsym $mod+Return exec --no-startup-id alacritty
 
-    # Start Rofi
-    bindsym $mod+d exec --no-startup-id ~/.config/rofi/launch.sh
+    # Start Wofi
+    bindsym $mod+d exec --no-startup-id rofi -show drun
 
     # Kill focused window
     bindsym $mod+q kill
@@ -45,7 +43,7 @@ client.placeholder	          #1E222A    #1E222A        #FFFFFF  #98C379   	   #1
     floating_modifier $mod
 
     # Screenshot
-    bindsym Print exec --no-startup-id flameshot gui
+    bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png -i
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -144,14 +142,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Picom
-exec --no-startup-id ~/.config/picom/launch.sh
-
 # Polybar
 exec --no-startup-id ~/.config/polybar/launch.sh
 
-# Fix cursor
-exec --no-startup-id xsetroot -cursor_name left_ptr
-
 # Dunst
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc &
+
+# Picom
+exec --no-startup-id ~/.config/picom/launch.sh
+
+# Fix cursor
+exec --no-startup-id xsetroot -cursor_name left_ptr &

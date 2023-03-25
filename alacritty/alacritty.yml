@@ -39,7 +39,7 @@ live_config_reload: true
 colors:
   # Default colors
   primary:
-    background: "0x171d23"
+    background: "0x0A0E14"
     foreground: "0xabb2bf"
 
   # Normal colors

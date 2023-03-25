@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
-killall -q picom
+DIR="$HOME/.config/picom"
 
-while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+if [[ $(pgrep -x picom) ]]; then
+	killall -q picom
+	while pgrep -x picom >/dev/null; do sleep 1; done
+fi
 
-picom --config ~/.config/picom/picom.conf &
+picom --config "$DIR"/picom.conf &
