@@ -43,7 +43,7 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     floating_modifier $mod
 
     # Screenshot
-    bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png -i
+    bindsym Print exec --no-startup-id flameshot gui
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -153,3 +153,9 @@ exec --no-startup-id ~/.config/picom/launch.sh
 
 # Fix cursor
 exec --no-startup-id xsetroot -cursor_name left_ptr &
+
+# Background
+exec --no-startup-id ~/.fehbg
+
+# Start flameshot
+exec --no-startup-id flameshot &
