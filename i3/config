@@ -143,7 +143,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-# exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Dunst
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc &
