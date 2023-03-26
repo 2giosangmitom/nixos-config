@@ -143,19 +143,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec --no-startup-id ~/.config/polybar/launch.sh
+# exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Dunst
-exec --no-startup-id dunst -config ~/.config/dunst/dunstrc &
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc &
 
 # Picom
-exec --no-startup-id ~/.config/picom/launch.sh
+exec --no-startup-id $HOME/.config/picom/launch.sh
 
 # Fix cursor
 exec --no-startup-id xsetroot -cursor_name left_ptr &
 
 # Background
-exec --no-startup-id ~/.fehbg
+exec --no-startup-id $HOME/.fehbg
 
 # Start flameshot
 exec --no-startup-id flameshot &
