@@ -43,7 +43,8 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     floating_modifier $mod
 
     # Screenshot
-    bindsym Print exec --no-startup-id flameshot gui
+    bindsym Print exec --no-startup-id flameshot full --clipboard
+    bindsym Shift+Print exec --no-startup-id flameshot gui
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -159,3 +160,6 @@ exec --no-startup-id $HOME/.fehbg
 
 # Start flameshot
 exec --no-startup-id flameshot &
+
+# Autostart
+exec --no-startup-id dbus-update-activation-environment --all
