@@ -4,7 +4,9 @@
 </div>
 
 <div>
-    <img src="https://i.imgur.com/DSNJjTk.png">
+    <img src="https://i.imgur.com/4Jl18Qn.png" />
+    <img src="https://i.imgur.com/R2h8ePl.png" />
+    <img src="https://i.imgur.com/ZUDneO7.png" />
 </div>
 
 <hr>
