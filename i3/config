@@ -153,9 +153,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/picom/launch.sh
 
 # Fix cursor
-exec_always --no-startup-id xsetroot -cursor_name left_ptr &
+# exec_always --no-startup-id xsetroot -cursor_name left_ptr &
 
-# Background
+# Restore background
 exec --no-startup-id $HOME/.fehbg
 
 # Start flameshot
@@ -166,5 +166,3 @@ exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc &
 
 # Autostart
 exec --no-startup-id dbus-update-activation-environment --all
-
-for_window [class="alacritty"] floating enable
