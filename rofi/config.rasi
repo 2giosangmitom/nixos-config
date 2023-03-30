@@ -41,7 +41,7 @@ configuration {
 
 window {
   border:                      0;
-  border-radius:               20px;
+  border-radius:               10px;
   cursor:                      "default";
   enabled:                     true;
   margin:                      0px;
