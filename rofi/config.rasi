@@ -3,6 +3,11 @@ configuration {
   show-icons:                 true;
   display-drun:               "";
 	drun-display-format:        "{name}";
+  cycle: true;
+  normalize-match: true;
+  steal-focus: false;
+	filter: "";
+  scroll-method: 0;
 }
 
 @import "colors.rasi"
@@ -64,7 +69,7 @@ inputbar {
   enabled:                     true;
   spacing:                     10px;
   margin:                      0px;
-  padding:                     15px;
+  padding:                     8px;
   border:                      0px solid;
   border-radius:               12px;
   border-color:                @selected;
