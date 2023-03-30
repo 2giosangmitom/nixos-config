@@ -52,6 +52,9 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     # Restart i3
     bindsym $mod+Shift+r restart
 
+    # Powermenu
+    bindsym $mod+Shift+e exec --no-startup-id $HOME/.config/rofi/powermenu.sh
+
 # Moving around:
 
     # Move your focus around
