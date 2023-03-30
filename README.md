@@ -4,7 +4,7 @@
 </div>
 
 <div>
-    <img src="https://i.imgur.com/WklgR5Q.png">
+    <img src="https://i.imgur.com/DSNJjTk.png">
 </div>
 
 <hr>
