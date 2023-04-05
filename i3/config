@@ -148,7 +148,7 @@ bindsym $mod+r mode "resize"
 
 # Autostart
 exec --no-startup-id dbus-update-activation-environment --all &
-exec_always --no-startup-id xsetroot -cursor_name left_ptr &
+exec --no-startup-id xsetroot -cursor_name left_ptr &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id $HOME/.fehbg
 exec_always --no-startup-id $HOME/.config/picom/launch.sh
