@@ -146,23 +146,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Picom
-exec_always --no-startup-id $HOME/.config/picom/launch.sh
-
-# Fix cursor
-exec_always --no-startup-id xsetroot -cursor_name left_ptr &
-
-# Restore background
-exec --no-startup-id $HOME/.fehbg
-
-# Start flameshot
-exec --no-startup-id flameshot &
-
-# Dunst
-exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc &
-
 # Autostart
-exec --no-startup-id dbus-update-activation-environment --all
+exec dbus-update-activation-environment --all &
+exec xsetroot -cursor_name left_ptr &
+exec_always $HOME/.config/polybar/launch.sh
+exec $HOME/.fehbg
+exec_always $HOME/.config/picom/launch.sh
+exec dunst -config $HOME/.config/dunst/dunstrc &
+exec flameshot &
