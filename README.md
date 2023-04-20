@@ -1,15 +1,9 @@
-<div align="center">
-    <h1>Dot files</h1>
-    <p>My Arch Linux set up for i3wm</p>
-</div>
+# 🌠 [i3wm](https://github.com/i3/i3)
 
 <div>
+    <h2>Preview</h2>
     <img src="https://i.imgur.com/4Jl18Qn.png" />
-    <img src="https://i.imgur.com/Kl8nssU.png" />
-    <img src="https://i.imgur.com/ZUDneO7.png" />
 </div>
-
-<hr>
 
 <div>
     <h2>Details</h2>
@@ -36,3 +30,7 @@
         <li>Cursor: <a href="https://www.gnome-look.org/p/1393084">Sweet</a></li>
     </ul>
 </div>
+
+<hr>
+
+# 🌌 [swaywm](https://github.com/swaywm/sway)
