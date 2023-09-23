@@ -23,8 +23,6 @@ window:
 cursor:
   style:
     shape: Block
-    blinking: Always
-  blink_interval: 500
   unfocused_hollow: true
   thickness: 0.30
 
