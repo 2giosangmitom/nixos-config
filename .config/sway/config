@@ -145,7 +145,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Autostart
-exec ~/.config/waybar/launch.sh
+exec_always ~/.config/waybar/launch.sh
 
 # Fix wayland screen sharing
 include /etc/sway/config.d/*
