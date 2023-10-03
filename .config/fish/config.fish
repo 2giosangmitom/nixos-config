@@ -4,3 +4,4 @@ set -gx TERM xterm-256color
 builtin history clear
 export GPG_TTY=$(tty)
 export EDITOR=nvim
+export BUN_INSTALL="$HOME/.bun"
