@@ -44,3 +44,4 @@ Downloads/
 .config/broot/
 .config/lazygit/state.yml
 fish_variables
+.nix-profile
