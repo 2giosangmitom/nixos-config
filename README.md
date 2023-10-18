@@ -1,15 +1,11 @@
-## Swaywm
-
-![image](https://i.imgur.com/MBf3HFc.png)
-
 ## Infomation
 
 - **OS:** Arch Linux
-- **WM:** Sway
+- **WM:** Hyprland
 - **Terminal:** Alacritty
-- **Shell:** Fish
+- **Shell:** fish
 - **Editor:** Neovim
-- **Application Launcher:** Wofi
+- **Application Launcher:** Rofi
 - **File manager:** lf
 - **Status bar:** waybar
 - **Notification daemon:** dunst
