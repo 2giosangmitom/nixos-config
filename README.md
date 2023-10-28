@@ -1,7 +1,7 @@
 ## Infomation
 
 - **OS:** Arch Linux
-- **WM:** Hyprland
+- **WM:** Sway
 - **Terminal:** Alacritty
 - **Shell:** fish
 - **Editor:** Neovim
