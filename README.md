@@ -1,5 +1,7 @@
 ## Infomation
 
+![](./preview.png)
+
 - **OS:** Arch Linux
 - **WM:** Sway
 - **Terminal:** Alacritty
