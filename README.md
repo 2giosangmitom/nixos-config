@@ -1,6 +1,6 @@
-## Infomation
-
 ![](./preview.png)
+
+## Infomation
 
 - **OS:** Arch Linux
 - **WM:** Sway
