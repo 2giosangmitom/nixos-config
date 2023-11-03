@@ -49,9 +49,9 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     floating_modifier $mod normal
 
     # Screenshot
-    bindsym Print exec grimshot copy output
-    bindsym Shift+Print exec grimshot copy area
-    bindsym $mod+Shift+s exec grimshot save
+    bindsym Print exec grim - | wl-copy
+    bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Shift+s exec grim
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
