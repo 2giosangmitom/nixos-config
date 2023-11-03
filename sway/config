@@ -35,12 +35,13 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
 ### Key bindings
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $term --class="termfloat"
 
     # Kill focused window
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec rofi -show drun
+    bindsym $mod+d exec ~/.config/rofi/launcher.sh
 
     # Mouse button for dragging
     floating_modifier $mod normal
