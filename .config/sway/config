@@ -13,9 +13,6 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 
-# Set background
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-
 # Settings
 gaps outer 0
 gaps inner 5
@@ -148,3 +145,4 @@ include /etc/sway/config.d/*
 
 exec_always ~/.config/waybar/launch.sh
 exec_always ~/.config/dunst/launch.sh
+exec_always ~/.config/sway/dynamic_wallpaper.sh
