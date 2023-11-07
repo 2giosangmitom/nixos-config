@@ -54,6 +54,9 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # Change background
+    bindsym $mod+o exec ~/.config/sway/dynamic_wallpaper.sh
+
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
@@ -144,6 +147,6 @@ bindsym $mod+r mode "resize"
 
 include /etc/sway/config.d/*
 
-exec_always ~/.config/waybar/launch.sh
-exec_always ~/.config/dunst/launch.sh
-exec_always ~/.config/sway/dynamic_wallpaper.sh
+exec ~/.config/waybar/launch.sh
+exec ~/.config/dunst/launch.sh
+exec ~/.config/sway/dynamic_wallpaper.sh
