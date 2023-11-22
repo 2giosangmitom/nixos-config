@@ -12,7 +12,7 @@ configuration {
   selected: #61afefff;
   active: #98c379ff;
   urgent: #e06c75ff;
-  font: "JetBrainsMono Nerd Font 11";
+  font: "JetBrainsMono NF 11";
   border-colour: var(selected);
   handle-colour: var(selected);
   background-colour: var(background);
