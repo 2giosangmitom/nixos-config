@@ -64,7 +64,7 @@ colors:
 
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono NF
     style: Medium
   size: 10
 
