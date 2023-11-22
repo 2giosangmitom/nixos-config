@@ -1,4 +1,4 @@
-![](./preview.png)
+![preview](./preview.png)
 
 ## Infomation
 
@@ -11,4 +11,4 @@
 - **File manager:** lf
 - **Status bar:** waybar
 - **Notification daemon:** dunst
-- **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, broot
+- **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, broot, tmux
