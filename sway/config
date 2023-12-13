@@ -153,3 +153,4 @@ include /etc/sway/config.d/*
 exec ~/.config/waybar/launch.sh
 exec ~/.config/dunst/launch.sh
 exec ~/.config/sway/dynamic_wallpaper.sh
+exec ibus-daemon -rxRd
