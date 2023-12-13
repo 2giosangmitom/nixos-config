@@ -71,6 +71,7 @@ tooltip {
 #pulseaudio,
 #disk,
 #memory,
+#tray,
 #cpu {
   background: #1f2037;
   margin: 2px 0;
