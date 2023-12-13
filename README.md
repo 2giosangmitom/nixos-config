@@ -1,3 +1,5 @@
+# 2giosangmitom Arch Linux dotfiles
+
 ![preview](./preview.png)
 
 ## Infomation
@@ -6,8 +8,8 @@
 - **WM:** Sway
 - **Terminal:** Alacritty
 - **Shell:** fish
-- **Editor:** Neovim
-- **Application Launcher:** Rofi
+- **Editor:** Neovim - [my config](https://github.com/2giosangmitom/neovim-config)
+- **Application Launcher:** wofi
 - **File manager:** lf
 - **Status bar:** waybar
 - **Notification daemon:** dunst
