@@ -5,11 +5,11 @@
 }
 
 #window {
-  background: rgba(41, 46, 66, 0.5);
+  background: rgba(41, 46, 66, 0.8);
   margin: auto;
   padding: 5px;
-  border-radius: 10px;
-  border: 5px solid #b072d1;
+  border-radius: 8px;
+  border: 2px solid #b072d1;
 }
 
 #input {
