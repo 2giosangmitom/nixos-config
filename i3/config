@@ -30,7 +30,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme "$HOME/.config/rofi/launcher.rasi"
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launch.sh launcher
 
 # change focus
 bindsym $mod+h focus left
@@ -124,6 +124,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -140,7 +141,7 @@ bindsym $mod+r mode "resize"
 
 # Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id feh --bg-scale $HOME/Photos/luffy.png
+exec --no-startup-id feh --bg-scale $HOME/backgrounds/luffy.png
 exec --no-startup-id xsetroot -cursor_name left_ptr
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/picom/launch.sh
