@@ -15,6 +15,14 @@ title_align center
 default_border pixel 2
 default_floating_border pixel 2
 focus_follows_mouse yes
+for_window [all] title_window_icon off
+show_marks yes
+focus_on_window_activation smart
+workspace_auto_back_and_forth yes
+mouse_warping none
+for_window [class="Pavucontrol"] floating enable
+for_window [class="flameshot"] floating enable
+for_window [class="termfloat"] floating enable
 
 # Class                      border        background      text         indicator      child_border
 client.focused               #8148EC       #8148EC         #FFFFFF      #33CFA2        #8148EC
@@ -25,6 +33,7 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty --class="termfloat"
 
 # kill focused window
 bindsym $mod+q kill
