@@ -1,5 +1,5 @@
 live_config_reload = true
-shell = "fish"
+shell = "tmux"
 
 [[colors.indexed_colors]]
 color = "0xff966c"
