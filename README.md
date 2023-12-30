@@ -18,6 +18,7 @@
 - **Application Launcher:** rofi
 - **File manager:** lf, thunar
 - **Status bar:** polybar
+- **Compositor:** picom
 - **Notification daemon:** dunst
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
