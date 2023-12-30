@@ -1,16 +1,6 @@
-# 2giosangmitom Arch Linux dotfiles
+<h1 align="center">2giosangmitom Arch Linux dotfiles</h1>
 
-![preview](./preview.png)
-
-## Infomation
-
-- **OS:** Arch Linux
-- **WM:** Sway
-- **Terminal:** Alacritty
-- **Shell:** fish
-- **Editor:** Neovim - [my config](https://github.com/2giosangmitom/neovim-config)
-- **Application Launcher:** wofi
-- **File manager:** lf
-- **Status bar:** waybar
-- **Notification daemon:** dunst
-- **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, broot, tmux
+## i3-wm with Tokyonight colorscheme
+![polybar](./previews/i3wm-polybar.png)
+![alacritty](./previews/i3wm-nvim-alacritty.png)
+![rofi-launcher](./previews/rofi.png)
