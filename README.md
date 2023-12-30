@@ -10,9 +10,9 @@
 - **WM:** i3
 - **Terminal:** alacritty
 - **Shell:** fish
-- **Application Launcher:** wofi
+- **Application Launcher:** rofi
 - **File manager:** lf, thunar
-- **Status bar:** waybar
+- **Status bar:** polybar
 - **Notification daemon:** dunst
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
@@ -28,9 +28,9 @@
 - **WM:** sway
 - **Terminal:** alacritty
 - **Shell:** fish
-- **Application Launcher:** rofi
+- **Application Launcher:** wofi
 - **File manager:** lf, thunar
-- **Status bar:** polybar
+- **Status bar:** waybar
 - **Notification daemon:** dunst
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
