@@ -20,10 +20,11 @@ smart_gaps on
 smart_borders on
 title_align center
 default_border pixel 2
-default_floating_border pixel 5
+default_floating_border pixel 2
 for_window [class=".*"] border pixel 2
 for_window [app_id="termfloat"] floating enable
 focus_follows_mouse yes
+output "*" bg $HOME/backgrounds/luffy.png fill
 
 # Class                      border        background      text         indicator      child_border
 client.focused               #8148EC       #8148EC         #FFFFFF      #33CFA2        #8148EC
@@ -37,8 +38,8 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec $term --class="termfloat"
 
-    bindsym $mod+i exec ~/.config/input_method.sh checkInputMethod
-    bindsym $mod+Shift+i exec ~/.config/input_method.sh toggleInputMethod
+    bindsym $mod+i exec $HOME/scripts/input_method.sh -c
+    bindsym $mod+Shift+i exec $HOME/scripts/input_method.sh -t
 
     # Kill focused window
     bindsym $mod+q kill
@@ -61,7 +62,7 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     bindsym $mod+o exec ~/.config/sway/dynamic_wallpaper.sh
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
 
 ### Moving around:
     # Move your focus around
@@ -150,6 +151,5 @@ bindsym $mod+r mode "resize"
 
 include /etc/sway/config.d/*
 
-exec ~/.config/waybar/launch.sh
-exec ~/.config/dunst/launch.sh
-exec ~/.config/sway/dynamic_wallpaper.sh
+exec_always ~/.config/waybar/launch.sh
+exec_always ~/.config/dunst/launch.sh
