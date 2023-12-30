@@ -7,13 +7,15 @@
 
 ### Infomation
 - **OS:** Arch Linux
-- **WM:** Sway
-- **Terminal:** Alacritty
+- **WM:** i3
+- **Terminal:** alacritty
 - **Shell:** fish
 - **Application Launcher:** wofi
 - **File manager:** lf, thunar
 - **Status bar:** waybar
 - **Notification daemon:** dunst
+- **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
+- **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
 - **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
 
 
@@ -23,11 +25,13 @@
 
 ### Infomation
 - **OS:** Arch Linux
-- **WM:** i3
-- **Terminal:** Alacritty
+- **WM:** sway
+- **Terminal:** alacritty
 - **Shell:** fish
 - **Application Launcher:** rofi
 - **File manager:** lf, thunar
 - **Status bar:** polybar
 - **Notification daemon:** dunst
+- **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
+- **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
 - **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
