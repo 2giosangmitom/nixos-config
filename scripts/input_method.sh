@@ -11,17 +11,25 @@ display_help() {
 }
 
 check_input_method() {
-	notify-send "Input method: $input_method"
+	if [[ $input_method == "" ]]; then
+		notify-send "No engine is set"
+	else
+		notify-send "Input method: $input_method"
+	fi
 }
 
 toggle_input_method() {
-	if [[ $input_method == "Bamboo" ]]; then
-		ibus engine "BambooUs"
-		notify-send "Switched to English"
-	else
-		ibus engine "Bamboo"
-		notify-send "Switched to Vietnamese"
-	fi
+	case $input_method in
+		"Bamboo")
+			ibus engine "BambooUs"
+			notify-send "Switched to English"
+			;;
+		"BambooUs")
+			ibus engine "Bamboo"
+			notify-send "Switched to Vietnamese"
+			;;
+		*) notify-send "No engine is set";;
+	esac
 }
 
 case $1 in
