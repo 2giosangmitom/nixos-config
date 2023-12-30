@@ -13,7 +13,7 @@ smart_gaps on
 smart_borders on
 title_align center
 default_border pixel 2
-default_floating_border pixel 5
+default_floating_border pixel 2
 focus_follows_mouse yes
 
 # Class                      border        background      text         indicator      child_border
