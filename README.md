@@ -1,11 +1,16 @@
-<h1 align="center">2giosangmitom Arch Linux dotfiles</h1>
+<div align="center">
+  <h1>2giosangmitom Arch Linux dotfiles</h1>
+  <img src="./assets/dotfiles.png" >
+</div>
 
-## i3-wm with Tokyonight colorscheme
-![polybar](./previews/i3wm-polybar.png)
-![alacritty](./previews/i3wm-nvim-alacritty.png)
-![rofi-launcher](./previews/rofi.png)
+## [i3-wm with Tokyonight colorscheme](./i3/)
+
+![polybar](./assets/i3wm-polybar.png)
+![alacritty](./assets/i3wm-nvim-alacritty.png)
+![rofi-launcher](./assets/rofi.png)
 
 ### Infomation
+
 - **OS:** Arch Linux
 - **WM:** i3
 - **Terminal:** alacritty
@@ -18,12 +23,13 @@
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
 - **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
 
+## [sway](./sway/)
 
-## sway
-![waybar](./previews/sway-waybar.png)
-![terminal](./previews/sway-lazygit.png)
+![waybar](./assets/sway-waybar.png)
+![terminal](./assets/sway-lazygit.png)
 
 ### Infomation
+
 - **OS:** Arch Linux
 - **WM:** sway
 - **Terminal:** alacritty
