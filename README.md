@@ -8,7 +8,6 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 
 ## [i3 Tokyonight](./i3/)
 
-![polybar](./assets/i3wm-polybar.png)
 ![alacritty](./assets/i3wm-nvim-alacritty.png)
 ![rofi-launcher](./assets/rofi.png)
 
@@ -29,7 +28,6 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 
 ## [sway Tokyonight](./sway/)
 
-![waybar](./assets/sway-waybar.png)
 ![terminal](./assets/sway-lazygit.png)
 
 ### Detail
