@@ -6,7 +6,7 @@
 
 Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles, hope you find something useful here 🚀.
 
-## [i3-wm with Tokyonight colorscheme](./i3/)
+## [i3 Tokyonight](./i3/)
 
 ![polybar](./assets/i3wm-polybar.png)
 ![alacritty](./assets/i3wm-nvim-alacritty.png)
@@ -27,7 +27,7 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
 - **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
 
-## [sway](./sway/)
+## [sway Tokyonight](./sway/)
 
 ![waybar](./assets/sway-waybar.png)
 ![terminal](./assets/sway-lazygit.png)
