@@ -1,6 +1,10 @@
 live_config_reload = true
 shell = "tmux"
 
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1.0"
+
 [[colors.indexed_colors]]
 color = "0xff966c"
 index = 16
