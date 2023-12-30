@@ -10,6 +10,7 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 
 ![alacritty](./assets/i3wm-nvim-alacritty.png)
 ![rofi-launcher](./assets/rofi.png)
+![powermenu](./assets/powermenu.png)
 
 ### Detail
 
