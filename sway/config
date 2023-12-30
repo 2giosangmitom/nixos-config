@@ -38,8 +38,8 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec $term --class="termfloat"
 
-    bindsym $mod+i exec ~/.config/input_method.sh checkInputMethod
-    bindsym $mod+Shift+i exec ~/.config/input_method.sh toggleInputMethod
+    bindsym $mod+i exec $HOME/scripts/input_method.sh -c
+    bindsym $mod+Shift+i exec $HOME/scripts/input_method.sh -t
 
     # Kill focused window
     bindsym $mod+q kill
