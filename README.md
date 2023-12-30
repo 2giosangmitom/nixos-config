@@ -1,4 +1,4 @@
-<h1 align="center">2giosangmitom dotfiles</h1>
+<h1 align="center">2giosangmitom Arch Linux dotfiles</h1>
 
 ## i3-wm with Tokyonight colorscheme
 ![polybar](./previews/i3wm-polybar.png)
