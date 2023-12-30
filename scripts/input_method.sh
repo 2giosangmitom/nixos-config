@@ -20,21 +20,20 @@ check_input_method() {
 
 toggle_input_method() {
 	case $input_method in
-		"Bamboo")
-			ibus engine "BambooUs"
-			notify-send "Switched to English"
-			;;
-		"BambooUs")
-			ibus engine "Bamboo"
-			notify-send "Switched to Vietnamese"
-			;;
-		*) notify-send "No engine is set";;
+	"Bamboo")
+		ibus engine "BambooUs"
+		notify-send "Switched to English"
+		;;
+	"BambooUs")
+		ibus engine "Bamboo"
+		notify-send "Switched to Vietnamese"
+		;;
+	*) notify-send "No engine is set" ;;
 	esac
 }
 
 case $1 in
-	"-h" | "--help") display_help;;
-	"-c" | "--check") check_input_method;;
-	"-t" | "--toggle") toggle_input_method;;
-	*) display_help && exit -1;;
+"-h" | "--help") display_help ;;
+"-c" | "--check") check_input_method ;;
+"-t" | "--toggle") toggle_input_method ;;
 esac
