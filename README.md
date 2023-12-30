@@ -1,7 +1,10 @@
 <div align="center">
-  <h1>2giosangmitom Arch Linux dotfiles</h1>
-  <img src="./assets/dotfiles.png" >
+  <img src="./assets/dotfiles.png">
 </div>
+
+# Introduction
+
+Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles, hope you find something useful here 🚀.
 
 ## [i3-wm with Tokyonight colorscheme](./i3/)
 
@@ -9,7 +12,7 @@
 ![alacritty](./assets/i3wm-nvim-alacritty.png)
 ![rofi-launcher](./assets/rofi.png)
 
-### Infomation
+### Detail
 
 - **OS:** Arch Linux
 - **WM:** i3
@@ -29,7 +32,7 @@
 ![waybar](./assets/sway-waybar.png)
 ![terminal](./assets/sway-lazygit.png)
 
-### Infomation
+### Detail
 
 - **OS:** Arch Linux
 - **WM:** sway
