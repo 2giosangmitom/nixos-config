@@ -31,8 +31,8 @@ client.urgent                #C678DD       #C678DD         #FFFFFF      #98C379 
 client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379        #1E222A
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+Return exec alacritty --class="termfloat"
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --class="termfloat"
 
 # kill focused window
 bindsym $mod+q kill
@@ -132,7 +132,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu
+bindsym $mod+Shift+e exec --no-startup-id $HOME/.config/rofi/launch.sh powermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -148,9 +148,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Autostart
-exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id feh --bg-scale $HOME/backgrounds/luffy.png
-exec --no-startup-id xsetroot -cursor_name left_ptr
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/picom/launch.sh
 exec_always --no-startup-id $HOME/.config/dunst/launch.sh
+exec_always --no-startup-id xsetroot -cursor_name left_ptr
