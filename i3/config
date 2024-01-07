@@ -52,10 +52,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# input method
-bindsym $mod+i exec --no-startup-id $HOME/scripts/input_method.sh -c
-bindsym $mod+Shift+i exec --no-startup-id $HOME/scripts/input_method.sh -t
-
 # screenshot
 bindsym Shift+Print exec --no-startup-id flameshot gui
 bindsym Print exec --no-startup-id flameshot full -c
