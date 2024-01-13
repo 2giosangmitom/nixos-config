@@ -1,43 +1,40 @@
 {
-  "layer": "top",
-  "position": "top",
-  "mod": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "gtk-layer-shell": true,
-  "height": 0,
-  "modules-left": ["clock", "sway/mode", "sway/workspaces"],
-  "modules-right": ["pulseaudio", "disk", "cpu", "memory", "tray"],
+	"layer": "top",
+	"position": "top",
+	"mod": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"height": 0,
+	"modules-left": ["clock", "sway/mode", "sway/workspaces"],
+	"modules-right": ["pulseaudio", "cpu", "memory", "tray"],
 
-  "clock": {
-    "format": "{:%b %d  %H:%M}",
-    "tooltip": false
-  },
-  "sway/mode": {
-    "tooltip": false
-  },
-  "sway/workspaces": {
-    "disable-click": true,
-    "disable-scroll": true,
-    "disable-markup": true
-  },
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "tooltip": false,
-    "format-muted": "   Muted",
-    "format-icons": {
-      "default": [" ", " ", " "]
-    },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "scroll-step": 5
-  },
-  "disk": {
-    "format": "󰋊 {used}/{total}"
-  },
-  "cpu": {
-    "format": "  {usage}%"
-  },
-  "memory": {
-    "format": "󰍛 {used}/{total}"
-  }
+	"clock": {
+		"format": "{:%b %d  %H:%M}",
+		"tooltip": false
+	},
+	"sway/mode": {
+		"tooltip": false
+	},
+	"sway/workspaces": {
+		"disable-click": true,
+		"disable-scroll": true,
+		"disable-markup": true
+	},
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+		"tooltip": false,
+		"format-muted": "   Muted",
+		"format-icons": {
+			"default": [" ", " ", " "]
+		},
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"scroll-step": 5
+	},
+	"cpu": {
+		"format": "  {usage}%"
+	},
+	"memory": {
+		"format": "󰍛 {used}/{total}"
+	}
 }
