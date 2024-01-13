@@ -26,7 +26,6 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 - **Notification daemon:** dunst
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
-- **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
 
 ## [sway Tokyonight](./sway/)
 
@@ -38,11 +37,10 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 - **WM:** sway
 - **Terminal:** alacritty
 - **Shell:** fish
-- **Application Launcher:** wofi
+- **Application Launcher:** rofi
 - **File manager:** lf, thunar
 - **Status bar:** waybar
 - **Notification daemon:** dunst
 - **Screenshot software:** grim
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
-- **Other tools:** lazygit, neofetch, bottom, ripgrep, starship, fzf, tmux
