@@ -10,9 +10,6 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
-set $term alacritty
-
 # Settings
 gaps outer 0
 gaps inner 5
@@ -35,14 +32,14 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
 
 ### Key bindings
     # Start a terminal
-    bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec $term --class="termfloat"
+    bindsym $mod+Return exec alacritty
+    bindsym $mod+Shift+Return exec alacritty --class="termfloat"
 
     # Kill focused window
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec wofi --show drun
+    bindsym $mod+d exec $HOME/.config/rofi/launch.sh launcher
 
     # Mouse button for dragging
     floating_modifier $mod normal
@@ -55,11 +52,8 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Change background
-    bindsym $mod+o exec ~/.config/sway/dynamic_wallpaper.sh
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
+    # Exit sway
+    bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu
 
 ### Moving around:
     # Move your focus around
