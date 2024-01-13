@@ -6,7 +6,7 @@
 
 Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles, hope you find something useful here 🚀.
 
-## [i3 Tokyonight](./i3/)
+## [i3wm](./i3/)
 
 ![alacritty](./assets/i3wm-nvim-alacritty.png)
 ![rofi-launcher](./assets/rofi.png)
@@ -27,7 +27,7 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 - **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
 - **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
 
-## [sway Tokyonight](./sway/)
+## [swaywm](./sway/)
 
 ![terminal](./assets/sway-lazygit.png)
 
