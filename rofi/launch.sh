@@ -32,9 +32,18 @@ run_cmd() {
 		elif [[ $1 == '--suspend' ]]; then
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			i3-msg exit
+			if [[ $DESKTOP_SESSION == "sway" ]]; then
+				swaymsg exit
+			elif [[ $DESKTOP_SESSION == "i3" ]]; then
+				i3-msg exit
+			fi
 		elif [[ $1 == '--lock' ]]; then
-			i3lock
+			if [[ $DESKTOP_SESSION == "sway" ]]; then
+				swaylock
+			elif [[ $DESKTOP_SESSION == "i3" ]]; then
+				i3lock
+			fi
+
 		fi
 	else
 		exit 0
