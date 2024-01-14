@@ -8,22 +8,14 @@
 
 window#waybar {
   background-color: transparent;
-  color: white;
-}
-
-tooltip {
-  background: #1e1e2e;
-  border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #11111b;
+  color: #c0caf5;
 }
 
 #mode {
   margin: 2px 0;
   padding: 0 10px;
   margin-left: 10px;
-  background: #1f2037;
+  background: #24283b;
   border-radius: 5px;
 }
 
@@ -32,16 +24,16 @@ tooltip {
 }
 
 #workspaces button {
-  color: #c0caf5;
   padding: 0 4px;
+  color: #c0caf5;
 }
 
 #workspaces button.focused {
-  color: cyan;
+  color: #2ac3de;
 }
 
 #workspaces button.urgent {
-  color: white;
+  color: #f7768e;
 }
 
 #workspaces button.persistent {
@@ -49,12 +41,12 @@ tooltip {
 }
 
 #workspaces button:hover {
-  background: #1f2037;
+  background: #24283b;
   border: none;
 }
 
 #clock {
-  background: #1f2037;
+  background: #24283b;
   margin: 2px 0;
   margin-left: 5px;
   padding: 0 15px;
@@ -62,7 +54,7 @@ tooltip {
 }
 
 #workspaces {
-  background: #1f2037;
+  background: #24283b;
   padding: 0px 10px;
   border-radius: 5px;
   margin: 2px 0;
@@ -74,25 +66,9 @@ tooltip {
 #memory,
 #tray,
 #cpu {
-  background: #1f2037;
+  background: #24283b;
   margin: 2px 0;
   margin-right: 5px;
   padding: 0 10px;
   border-radius: 5px;
-}
-
-#pulseaudio {
-  color: #52cef5;
-}
-
-#disk {
-  color: #d8ec45;
-}
-
-#cpu {
-  color: #fca800;
-}
-
-#memory {
-  color: #08fc00;
 }
