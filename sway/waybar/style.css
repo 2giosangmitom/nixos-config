@@ -22,13 +22,13 @@ tooltip {
 #mode {
   margin: 2px 0;
   padding: 0 10px;
-  margin-left: 15px;
+  margin-left: 10px;
   background: #1f2037;
   border-radius: 5px;
 }
 
 #workspaces {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 #workspaces button {
@@ -55,7 +55,8 @@ tooltip {
 
 #clock {
   background: #1f2037;
-  margin: 2px 2px;
+  margin: 2px 0;
+  margin-left: 5px;
   padding: 0 15px;
   border-radius: 5px;
 }
@@ -75,7 +76,7 @@ tooltip {
 #cpu {
   background: #1f2037;
   margin: 2px 0;
-  margin-right: 2px;
+  margin-right: 5px;
   padding: 0 10px;
   border-radius: 5px;
 }
