@@ -22,9 +22,9 @@
 		"disable-markup": true
 	},
 	"pulseaudio": {
-		"format": "{icon}{volume}%",
+		"format": "<span color='#b4f9f8'>{icon}</span>{volume}%",
 		"tooltip": false,
-		"format-muted": " Muted",
+		"format-muted": "<span color='#f7768e'> Muted</span>",
 		"format-icons": {
 			"default": [" ", " ", " "]
 		},
@@ -32,11 +32,11 @@
 		"scroll-step": 5
 	},
 	"cpu": {
-		"format": " {usage}%",
+		"format": "<span color='#bb9af7'></span> {usage}%",
 		"tooltip": false
 	},
 	"memory": {
-		"format": "󰍛 {used}/{total}",
+		"format": "<span color='#ff9e64'>󰍛</span> {used}/{total}",
 		"tooltip": false
 	}
 }
