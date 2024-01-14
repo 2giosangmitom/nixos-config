@@ -6,11 +6,11 @@
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"height": 0,
-	"modules-left": ["clock", "sway/mode", "sway/workspaces"],
+	"modules-left": ["clock", "sway/workspaces", "sway/mode"],
 	"modules-right": ["pulseaudio", "cpu", "memory", "tray"],
 
 	"clock": {
-		"format": "{:%b %d  %H:%M}",
+		"format": "{:%b %d - %H:%M}",
 		"tooltip": false
 	},
 	"sway/mode": {
@@ -22,9 +22,9 @@
 		"disable-markup": true
 	},
 	"pulseaudio": {
-		"format": "{icon}  {volume}%",
+		"format": "{icon}{volume}%",
 		"tooltip": false,
-		"format-muted": "   Muted",
+		"format-muted": " Muted",
 		"format-icons": {
 			"default": [" ", " ", " "]
 		},
@@ -32,9 +32,11 @@
 		"scroll-step": 5
 	},
 	"cpu": {
-		"format": "  {usage}%"
+		"format": " {usage}%",
+		"tooltip": false
 	},
 	"memory": {
-		"format": "󰍛 {used}/{total}"
+		"format": "󰍛 {used}/{total}",
+		"tooltip": false
 	}
 }
