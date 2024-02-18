@@ -1,10 +1,14 @@
-<div align="center">
-  <img src="./assets/dotfiles.png">
-</div>
+# Dotfiles for Sway and i3 Window Managers
 
-# Introduction
+[![GitHub stars](https://img.shields.io/github/stars/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41)](https://github.com/2giosangmitom/dotfiles/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/2giosangmitom/dotfiles.svg?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41)](https://github.com/2giosangmitom/dotfiles/forks)
+[![Github issues](https://img.shields.io/github/issues/2giosangmitom/dotfiles?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41)](https://github.com/2giosangmitom/dotfiles/issues)
+[![Github last commit](https://img.shields.io/github/last-commit/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41)](https://github.com/2giosangmitom/dotfiles/graphs/commit-activity)
+![Repo size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
 
-Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles, hope you find something useful here 🚀.
+## Introduction
+
+Welcome to my dotfiles repository for configuring the sway and i3 window managers on Linux. This repository contains configuration files tailored to customize and optimize your desktop environment, providing a seamless and efficient user experience.
 
 ## [i3wm](./i3/)
 
@@ -12,35 +16,6 @@ Hello there! This repository hosts my _sway, i3_ and my favorite tools dotfiles,
 ![rofi-launcher](./assets/rofi.png)
 ![powermenu](./assets/powermenu.png)
 
-### Detail
-
-- **OS:** Arch Linux
-- **WM:** i3
-- **Terminal:** alacritty
-- **Shell:** fish
-- **Application Launcher:** rofi
-- **File manager:** lf, thunar
-- **Status bar:** polybar
-- **Compositor:** picom
-- **Screenshot software:** flameshot
-- **Notification daemon:** dunst
-- **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
-- **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
-
 ## [swaywm](./sway/)
 
 ![terminal](./assets/sway-lazygit.png)
-
-### Detail
-
-- **OS:** Arch Linux
-- **WM:** sway
-- **Terminal:** alacritty
-- **Shell:** fish
-- **Application Launcher:** rofi
-- **File manager:** lf, thunar
-- **Status bar:** waybar
-- **Notification daemon:** dunst
-- **Screenshot software:** grim
-- **GTK theme:** Sweet Ambar Blue Dark - [Download link](https://www.gnome-look.org/p/1253385)
-- **Cursor theme:** Layan cursors - [Download link](https://www.gnome-look.org/p/1365214)
