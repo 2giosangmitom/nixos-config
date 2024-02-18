@@ -12,10 +12,8 @@ Welcome to my dotfiles repository for configuring the sway and i3 window manager
 
 ## [i3wm](./i3/)
 
-![alacritty](./assets/i3wm-nvim-alacritty.png)
-![rofi-launcher](./assets/rofi.png)
-![powermenu](./assets/powermenu.png)
+> Preview: [From Dust to Digital: Arch Linux with i3wm on old hardware 🚀](https://youtu.be/dQkbVVCDTy0)
 
 ## [swaywm](./sway/)
 
-![terminal](./assets/sway-lazygit.png)
+> Preview: [Arch Linux swaywm rice](https://youtu.be/IpM8FoWltrY)
