@@ -11,18 +11,6 @@ window#waybar {
   color: #c0caf5;
 }
 
-#mode {
-  margin: 2px 0;
-  padding: 0 10px;
-  margin-left: 10px;
-  background: #24283b;
-  border-radius: 5px;
-}
-
-#workspaces {
-  margin-left: 10px;
-}
-
 #workspaces button {
   padding: 0 4px;
   color: #c0caf5;
@@ -45,30 +33,17 @@ window#waybar {
   border: none;
 }
 
-#clock {
-  background: #24283b;
-  margin: 2px 0;
-  margin-left: 5px;
-  padding: 0 15px;
-  border-radius: 5px;
-}
-
-#workspaces {
-  background: #24283b;
-  padding: 0px 10px;
-  border-radius: 5px;
-  margin: 2px 0;
-  margin-left: 10px;
-}
-
+#custom-uptime,
 #pulseaudio,
+#clock,
+#workspaces,
 #disk,
 #memory,
 #tray,
+#mode,
 #cpu {
   background: #24283b;
-  margin: 2px 0;
-  margin-right: 5px;
+  margin: 2px 3px;
   padding: 0 10px;
   border-radius: 5px;
 }
