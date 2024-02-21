@@ -6,9 +6,8 @@
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"height": 0,
-	"modules-left": ["clock", "sway/workspaces", "sway/mode"],
+	"modules-left": ["clock", "custom/uptime", "sway/workspaces", "sway/mode"],
 	"modules-right": ["pulseaudio", "cpu", "memory", "tray"],
-
 	"clock": {
 		"format": "{:%b %d - %H:%M}",
 		"tooltip": false
@@ -20,6 +19,11 @@
 		"disable-click": true,
 		"disable-scroll": true,
 		"disable-markup": true
+	},
+	"custom/uptime": {
+		"exec": "uptime -p | sed -e 's/up //g'",
+		"interval": "60",
+		"format": "Uptime: {}"
 	},
 	"pulseaudio": {
 		"format": "<span color='#b4f9f8'>{icon}</span>{volume}%",
