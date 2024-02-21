@@ -18,6 +18,7 @@
 	"custom/pacman": {
 		"format": "<span color='#f0ab0a'>󰏕</span> {}",
 		"interval": "once",
+		"tooltip": false,
 		"exec": "checkupdates | wc -l",
 		"exec-if": "exit 0",
 		"on-click": "update-system",
@@ -30,7 +31,8 @@
 	},
 	"custom/uptime": {
 		"exec": "uptime -p | sed -e 's/up //g'",
-		"interval": "60",
+		"restart-interval": "60",
+		"tooltip": false,
 		"format": "Uptime: {}"
 	},
 	"pulseaudio": {
