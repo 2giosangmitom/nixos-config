@@ -7,13 +7,21 @@
 	"gtk-layer-shell": true,
 	"height": 0,
 	"modules-left": ["clock", "custom/uptime", "sway/workspaces", "sway/mode"],
-	"modules-right": ["pulseaudio", "cpu", "memory", "tray"],
+	"modules-right": ["pulseaudio", "cpu", "memory", "custom/pacman", "tray"],
 	"clock": {
 		"format": "{:%b %d - %H:%M}",
 		"tooltip": false
 	},
 	"sway/mode": {
 		"tooltip": false
+	},
+	"custom/pacman": {
+		"format": "<span color='#f0ab0a'>󰏕</span> {}",
+		"interval": "once",
+		"exec": "checkupdates | wc -l",
+		"exec-if": "exit 0",
+		"on-click": "update-system",
+		"signal": 8
 	},
 	"sway/workspaces": {
 		"disable-click": true,
