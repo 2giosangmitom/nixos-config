@@ -41,7 +41,6 @@ window#waybar {
 #memory,
 #tray,
 #mode,
-#custom-pacman,
 #cpu {
   background: #24283b;
   margin: 2px 3px;
