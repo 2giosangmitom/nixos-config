@@ -10,10 +10,10 @@
 
 Welcome to my dotfiles repository for configuring the sway and i3 window managers on Linux. This repository contains configuration files tailored to customize and optimize your desktop environment, providing a seamless and efficient user experience.
 
-## [i3wm](./i3/)
+## i3
 
 > Preview: [From Dust to Digital: Arch Linux with i3wm on old hardware 🚀](https://youtu.be/dQkbVVCDTy0)
 
-## [swaywm](./sway/)
+## sway
 
 > Preview: [Arch Linux swaywm rice](https://youtu.be/IpM8FoWltrY)
