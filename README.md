@@ -12,10 +12,10 @@ Welcome to my dotfiles repository for configuring the sway and i3 window manager
 
 ## i3
 
-- Preview: [From Dust to Digital: Arch Linux with i3wm on old hardware 🚀](https://youtu.be/dQkbVVCDTy0)
-- List of programs you need to install: i3, picom, flameshot, polybar, rofi, i3lock, dunst, feh
+- **Preview**: [From Dust to Digital: Arch Linux with i3wm on old hardware 🚀](https://youtu.be/dQkbVVCDTy0)
+- **List of programs you need to install**: i3, picom, flameshot, polybar, rofi, i3lock, dunst, feh
 
 ## sway
 
-- Preview: [Arch Linux swaywm rice](https://youtu.be/IpM8FoWltrY)
-- List of programs you need to install: sway, slurp, grim, waybar, rofi, swaylock, dunst
+- **Preview**: [Arch Linux swaywm rice](https://youtu.be/IpM8FoWltrY)
+- **List of programs you need to install**: sway, slurp, grim, waybar, rofi, swaylock, dunst
