@@ -1,9 +1,11 @@
 {
   enable = true;
-  settings = {
+  settings = let
+    hyprpaper = ./hyprpaper.conf;
+  in {
     "$mod" = "SUPER";
     monitor = ",preferred,auto,auto";
-    exec-once = "waybar";
+    exec-once = ["waybar" "hyprpaper -c ${hyprpaper}"];
 
     input = {
       kb_layout = "us";
