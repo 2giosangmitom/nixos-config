@@ -28,20 +28,42 @@
       wl-clipboard
       fcitx5
       xdg-utils
+      uutils-coreutils
+      procps
     ];
     stateVersion = "23.11";
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.vimix-cursors;
+    name = "Vimix Cursors";
+    size = 16;
   };
 
   gtk = {
     enable = true;
     font = {
       name = "Roboto";
-      size = 11;
+      size = 10;
+    };
+    theme = {
+      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["pink"];
+        size = "compact";
+        tweaks = ["rimless" "black"];
+        variant = "macchiato";
+      };
+    };
+    iconTheme = {
+      package = pkgs.tela-icon-theme;
+      name = "Tela-dark";
     };
   };
 
   programs.rofi = import ./rofi.nix;
-  #programs.waybar = import ./waybar.nix; #TODO
+  programs.waybar = import ./waybar;
   wayland.windowManager.hyprland = import ./hyprland.nix;
   programs.alacritty = import ./alacritty.nix;
   programs.git = import ./git.nix;

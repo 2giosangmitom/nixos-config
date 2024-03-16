@@ -3,6 +3,7 @@
   settings = {
     "$mod" = "SUPER";
     monitor = ",preferred,auto,auto";
+    exec-once = "waybar";
 
     input = {
       kb_layout = "us";
@@ -78,6 +79,8 @@
         "$mod,l,movefocus,r"
         "$mod,k,movefocus,u"
         "$mod,j,movefocus,d"
+
+        "$mod,mouse:272,movewindow"
       ]
       ++ (
         builtins.concatLists (builtins.genList (
