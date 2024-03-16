@@ -27,7 +27,6 @@
       tmux
       gh
       fd
-      lazygit
       wl-clipboard
       fcitx5
     ];
@@ -38,5 +37,6 @@
   programs.git = import ./git.nix;
   programs.fish = import ./fish.nix;
   programs.starship = import ./starship.nix;
+  programs.lazygit = import ./lazygit.nix;
   programs.home-manager.enable = true;
 }
