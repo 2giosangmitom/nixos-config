@@ -47,7 +47,6 @@
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
-  programs.hyprland.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -65,7 +64,7 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  environment.systemPackages = with pkgs; [neovim git xdg-utils];
+  environment.systemPackages = with pkgs; [neovim git];
 
   services.openssh.enable = true;
   system.stateVersion = "23.11";
@@ -90,4 +89,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  programs.dconf.enable = true;
+  programs.hyprland.enable = true;
+  programs.xwayland.enable = true;
 }
