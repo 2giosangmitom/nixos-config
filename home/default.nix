@@ -18,8 +18,6 @@
       eza
       bottom
       brave
-      rofi
-      waybar
       gnumake
       gcc
       gammastep
@@ -29,14 +27,27 @@
       fd
       wl-clipboard
       fcitx5
+      xdg-utils
     ];
     stateVersion = "23.11";
   };
 
+  gtk = {
+    enable = true;
+    font = {
+      name = "Roboto";
+      size = 11;
+    };
+  };
+
+  programs.rofi = import ./rofi.nix;
+  #programs.waybar = import ./waybar.nix; #TODO
+  wayland.windowManager.hyprland = import ./hyprland.nix;
   programs.alacritty = import ./alacritty.nix;
   programs.git = import ./git.nix;
   programs.fish = import ./fish.nix;
   programs.starship = import ./starship.nix;
   programs.lazygit = import ./lazygit.nix;
+  #programs.hyprpaper = import ./hyprpaper.nix; #TODO
   programs.home-manager.enable = true;
 }
