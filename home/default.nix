@@ -30,15 +30,10 @@
       xdg-utils
       uutils-coreutils
       procps
+      fastfetch
+      hyprpaper
     ];
     stateVersion = "23.11";
-  };
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.vimix-cursors;
-    name = "Vimix Cursors";
-    size = 16;
   };
 
   gtk = {
@@ -70,6 +65,5 @@
   programs.fish = import ./fish.nix;
   programs.starship = import ./starship.nix;
   programs.lazygit = import ./lazygit.nix;
-  #programs.hyprpaper = import ./hyprpaper.nix; #TODO
   programs.home-manager.enable = true;
 }
