@@ -4,7 +4,6 @@
     hyprpaper = ./hyprpaper.conf;
   in {
     "$mod" = "SUPER";
-    monitor = ",preferred,auto,auto";
     exec-once = ["waybar" "hyprpaper -c ${hyprpaper}"];
 
     input = {
@@ -85,8 +84,6 @@
         "$mod,l,movefocus,r"
         "$mod,k,movefocus,u"
         "$mod,j,movefocus,d"
-
-        "$mod,mouse:272,movewindow"
       ]
       ++ (
         builtins.concatLists (builtins.genList (
@@ -102,5 +99,10 @@
           )
           10)
       );
+
+    bindm = [
+      "$mod,mouse:272,movewindow"
+      "$mod,mouse:273,resizewindow"
+    ];
   };
 }
