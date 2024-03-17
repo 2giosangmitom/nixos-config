@@ -33,9 +33,7 @@
       gh
       fd
       wl-clipboard
-      fcitx5
       xdg-utils
-      uutils-coreutils
       procps
       fastfetch
       hyprpaper
@@ -44,11 +42,17 @@
       grimblast
       obs-studio
       gimp
+      dconf
+      nwg-look
     ];
     stateVersion = "23.11";
   };
 
   gtk = {
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+      gtk-cursor-theme-name = "Vimix Cursors";
+    };
     enable = true;
     font = {
       name = "Roboto";
@@ -67,7 +71,21 @@
       package = pkgs.tela-icon-theme;
       name = "Tela-dark";
     };
+    cursorTheme = {
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
+      size = 24;
+    };
   };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    size = 24;
+    package = pkgs.vimix-cursors;
+    name = "Vimix Cursors";
+  };
+
+  home.file.".icons/default".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
 
   programs.waybar = import ./waybar;
   wayland.windowManager.hyprland = import ./hyprland.nix;
