@@ -1,7 +1,11 @@
 {
   enable = true;
   settings = {
-    shell = "fish";
+    shell = "tmux";
+    live_config_reload = true;
+    env = {
+      TERM = "xterm-256color";
+    };
     font = {
       size = 10;
       normal = {

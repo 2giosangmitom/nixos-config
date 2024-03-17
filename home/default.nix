@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./tmux.nix
+  ];
+
   home = {
     username = "chien";
     homeDirectory = "/home/chien";
@@ -26,7 +30,6 @@
       gcc
       gammastep
       pavucontrol
-      tmux
       gh
       fd
       wl-clipboard
@@ -39,6 +42,8 @@
       rofi
       libnotify
       grimblast
+      obs-studio
+      gimp
     ];
     stateVersion = "23.11";
   };
