@@ -37,6 +37,8 @@
       fastfetch
       hyprpaper
       rofi
+      libnotify
+      grimblast
     ];
     stateVersion = "23.11";
   };
@@ -69,5 +71,6 @@
   programs.fish = import ./fish.nix;
   programs.starship = import ./starship.nix;
   programs.lazygit = import ./lazygit.nix;
+  services.dunst = import ./dunst.nix;
   programs.home-manager.enable = true;
 }
