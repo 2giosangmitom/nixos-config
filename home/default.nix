@@ -32,6 +32,7 @@
       procps
       fastfetch
       hyprpaper
+      rofi
     ];
     stateVersion = "23.11";
   };
@@ -57,7 +58,6 @@
     };
   };
 
-  programs.rofi = import ./rofi.nix;
   programs.waybar = import ./waybar;
   wayland.windowManager.hyprland = import ./hyprland.nix;
   programs.alacritty = import ./alacritty.nix;
