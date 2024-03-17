@@ -4,7 +4,7 @@
     hyprpaper = ./hyprpaper.conf;
   in {
     "$mod" = "SUPER";
-    exec-once = ["waybar" "hyprpaper -c ${hyprpaper}"];
+    exec-once = ["waybar" "hyprpaper -c ${hyprpaper}" "dunst"];
 
     input = {
       kb_layout = "us";
@@ -84,6 +84,9 @@
         "$mod,l,movefocus,r"
         "$mod,k,movefocus,u"
         "$mod,j,movefocus,d"
+
+        ",Print,exec,grimblast --notify copy screen"
+        "SHIFT,Print,exec,grimblast --notify copy area"
       ]
       ++ (
         builtins.concatLists (builtins.genList (
