@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./tmux.nix
+    ./bottom.nix
   ];
 
   home = {
@@ -13,6 +14,7 @@
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
+      EDITOR = "nvim";
     };
 
     packages = with pkgs; [
@@ -24,7 +26,6 @@
       jq
       fzf
       eza
-      bottom
       brave
       gnumake
       gcc
@@ -43,7 +44,6 @@
       obs-studio
       gimp
       dconf
-      nwg-look
     ];
     stateVersion = "23.11";
   };
