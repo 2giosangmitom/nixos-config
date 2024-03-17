@@ -15,15 +15,15 @@
     self,
   }: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+    mkSystem = hostname:
+      nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
           {_module.args = {inherit inputs;};}
+          {networking.hostName = hostname;}
 
-          ./hosts/nixos/configuration.nix
+          (./. + "/hosts/${hostname}/configuration.nix")
           ./modules/boot.nix
           ./modules/networking.nix
           ./modules/locale.nix
@@ -43,6 +43,9 @@
           }
         ];
       };
+  in {
+    nixosConfigurations = {
+      nixos = mkSystem "nixos"; # My desktop
     };
     formatter.x86_64-linux = pkgs.alejandra;
   };
