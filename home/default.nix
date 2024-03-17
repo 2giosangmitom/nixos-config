@@ -53,6 +53,7 @@
       obs-studio
       gimp
       dconf
+      tokei
     ];
     stateVersion = "23.11";
   };
