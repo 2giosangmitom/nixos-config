@@ -5,4 +5,7 @@
     set -U fish_greeting
     builtin history clear
   '';
+  shellAliases = {
+    ls = "eza";
+  };
 }
