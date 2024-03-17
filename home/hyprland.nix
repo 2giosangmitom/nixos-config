@@ -62,17 +62,21 @@
       disable_splash_rendering = true;
       mouse_move_enables_dpms = true;
       enable_swallow = true;
+      key_press_enables_dpms = true;
     };
 
     bind = let
       terminal = "alacritty";
-      launcher = "rofi -show drun";
+      rofi = ./rofi/launch.sh;
+      launcher_theme = ./rofi/launcher.rasi;
+      powermenu_theme = ./rofi/powermenu.rasi;
+      confirm_theme = ./rofi/confirm.rasi;
     in
       [
         "$mod,Return,exec,${terminal}"
-        "$mod,D,exec,${launcher}"
+        "$mod,D,exec,${rofi} launcher ${launcher_theme}"
+        "$mod SHIFT,E,exec,${rofi} powermenu ${powermenu_theme} ${confirm_theme}"
         "$mod,Q,killactive,"
-        "$mod,M,exit,"
         "$mod,Space,togglefloating"
         "$mod,P,pseudo,"
         "$mod,E,togglesplit,"
