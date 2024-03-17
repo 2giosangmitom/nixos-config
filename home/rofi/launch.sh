@@ -1,65 +1,85 @@
 #!/usr/bin/env bash
 
 show_launcher() {
-	rofi -show drun -theme "$1"
+	local theme="$1"
+	rofi -show drun -theme "$theme"
 }
 
-shutdown='⏻ Shutdown'
-reboot=' Reboot'
-lock='󰌾 Lock'
-suspend='󰏥 Suspend'
-logout=' Logout'
-yes='󰗠 Yes'
-no='󰅙 No'
+shutdown="⏻ Shutdown"
+reboot=" Reboot"
+lock="󰌾 Lock"
+suspend="󰏥 Suspend"
+logout=" Logout"
+yes="󰗠 Yes"
+no="󰅙 No"
 
 show_powermenu() {
-	uptime="$(uptime -p | sed -e 's/up //g')"
-	host=$(hostnamectl hostname)
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme $1
+	local theme="$1"
+	local uptime="$(uptime -p | sed -e 's/up //g')"
+	local host="$(hostnamectl hostname)"
+	local options=(
+		"$lock"
+		"$suspend"
+		"$logout"
+		"$reboot"
+		"$shutdown"
+	)
+	local choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$theme")
+	echo "$choice"
 }
 
 confirm_exit() {
-	echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme $1
+	local theme="$1"
+	local selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$theme")
+	echo "$selected"
 }
 
 run_cmd() {
-	selected="$(confirm_exit $2)"
+	local action="$1"
+	local theme="$2"
+	local selected="$(confirm_exit "$theme")"
 	if [[ "$selected" == "$yes" ]]; then
-		if [[ $1 == '--shutdown' ]]; then
+		case "$action" in
+		"--shutdown")
 			systemctl poweroff
-		elif [[ $1 == '--reboot' ]]; then
+			;;
+		"--reboot")
 			systemctl reboot
-		elif [[ $1 == '--suspend' ]]; then
+			;;
+		"--suspend")
 			systemctl suspend
-		elif [[ $1 == '--logout' ]]; then
+			;;
+		"--logout")
 			hyprctl dispatch exit
-		elif [[ $1 == '--lock' ]]; then
+			;;
+		"--lock")
 			hyprctl dispatch dpms off
-		fi
+			;;
+		esac
 	else
 		exit 0
 	fi
 }
 
 case "$1" in
-"launcher") show_launcher $2 ;;
+"launcher") show_launcher "$2" ;;
 "powermenu")
-	choice="$(show_powermenu $2)"
-	case $choice in
+	choice="$(show_powermenu "$2")"
+	case "$choice" in
 	"$shutdown")
-		run_cmd --shutdown $3
+		run_cmd --shutdown "$3"
 		;;
 	"$reboot")
-		run_cmd --reboot $3
+		run_cmd --reboot "$3"
 		;;
 	"$lock")
-		run_cmd --lock $3
+		run_cmd --lock "$3"
 		;;
 	"$suspend")
-		run_cmd --suspend $3
+		run_cmd --suspend "$3"
 		;;
 	"$logout")
-		run_cmd --logout $3
+		run_cmd --logout "$3"
 		;;
 	esac
 	;;
