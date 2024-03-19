@@ -5,27 +5,22 @@
   ...
 }: {
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [git nix-index];
+  environment.systemPackages = with pkgs; [git];
 
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
-
   programs.nix-ld.enable = true;
-
   programs.dconf.enable = true;
-
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   };
-
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
-
   programs.xwayland.enable = true;
 
   xdg.portal = {
