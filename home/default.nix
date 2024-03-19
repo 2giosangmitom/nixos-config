@@ -15,6 +15,8 @@
     ./git.nix
     ./starship.nix
     ./theme.nix
+    ./yazi.nix
+    ./zoxide.nix
   ];
 
   home = {
@@ -27,7 +29,6 @@
     };
 
     packages = with pkgs; [
-      nnn
       curl
       unzip
       zip
