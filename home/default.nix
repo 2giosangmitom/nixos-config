@@ -17,6 +17,7 @@
     ./theme.nix
     ./yazi.nix
     ./zoxide.nix
+    ./fzf.nix
   ];
 
   home = {
@@ -34,7 +35,6 @@
       zip
       ripgrep
       jq
-      fzf
       eza
       brave
       gnumake
