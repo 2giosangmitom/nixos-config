@@ -21,9 +21,13 @@
         specialArgs = {inherit inputs;};
         modules = [
           {_module.args = {inherit inputs;};}
-          {networking.hostName = hostname;}
+          {
+            networking.hostName = hostname;
+            system.stateVersion = "23.11";
+            nix.settings.experimental-features = ["nix-command" "flakes"];
+          }
 
-          (./. + "/hosts/${hostname}/configuration.nix")
+          (./. + "/hosts/${hostname}/hardware-configuration.nix")
           ./modules/boot.nix
           ./modules/networking.nix
           ./modules/locale.nix

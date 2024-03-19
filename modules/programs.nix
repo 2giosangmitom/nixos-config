@@ -4,10 +4,15 @@
   inputs,
   ...
 }: {
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; [neovim git nix-index];
+
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
+
+  programs.nix-ld.enable = true;
 
   programs.dconf.enable = true;
 
