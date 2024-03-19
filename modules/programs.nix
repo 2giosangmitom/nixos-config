@@ -5,7 +5,7 @@
   ...
 }: {
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [neovim git nix-index];
+  environment.systemPackages = with pkgs; [git nix-index];
 
   programs.gnupg.agent = {
     enable = true;
@@ -19,6 +19,11 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
   };
 
   programs.xwayland.enable = true;
