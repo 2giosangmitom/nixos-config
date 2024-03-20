@@ -13,6 +13,9 @@
   <a>
     <img src="https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41" />
   </a>
+  <a href="https://github.com/2giosangmitom/dotfiles/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
+  </a>
 </div>
 
 # Introduction
