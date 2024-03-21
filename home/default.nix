@@ -32,6 +32,7 @@
     packages = with pkgs; [
       curl
       unzip
+      bat
       zip
       ripgrep
       jq
