@@ -8,6 +8,7 @@
     '';
     shellAliases = {
       ls = "eza";
+      cat = "bat";
     };
   };
 }
