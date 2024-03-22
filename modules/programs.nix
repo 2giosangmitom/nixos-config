@@ -1,11 +1,11 @@
 {
   config,
   pkgs,
-  inputs,
+  pkgs-unstable,
   ...
 }: {
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [git];
+  environment.systemPackages = with pkgs; [git wireplumber];
 
   programs.gnupg.agent = {
     enable = true;
@@ -19,6 +19,7 @@
   };
   programs.neovim = {
     enable = true;
+    package = pkgs-unstable.neovim-unwrapped;
     defaultEditor = true;
   };
   programs.xwayland.enable = true;
