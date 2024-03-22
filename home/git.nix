@@ -3,5 +3,8 @@
     enable = true;
     userName = "Vo Quang Chien";
     userEmail = "yeuxacucodon.dev@proton.me";
+    delta = {
+      enable = true;
+    };
   };
 }
