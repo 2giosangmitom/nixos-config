@@ -11,17 +11,24 @@
   };
 
   outputs = inputs @ {
+    self,
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
-    self,
+    ...
   }: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+
     mkSystem = hostname:
       nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
+        inherit system;
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
         modules = [
-          {_module.args = {inherit inputs;};}
+          {_module.args = {inherit pkgs-unstable;};}
           {
             networking.hostName = hostname;
             system.stateVersion = "23.11";
@@ -43,6 +50,9 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = {
+                inherit pkgs-unstable;
+              };
               users.chien = import ./home;
             };
           }
@@ -52,6 +62,6 @@
     nixosConfigurations = {
       nixos = mkSystem "nixos"; # My desktop
     };
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+    formatter.x86_64-linux = pkgs.alejandra;
   };
 }
