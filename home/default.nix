@@ -29,7 +29,7 @@
       NIXOS_OZONE_WL = "1";
     };
 
-    packages = with pkgs; [
+    packages = with pkgs-unstable; [
       curl
       unzip
       bat
@@ -57,7 +57,6 @@
       dconf
       tokei
       du-dust
-      delta
     ];
     stateVersion = "23.11";
   };
