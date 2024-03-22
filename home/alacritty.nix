@@ -1,6 +1,7 @@
-{
+{pkgs-unstable, ...}: {
   programs.alacritty = {
     enable = true;
+    package = pkgs-unstable.alacritty;
     settings = {
       shell = "tmux";
       live_config_reload = true;
