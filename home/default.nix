@@ -56,6 +56,8 @@
       gimp
       dconf
       tokei
+      du-dust
+      delta
     ];
     stateVersion = "23.11";
   };
