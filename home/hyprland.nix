@@ -81,6 +81,7 @@
         launcher_theme = ./rofi/launcher.rasi;
         powermenu_theme = ./rofi/powermenu.rasi;
         confirm_theme = ./rofi/confirm.rasi;
+        input_method = ./scripts/input_method.sh;
       in
         [
           "$mod,Return,exec,${terminal}"
@@ -90,6 +91,8 @@
           "$mod,Space,togglefloating"
           "$mod,P,pseudo,"
           "$mod,E,togglesplit,"
+          "$mod,I,exec,${input_method} -c"
+          "$mod SHIFT,I,exec,${input_method} -t"
 
           "$mod,h,movefocus,l"
           "$mod,l,movefocus,r"
