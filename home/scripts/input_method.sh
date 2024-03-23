@@ -24,7 +24,7 @@ toggle_input_method() {
 		ibus engine "BambooUs"
 		notify-send "Switched to English"
 		;;
-	"BambooUs")
+	"BambooUs" | "xkb:us::eng")
 		ibus engine "Bamboo"
 		notify-send "Switched to Vietnamese"
 		;;
