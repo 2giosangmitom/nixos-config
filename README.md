@@ -29,3 +29,15 @@ Welcome to your haven of personalized NixOS bliss, featuring the sleek Hyprland 
 - **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
 - **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
 - **Hyprland Haven:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, improvements, or new features to add, feel free to open an issue or pull request.
+
+## Acknowledgements
+
+Special thanks to the NixOS community for their excellent tools and resources, without which this configuration wouldn't be possible.
+
+---
+
+Happy hacking! 🚀
