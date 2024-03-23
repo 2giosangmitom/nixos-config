@@ -62,6 +62,15 @@
     nixosConfigurations = {
       nixos = mkSystem "nixos"; # My desktop
     };
+    devShell.x86_64-linux = pkgs.mkShell {
+      buildInputs = with pkgs; [
+        nodejs_20
+        fish
+      ];
+      shellHook = ''
+        exec fish
+      '';
+    };
     formatter.x86_64-linux = pkgs.alejandra;
   };
 }
