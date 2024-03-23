@@ -1,4 +1,4 @@
-{
+{pkgs-unstable,...}:{
   time.timeZone = "Asia/Ho_Chi_Minh";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -11,5 +11,9 @@
     LC_PAPER = "vi_VN";
     LC_TELEPHONE = "vi_VN";
     LC_TIME = "vi_VN";
+  };
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = with pkgs-unstable.ibus-engines; [bamboo];
   };
 }
