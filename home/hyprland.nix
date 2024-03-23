@@ -1,7 +1,8 @@
-{
+{pkgs-unstable, ...}: {
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
   wayland.windowManager.hyprland = {
     enable = true;
+    package = pkgs-unstable.hyprland;
     xwayland = {
       enable = true;
     };
@@ -10,7 +11,13 @@
       hyprpaper = ./hyprpaper.conf;
     in {
       "$mod" = "SUPER";
-      exec-once = ["waybar &" "hyprpaper -c ${hyprpaper}" "dunst &" "ibus-daemon -rxRd"];
+      exec-once = [
+        "dbus-update-activation-environment --all"
+        "waybar"
+        "hyprpaper -c ${hyprpaper}"
+        "dunst"
+        "ibus-daemon -rxRd"
+      ];
 
       input = {
         kb_layout = "us";
@@ -98,6 +105,11 @@
           "$mod,l,movefocus,r"
           "$mod,k,movefocus,u"
           "$mod,j,movefocus,d"
+
+          "$mod SHIFT,h,movewindow,l"
+          "$mod SHIFT,l,movewindow,r"
+          "$mod SHIFT,k,movewindow,u"
+          "$mod SHIFT,j,movewindow,d"
 
           ",Print,exec,grimblast --notify copy screen"
           "SHIFT,Print,exec,grimblast --notify copy area"
