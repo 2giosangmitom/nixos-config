@@ -10,7 +10,7 @@
       hyprpaper = ./hyprpaper.conf;
     in {
       "$mod" = "SUPER";
-      exec-once = ["waybar &" "hyprpaper -c ${hyprpaper}" "dunst &"];
+      exec-once = ["waybar &" "hyprpaper -c ${hyprpaper}" "dunst &" "ibus-daemon -rxRd"];
 
       input = {
         kb_layout = "us";
