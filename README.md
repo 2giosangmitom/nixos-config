@@ -18,6 +18,14 @@
   </a>
 </div>
 
-# Introduction
+## Introduction
 
 Welcome to your haven of personalized NixOS bliss, featuring the sleek Hyprland window manager and meticulously configured CLI tools! This repository crafts a delightful system experience using the power of flakes and home-manager. With this configuration, you can easily replicate my personalized development environment on any NixOS machine.
+
+## What Awaits You?
+
+- **Flake Repository:** Leverage flakes for a future-proof, modular, and collaborative configuration.
+- **Modular Design:** Configuration is organized into modules for easier management and customization.
+- **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
+- **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
+- **Hyprland Haven:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
