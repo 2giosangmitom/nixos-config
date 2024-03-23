@@ -29,7 +29,8 @@ toggle_input_method() {
 		notify-send "Switched to Vietnamese"
 		;;
 	*)
-		notify-send "No input method is set"
+		ibus engine "BambooUs"
+		notify-send "Set to default"
 		;;
 	esac
 }
