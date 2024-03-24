@@ -15,6 +15,7 @@
     ./zoxide.nix
     ./fzf.nix
     ./vscode.nix
+    ./bash.nix
   ];
 
   home = {
