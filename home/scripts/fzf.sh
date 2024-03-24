@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-e() {
+edit() {
 	nvim $(fzf --preview 'bat --style=numbers --color=always {}' --border -m)
 }
 
@@ -13,7 +13,7 @@ delete_branch() {
 }
 
 case $1 in
-e) e ;;
+edit) edit ;;
 checkout_recent_branch) checkout_recent_branch ;;
 delete_branch) delete_branch ;;
 esac

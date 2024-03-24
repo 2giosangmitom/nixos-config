@@ -12,7 +12,7 @@
     in {
       ls = "eza";
       cat = "bat";
-      e = "${fzf_script} e";
+      e = "${fzf_script} edit";
       crb = "${fzf_script} checkout_recent_branch";
       db = "${fzf_script} delete_branch";
     };
