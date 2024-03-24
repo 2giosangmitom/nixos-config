@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [

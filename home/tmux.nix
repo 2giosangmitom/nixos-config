@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     mouse = true;

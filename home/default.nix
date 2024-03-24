@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  ...
-}: {
+{pkgs-unstable, ...}: {
   imports = [
     ./tmux.nix
     ./bottom.nix
