@@ -10,8 +10,7 @@
     };
   };
 
-  outputs = inputs @ {
-    self,
+  outputs = {
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
@@ -80,9 +79,13 @@
       nixos = mkSystem "nixos"; # My desktop
     };
     devShell.x86_64-linux = pkgs.mkShell {
-      buildInputs = with pkgs; [
+      buildInputs = with pkgs-unstable; [
         nodejs_20
         fish
+        statix
+        alejandra
+        deadnix
+        nil
       ];
       shellHook = ''
         exec fish
