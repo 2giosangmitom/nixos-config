@@ -14,6 +14,7 @@
       cat = "bat";
       e = "${fzf_script} e";
       crb = "${fzf_script} checkout_recent_branch";
+      db = "${fzf_script} delete_branch";
     };
   };
 }
