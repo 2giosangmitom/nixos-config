@@ -16,13 +16,18 @@
     home-manager,
     ...
   }: let
+    # Defines the target system as x86_64-linux.
     system = "x86_64-linux";
+
+    # Imports Nixpkgs for stable version with custom configuration.
     pkgs = import nixpkgs {
       inherit system;
       config = {
         allowUnfree = true;
       };
     };
+
+    # Imports Nixpkgs for unstable version with custom configuration.
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config = {
@@ -30,6 +35,7 @@
       };
     };
 
+    # Function to generate NixOS system configuration for the given hostname.
     mkSystem = hostname:
       nixpkgs.lib.nixosSystem {
         inherit system;
@@ -44,12 +50,14 @@
               inherit pkgs;
             };
           }
+
           {
             networking.hostName = hostname;
             system.stateVersion = "23.11";
             nix.settings.experimental-features = ["nix-command" "flakes"];
           }
 
+          # Includes custom module files for configuration.
           (./. + "/hosts/${hostname}/hardware-configuration.nix")
           ./modules/boot.nix
           ./modules/networking.nix
@@ -60,6 +68,7 @@
           ./modules/user.nix
           ./modules/fonts.nix
 
+          # Includes Home Manager configuration.
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -69,12 +78,14 @@
                 inherit pkgs-unstable;
                 inherit pkgs;
               };
+              # Imports user-specific Home Manager configuration.
               users.chien = import ./home;
             };
           }
         ];
       };
   in {
+    # Defines available NixOS configurations.
     nixosConfigurations = {
       nixos = mkSystem "nixos"; # My desktop
     };
