@@ -4,7 +4,6 @@
   pkgs-unstable,
   ...
 }: {
-  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs-unstable; [git wireplumber];
 
   programs.gnupg.agent = {

@@ -2,8 +2,8 @@
   description = "2giosangmitom's NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.11";
-    nixpkgs-unstable.url = "nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,17 +18,33 @@
     ...
   }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+    };
 
     mkSystem = hostname:
       nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit pkgs-unstable;
+          inherit pkgs;
         };
         modules = [
-          {_module.args = {inherit pkgs-unstable;};}
+          {
+            _module.args = {
+              inherit pkgs-unstable;
+              inherit pkgs;
+            };
+          }
           {
             networking.hostName = hostname;
             system.stateVersion = "23.11";
@@ -52,6 +68,7 @@
               useUserPackages = true;
               extraSpecialArgs = {
                 inherit pkgs-unstable;
+                inherit pkgs;
               };
               users.chien = import ./home;
             };
