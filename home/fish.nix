@@ -7,9 +7,12 @@
       set -U fish_greeting
       builtin history clear
     '';
-    shellAliases = {
+    shellAliases = let
+      fzf_script = ./scripts/fzf.sh;
+    in {
       ls = "eza";
       cat = "bat";
+      e = "${fzf_script} e";
     };
   };
 }
