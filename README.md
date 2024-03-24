@@ -30,6 +30,13 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 - **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
 - **Hyprland WM:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
 
+## Screenshots
+
+<details>
+  <summary>Hyprland</summary>
+  <img src="./screenshots/hyprland.png" />
+</details>
+
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, improvements, or new features to add, feel free to open an issue or pull request.
