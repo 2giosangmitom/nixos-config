@@ -11,7 +11,6 @@
       fzf_script = ./scripts/fzf.sh;
     in {
       ls = "eza";
-      cd = "z";
       cat = "bat";
       e = "${fzf_script} edit";
       crb = "${fzf_script} checkout_recent_branch";
