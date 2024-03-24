@@ -19,6 +19,7 @@
     ./yazi.nix
     ./zoxide.nix
     ./fzf.nix
+    ./vscode.nix
   ];
 
   home = {
