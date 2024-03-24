@@ -13,6 +13,7 @@
       ls = "eza";
       cat = "bat";
       e = "${fzf_script} e";
+      crb = "${fzf_script} checkout_recent_branch";
     };
   };
 }
