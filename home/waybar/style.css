@@ -8,29 +8,28 @@
 
 window#waybar {
   background-color: transparent;
-  color: #c0caf5;
+  color: #cdd6f4;
 }
 
 #workspaces button {
   padding: 0 4px;
-  color: #c0caf5;
+  color: #cdd6f4;
 }
 
 #workspaces button.active {
-  color: #2ac3de;
+  color: #89dceb;
 }
 
 #workspaces button.urgent {
-  color: #f7768e;
+  color: #f38ba8;
 }
 
 #workspaces button.persistent {
-  color: #414868;
+  color: #f9e2af;
 }
 
 #workspaces button:hover {
-  background: #24283b;
-  border: none;
+  background: #1e1e2e;
 }
 
 #custom-uptime,
@@ -41,8 +40,10 @@ window#waybar {
 #memory,
 #tray,
 #mode,
+#temperature,
 #cpu {
-  background: #24283b;
+  background: #1e1e2e;
+  color: #cdd6f4;
   margin: 2px 3px;
   padding: 0 10px;
   border-radius: 5px;
