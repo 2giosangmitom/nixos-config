@@ -1,10 +1,10 @@
-{pkgs, ...}: {
+{pkgs-unstable, ...}: {
   # Font configuration section.
   fonts = {
     # Enables default font packages.
     enableDefaultPackages = true;
     # Specifies font packages to be installed.
-    packages = with pkgs; [
+    packages = with pkgs-unstable; [
       # Overrides Nerd Fonts with specified fonts.
       (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode"];})
       roboto
