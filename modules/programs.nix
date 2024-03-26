@@ -11,10 +11,10 @@
   };
   programs.nix-ld.enable = true;
   programs.dconf.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
   programs.neovim = {
     enable = true;
     package = pkgs-unstable.neovim-unwrapped;
@@ -27,8 +27,8 @@
     wlr.enable = true;
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
+      # xdg-desktop-portal-hyprland
+      # xdg-desktop-portal-gtk
     ];
   };
 }
