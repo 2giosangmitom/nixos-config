@@ -5,11 +5,11 @@ edit() {
 }
 
 checkout_recent_branch() {
-	git branch --sort=-committerdate --format=$'%(HEAD) %(refname:short) (%(committerdate:relative)) - %(subject)' | fzf --preview "git diff --color=always {1}" --border | xargs git checkout
+	git branch --sort=-committerdate --format=$'%(HEAD) %(refname:short) (%(committerdate:relative)) - %(subject)' | fzf --preview "git diff --color=always {1}" --border | sed 's/ (.*//' | xargs git checkout
 }
 
 delete_branch() {
-	git branch --sort=-committerdate --format=$'%(HEAD) %(refname:short) (%(committerdate:relative)) - %(subject)' | fzf --preview "git diff --color=always {1}" --border -m | xargs git branch -D
+	git branch --sort=-committerdate --format=$'%(HEAD) %(refname:short) (%(committerdate:relative)) - %(subject)' | fzf --preview "git diff --color=always {1}" --border -m | sed 's/ (.*//' | xargs git branch -D
 }
 
 case $1 in
