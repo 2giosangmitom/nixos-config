@@ -1,13 +1,18 @@
-{pkgs-unstable}: {
+{pkgs-unstable, ...}: {
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs-unstable.sway;
-    systemd = true;
-    xdgAutostart = true;
+    systemd = {
+      enable = true;
+      xdgAutostart = true;
+    };
     wrapperFeatures = {
       gtk = true;
     };
-    config = {
+    config = rec {
+      modifier = "Mod4";
+      floating.modifier = "Mod4";
+      terminal = "alacritty";
     };
   };
 }

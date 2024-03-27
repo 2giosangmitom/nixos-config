@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}: {
+{pkgs-unstable, ...}: {
   environment.systemPackages = with pkgs-unstable; [git wireplumber];
 
   programs.gnupg.agent = {
@@ -21,14 +17,23 @@
     defaultEditor = true;
   };
   programs.xwayland.enable = true;
+  programs.sway = {
+    enable = true;
+    package = pkgs-unstable.sway;
+  };
 
   xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = with pkgs; [
-      # xdg-desktop-portal-hyprland
-      # xdg-desktop-portal-gtk
+    enable = false;
+    xdgOpenUsePortal = false;
+    extraPortals = with pkgs-unstable; [
+      xdg-desktop-portal-wlr
     ];
+    config = {
+      common = {
+        default = [
+          "gtk"
+        ];
+      };
+    };
   };
 }

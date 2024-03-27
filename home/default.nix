@@ -2,9 +2,8 @@
   imports = [
     ./tmux.nix
     ./bottom.nix
-    ./waybar
     ./fish.nix
-    ./hyprland.nix
+    # ./hyprland.nix
     ./alacritty.nix
     ./dunst.nix
     ./lazygit.nix
@@ -16,6 +15,7 @@
     ./fzf.nix
     ./vscode.nix
     ./bash.nix
+    ./sway.nix
   ];
 
   home = {
@@ -44,10 +44,8 @@
       xdg-utils
       procps
       fastfetch
-      hyprpaper
       rofi
       libnotify
-      grimblast
       obs-studio
       gimp
       dconf
