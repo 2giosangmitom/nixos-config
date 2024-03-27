@@ -2,7 +2,6 @@
   imports = [
     ./tmux.nix
     ./bottom.nix
-    ./waybar
     ./fish.nix
     ./hyprland.nix
     ./alacritty.nix
@@ -44,10 +43,8 @@
       xdg-utils
       procps
       fastfetch
-      hyprpaper
       rofi
       libnotify
-      grimblast
       obs-studio
       gimp
       dconf

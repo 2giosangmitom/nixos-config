@@ -1,5 +1,9 @@
 {pkgs-unstable, ...}: {
-  systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
+  home.packages = with pkgs-unstable; [
+    grimblast
+    hyprpaper
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs-unstable.hyprland;
@@ -24,6 +28,7 @@
         follow_mouse = 1;
         sensitivity = 0;
       };
+      monitor = ",preferred,auto,1";
       xwayland = {
         force_zero_scaling = true;
       };
@@ -42,7 +47,7 @@
         drop_shadow = false;
       };
       animations = {
-        enabled = true;
+        enabled = false;
         bezier = [
           "overshot, 0.05, 0.9, 0.1, 1.05"
           "smoothOut, 0.3, 0, 0.2, -0.6"
@@ -76,8 +81,7 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
-        enable_swallow = true;
-        swallow_regex = "^(Alacritty)$";
+        enable_swallow = false;
         key_press_enables_dpms = true;
         vfr = true;
       };
@@ -134,5 +138,140 @@
         "$mod,mouse:273,resizewindow"
       ];
     };
+  };
+
+  programs.waybar = {
+    enable = true;
+    package = pkgs-unstable.waybar;
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        mod = "dock";
+        exclusive = true;
+        passthrough = false;
+        gtk-layer-shell = true;
+        height = 0;
+        modules-left = ["clock" "hyprland/workspaces"];
+        modules-center = ["custom/uptime"];
+        modules-right = ["pulseaudio" "temperature" "cpu" "memory" "tray"];
+        clock = {
+          format = "{:%b %d - %H:%M}";
+          tooltip = false;
+        };
+        "hyprland/workspaces" = {
+        };
+        "custom/uptime" = {
+          exec = ./scripts/uptime.sh;
+          interval = "60";
+          tooltip = false;
+          format = "{}";
+        };
+        pulseaudio = {
+          format = "<span color='#cba6f7'>{icon}</span>{volume}%";
+          tooltip = false;
+          format-muted = "<span color='#f38ba8'> </span>Muted";
+          format-icons = {
+            default = [" " " " " "];
+          };
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          scroll-step = 5;
+        };
+        temperature = {
+          tooltip = false;
+          format = "<span color='#ea76cb'>{icon}</span> {temperatureC}°C";
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+        };
+        cpu = {
+          format = "<span color='#eba0ac'>{icon}</span>{usage}%";
+          format-icons = [
+            " "
+            "󰪞 "
+            "󰪟 "
+            "󰪠 "
+            "󰪡 "
+            "󰪢 "
+            "󰪣 "
+            "󰪤 "
+            "󰪥 "
+          ];
+          tooltip = false;
+        };
+        memory = {
+          format = "<span color='#fab387'>{icon}</span>{used}/{total}";
+          format-icons = [
+            " "
+            "󰪞 "
+            "󰪟 "
+            "󰪠 "
+            "󰪡 "
+            "󰪢 "
+            "󰪣 "
+            "󰪤 "
+            "󰪥 "
+          ];
+          tooltip = false;
+        };
+      };
+    };
+    style = ''
+      * {
+        border: none;
+        border-radius: 0;
+        font-family: "JetBrainsMono NF";
+        font-size: 12.5px;
+        font-weight: bold;
+      }
+
+      window#waybar {
+        background-color: transparent;
+        color: #cdd6f4;
+      }
+
+      #workspaces button {
+        padding: 0 4px;
+        color: #cdd6f4;
+      }
+
+      #workspaces button.active {
+        color: #89dceb;
+      }
+
+      #workspaces button.urgent {
+        color: #f38ba8;
+      }
+
+      #workspaces button.persistent {
+        color: #f9e2af;
+      }
+
+      #workspaces button:hover {
+        background: #1e1e2e;
+      }
+
+      #custom-uptime,
+      #pulseaudio,
+      #clock,
+      #workspaces,
+      #disk,
+      #memory,
+      #tray,
+      #mode,
+      #temperature,
+      #cpu {
+        background: #1e1e2e;
+        color: #cdd6f4;
+        margin: 2px 3px;
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+    '';
   };
 }
