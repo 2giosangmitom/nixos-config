@@ -1,6 +1,6 @@
 {
   programs.bash = {
     enable = true;
-    historyIgnore = ["Hyprland"];
+    historyIgnore = ["Hyprland" "sway"];
   };
 }
