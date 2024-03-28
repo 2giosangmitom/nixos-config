@@ -22,7 +22,6 @@
         "waybar"
         "hyprpaper -c ${hyprpaper}"
         "dunst"
-        "ibus-daemon -rxRd"
       ];
 
       input = {
@@ -49,7 +48,7 @@
         drop_shadow = false;
       };
       animations = {
-        enabled = false;
+        enabled = true;
         bezier = [
           "overshot, 0.05, 0.9, 0.1, 1.05"
           "smoothOut, 0.3, 0, 0.2, -0.6"
