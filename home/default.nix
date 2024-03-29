@@ -50,7 +50,6 @@
       dconf
       tokei
       du-dust
-      bleachbit
     ];
     stateVersion = "23.11";
   };
