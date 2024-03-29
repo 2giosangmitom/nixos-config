@@ -3,6 +3,6 @@
     isNormalUser = true;
     description = "Vo Quang Chien";
     initialPassword = "123";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
   };
 }
