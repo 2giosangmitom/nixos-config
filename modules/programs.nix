@@ -27,6 +27,11 @@
 
   programs.xwayland.enable = true;
 
+  virtualisation.docker = {
+    enable = true;
+    package = pkgs-unstable.docker;
+  };
+
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = false;
