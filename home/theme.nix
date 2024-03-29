@@ -1,7 +1,6 @@
 {pkgs-unstable, ...}: {
   gtk = {
     gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
       gtk-cursor-theme-name = "Vimix Cursors";
       gtk-enable-animations = 0;
     };
