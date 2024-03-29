@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{pkgs-unstable, ...}: {
   gtk = {
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
       gtk-cursor-theme-name = "Vimix Cursors";
+      gtk-enable-animations = 0;
     };
     enable = true;
     font = {
@@ -11,7 +12,7 @@
     };
     theme = {
       name = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
+      package = pkgs-unstable.catppuccin-gtk.override {
         accents = ["pink"];
         size = "compact";
         tweaks = ["rimless" "black"];
@@ -19,11 +20,11 @@
       };
     };
     iconTheme = {
-      package = pkgs.tela-icon-theme;
+      package = pkgs-unstable.tela-icon-theme;
       name = "Tela-dark";
     };
     cursorTheme = {
-      package = pkgs.vimix-cursors;
+      package = pkgs-unstable.vimix-cursors;
       name = "Vimix Cursors";
       size = 24;
     };
@@ -32,9 +33,9 @@
   home.pointerCursor = {
     gtk.enable = true;
     size = 24;
-    package = pkgs.vimix-cursors;
+    package = pkgs-unstable.vimix-cursors;
     name = "Vimix Cursors";
   };
 
-  home.file.".icons/default".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
+  home.file.".icons/default".source = "${pkgs-unstable.vimix-cursors}/share/icons/Vimix-cursors";
 }
