@@ -118,7 +118,13 @@ This table summarizes some helpful NixOS commands you can run from the root dire
 
 <details>
   <summary>Hyprland</summary>
-  <img src="./screenshots/hyprland.png" />
+  <img align="center" src="./screenshots/hyprland.png" />
+</details>
+
+<details>
+  <summary>Rofi</summary>
+  <img align="center" src="./screenshots/rofi_launcher.png" />
+  <img align="center" src="./screenshots/rofi_powermenu.png" />
 </details>
 
 ## Nix Community Resources
