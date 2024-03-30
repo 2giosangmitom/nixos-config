@@ -1,4 +1,4 @@
-<h1 align="center">❄️ NixOS Configuration ❄️</h1>
+<h1 align="center">❄️ Dotfiles ❄️</h1>
 <p align="center">A Flake-powered NixOS setup for Developers with Hyprland</p>
 
 <div align="center">
@@ -109,7 +109,7 @@ This table summarizes some helpful NixOS commands you can run from the root dire
 
 | Command        | Description                                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `make up`      | Updates the system by installing new packages and configurations.                                                                          |
+| `make up`      | Updates the system by installing new packages.                                                                          |
 | `make gc`      | Collects Nix garbage, which removes unused Nix expressions and old generations of your NixOS system. This helps to free up disk space.     |
 | `make history` | Displays a history of your NixOS generations, allowing you to view and potentially roll back to previous configurations.                   |
 | `make rebuild` | Rebuilds your entire NixOS system based on your current configuration. This is necessary after making changes to your configuration files. |
