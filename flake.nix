@@ -36,7 +36,7 @@
     };
 
     # Function to generate NixOS system configuration for the given hostname.
-    mkSystem = hostname:
+    mkSystem = hostname: feature:
       nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
@@ -59,6 +59,7 @@
 
           # Includes custom module files for configuration.
           (./. + "/hosts/${hostname}/hardware-configuration.nix")
+          (./. + "/modules/${feature}.nix")
           ./modules/boot.nix
           ./modules/networking.nix
           ./modules/locale.nix
@@ -87,7 +88,7 @@
   in {
     # Defines available NixOS configurations.
     nixosConfigurations = {
-      nixos = mkSystem "nixos"; # My desktop
+      nixos = mkSystem "nixos" "hyprland"; # My desktop
     };
     devShell.x86_64-linux = pkgs.mkShell {
       buildInputs = with pkgs-unstable; [
