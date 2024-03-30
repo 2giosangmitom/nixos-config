@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 show_launcher() {
-	local theme="$1"
+	theme="$1"
 	rofi -show drun -theme "$theme"
 }
 
@@ -14,30 +14,30 @@ yes="󰗠 Yes"
 no="󰅙 No"
 
 show_powermenu() {
-	local theme="$1"
-	local uptime="$(uptime -p | sed -e 's/up //g')"
-	local host="$(hostnamectl hostname)"
-	local options=(
+	theme="$1"
+	uptime="$(uptime -p | sed -e 's/up //g')"
+	host="$(hostnamectl hostname)"
+	options=(
 		"$lock"
 		"$suspend"
 		"$logout"
 		"$reboot"
 		"$shutdown"
 	)
-	local choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$theme")
+	choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$theme")
 	echo "$choice"
 }
 
 confirm_exit() {
-	local theme="$1"
-	local selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$theme")
+	theme="$1"
+	selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$theme")
 	echo "$selected"
 }
 
 run_cmd() {
-	local action="$1"
-	local theme="$2"
-	local selected="$(confirm_exit "$theme")"
+	action="$1"
+	theme="$2"
+	selected="$(confirm_exit "$theme")"
 	if [[ "$selected" == "$yes" ]]; then
 		case "$action" in
 		"--shutdown")
