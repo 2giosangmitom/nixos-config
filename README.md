@@ -19,6 +19,17 @@
   </a>
 </div>
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What Awaits You?](#what-awaits-you)
+- [Getting Started](#getting-started)
+- [Essential NixOS Commands](#essential-nixos-commands)
+- [Screenshots](#screenshots)
+- [Nix Community Resources](#nix-community-resources)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+
 ## Introduction
 
 Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland window manager and meticulously configured CLI tools! This repository crafts a delightful system experience using the power of flakes and home-manager. With this configuration, you can easily replicate my personalized development environment on any NixOS machine.
@@ -36,7 +47,7 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 
 This guide outlines the steps to set up your personalized NixOS environment using this dotfiles repository.
 
-#### Prerequisites:
+**Prerequisites:**
 
 - **Nix Installed**: Ensure you have Nix installed on your system. Refer to the official documentation for installation instructions: [https://nixos.org/download/](https://nixos.org/download/)
 - **Git Installed**: You'll need Git to clone the repository.
@@ -63,7 +74,7 @@ git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
 
 This configuration lays a robust groundwork for your customized NixOS environment. Dive in and tailor it to suit your unique requirements! With an array of customization options at your disposal, you have the power to shape this configuration into a dynamic and personalized NixOS environment that aligns perfectly with your workflow and preferences. Embrace experimentation and unleash your creativity to make it truly your own!
 
-#### Configuration Breakdown:
+**Configuration Breakdown:**
 
 - **Home Manager**:
 
