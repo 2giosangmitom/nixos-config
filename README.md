@@ -54,6 +54,8 @@ This guide outlines the steps to set up your personalized NixOS environment usin
 - **Flakes Enabled**: NixOS uses flakes as an experimental feature, you should enable it manually.
   - For a more in-depth explanation of enabling flakes in NixOS, refer to this excellent resource: [https://thiscute.world/en/posts/nixos-and-flake-basics/](https://thiscute.world/en/posts/nixos-and-flake-basics/)
 
+**Deployment steps**
+
 1. **Taking ownership**
 
 Before cloning the repository, ensure your user has ownership of the /etc/nixos directory. Run the following command, replacing `username` with your actual username:
