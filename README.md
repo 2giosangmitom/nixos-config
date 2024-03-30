@@ -34,20 +34,22 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 
 ## Getting Started
 
+This section guides you through deploying this NixOS configuration on your machine. Hold on tight, and get ready to experience the delightful world of a pre-configured NixOS setup!
+
 1. **Take ownership of `/etc/nixos`**
 
 <pre>
-chown <b>username</b>:users /etc/nixos
+chown <i>username</i>:users /etc/nixos
 </pre>
 
 > [!NOTE]
-> Replace **username** with your username
+> Replace _username_ with your username
 
-3. **Clone the repository**
+2. **Clone the repository**
 
-   ```
-   git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
-   ```
+```
+git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
+```
 
 ## Screenshots
 
@@ -55,6 +57,16 @@ chown <b>username</b>:users /etc/nixos
   <summary>Hyprland</summary>
   <img src="./screenshots/hyprland.png" />
 </details>
+
+## Nix Community Resources
+
+The Nix community is fantastic and offers a wealth of resources to help you on your journey:
+
+- NixOS Discourse: [https://discourse.nixos.org/](https://discourse.nixos.org/)
+- NixOS & Flakes Book: [https://nixos-and-flakes.thiscute.world/](https://nixos-and-flakes.thiscute.world/)
+- Hyprland Docs: [https://wiki.hyprland.org/](https://wiki.hyprland.org/)
+- Flakes Docs: [https://nixos.wiki/wiki/Flakes](https://nixos.wiki/wiki/Flakes)
+- Nix Reference Manual: [https://nix.dev/manual/nix/2.18/introduction](https://nix.dev/manual/nix/2.18/introduction)
 
 ## Contributing
 
