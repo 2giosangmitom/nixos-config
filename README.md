@@ -90,9 +90,9 @@ After making customizations to your configuration, run the following command to 
 sudo nixos-rebuild switch
 ```
 
-## 🧞 Commands
+## Essential NixOS Commands
 
-All commands you can run from the root directory, from a terminal:
+This table summarizes some helpful NixOS commands you can run from the root directory of your terminal:
 
 | Command        | Description                                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
