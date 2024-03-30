@@ -34,28 +34,56 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 
 ## Getting Started
 
-This section guides you through deploying this NixOS configuration on your machine. Hold on tight, and get ready to experience the delightful world of a pre-configured NixOS setup!
+This guide outlines the steps to set up your personalized NixOS environment using this dotfiles repository.
 
-### Prerequisites:
+#### Prerequisites:
 
 - **Nix Installed**: Ensure you have Nix installed on your system. Refer to the official documentation for installation instructions: [https://nixos.org/download/](https://nixos.org/download/)
-- **Git Installed**: You'll need Git to clone the repository. If you don't have it, installation instructions can be found readily online.
-- **Flakes Enabled**: NixOS uses flakes as an experimental feature. To enable it, follow this book: [https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled](https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled)
+- **Git Installed**: You'll need Git to clone the repository.
+- **Flakes Enabled**: NixOS uses flakes as an experimental feature, you should enable it manually.
+  - For a more in-depth explanation of enabling flakes in NixOS, refer to this excellent resource: [https://thiscute.world/en/posts/nixos-and-flake-basics/](https://thiscute.world/en/posts/nixos-and-flake-basics/)
 
-1. **Take ownership of `/etc/nixos`**
+1. **Taking ownership**
+
+Before cloning the repository, ensure your user has ownership of the /etc/nixos directory. Run the following command, replacing `username` with your actual username:
 
 <pre>
-chown <i>username</i>:users /etc/nixos
+sudo chown <i>username</i>:users /etc/nixos
 </pre>
 
-> [!NOTE]
-> Replace _username_ with your actual username.
-
 2. **Clone the repository**
+
+Get started by cloning this repository into the `/etc/nixos` directory. This command pulls down the configuration files:
 
 ```
 git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
 ```
+
+3. **Unleash Your Customization Power!**
+
+This configuration provides a solid foundation for your personalized NixOS experience. Feel free to explore and modify it to fit your specific needs!
+
+#### Configuration Breakdown:
+
+- **Home Manager**:
+
+  - User-specific packages and configurations reside within the `./home` directory. This includes Hyprland configuration files for a seamless setup.
+  - `./home/default.nix`: This file acts as the entry point for your home manager configuration.
+
+- **Modules**:
+
+  - Shared NixOS configurations that multiple configurations rely on are organized within the `./modules` directory. This promotes reusability and reduces redundancy.
+
+- **Multi-Machine Management**:
+
+  - Manage configurations across different hardware setups using the `./hosts` directory.
+  - To generate the `hardware-configuration.nix` file for a specific machine, simply run the following command in your terminal:
+    ```bash
+    nixos-generate-config
+    ```
+
+- **Embrace Customization!**:
+  By leveraging these customization options, you can transform this base configuration into a powerful and personalized NixOS environment. Don't hesitate to experiment and make it your own!
 
 ## Screenshots
 
