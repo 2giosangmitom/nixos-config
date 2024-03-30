@@ -34,19 +34,20 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 
 ## Getting Started
 
-1. **Take ownership of `/etc/nixos`** 
-> [!NOTE]
-> Replace **username** with your username
-   
+1. **Take ownership of `/etc/nixos`**
+
 <pre>
 chown <b>username</b>:users /etc/nixos
 </pre>
-   
+
+> [!NOTE]
+> Replace **username** with your username
+
 3. **Clone the repository**
-   
-   <pre>
+
+   ```
    git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
-   </pre>
+   ```
 
 ## Screenshots
 
