@@ -36,6 +36,12 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 
 This section guides you through deploying this NixOS configuration on your machine. Hold on tight, and get ready to experience the delightful world of a pre-configured NixOS setup!
 
+### Prerequisites:
+
+- **Nix Installed**: Ensure you have Nix installed on your system. Refer to the official documentation for installation instructions: [https://nixos.org/download/](https://nixos.org/download/)
+- **Git Installed**: You'll need Git to clone the repository. If you don't have it, installation instructions can be found readily online.
+- **Flakes Enabled**: NixOS uses flakes as an experimental feature. To enable it, follow this book: [https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled](https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-with-flakes-enabled)
+
 1. **Take ownership of `/etc/nixos`**
 
 <pre>
@@ -43,7 +49,7 @@ chown <i>username</i>:users /etc/nixos
 </pre>
 
 > [!NOTE]
-> Replace _username_ with your username
+> Replace _username_ with your actual username.
 
 2. **Clone the repository**
 
