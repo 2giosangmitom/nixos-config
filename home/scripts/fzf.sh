@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 edit() {
-	nvim $(fzf --preview 'bat --style=numbers --color=always {}' --border -m)
+	nvim "$(fzf --preview 'bat --style=numbers --color=always {}' --border -m)"
 }
 
 checkout_recent_branch() {
