@@ -94,13 +94,12 @@ sudo nixos-rebuild switch
 
 All commands you can run from the root directory, from a terminal:
 
-| Command        | Description                                            |
-| -------------- | ------------------------------------------------------ |
-| `make up`      | Updates the system by installing new packages and configurations.
-                                   |
-| `make gc`      | Collects Nix garbage, which removes unused Nix expressions and old generations of your NixOS system. This helps to free up disk space. |
-| `make history` | Displays a history of your NixOS generations, allowing you to view and potentially roll back to previous configurations.                       |
-| `make rebuild` | Rebuilds your entire NixOS system based on your current configuration. This is necessary after making changes to your configuration files.                                         |
+| Command        | Description                                                                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `make up`      | Updates the system by installing new packages and configurations.                                                                          |
+| `make gc`      | Collects Nix garbage, which removes unused Nix expressions and old generations of your NixOS system. This helps to free up disk space.     |
+| `make history` | Displays a history of your NixOS generations, allowing you to view and potentially roll back to previous configurations.                   |
+| `make rebuild` | Rebuilds your entire NixOS system based on your current configuration. This is necessary after making changes to your configuration files. |
 
 ## Screenshots
 
