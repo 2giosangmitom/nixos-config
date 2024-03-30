@@ -43,7 +43,7 @@
       xdg-utils
       procps
       fastfetch
-      rofi
+      rofi-wayland
       libnotify
       obs-studio
       gimp

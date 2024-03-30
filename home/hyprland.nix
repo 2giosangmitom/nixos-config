@@ -26,7 +26,7 @@
 
       input = {
         kb_layout = "us";
-        follow_mouse = 1;
+        follow_mouse = 0;
         sensitivity = 0;
       };
       monitor = ",preferred,auto,1";
@@ -50,17 +50,17 @@
       animations = {
         enabled = true;
         bezier = [
-         "overshot, 0.05, 0.9, 0.1, 1.05"
-         "smoothOut, 0.3, 0, 0.2, -0.6"
-         "easeinoutsine, 0.2, 0, 0.3, 1"
+          "overshot, 0.05, 0.9, 0.1, 1.05"
+          "smoothOut, 0.3, 0, 0.2, -0.6"
+          "easeinoutsine, 0.2, 0, 0.3, 1"
         ];
         animation = [
-         "workspaces, 1, 2, default"
-         "fade, 0"
-         "windows, 1, 2, overshot, slide"
-         "windowsOut, 1, 2, smoothOut, slide"
-         "windowsMove, 1, 2, easeinoutsine, slide"
-         "border, 1, 2, default"
+          "workspaces, 1, 2, default"
+          "fade, 0"
+          "windows, 1, 2, overshot, slide"
+          "windowsOut, 1, 2, smoothOut, slide"
+          "windowsMove, 1, 2, easeinoutsine, slide"
+          "border, 1, 2, default"
         ];
       };
       dwindle = {
