@@ -61,9 +61,7 @@ git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
 
 3. **Unleash Your Customization Power!**
 
-This configuration provides a solid foundation for your personalized NixOS experience. Feel free to explore and modify it to fit your specific needs!
-
-By leveraging these customization options, you can transform this base configuration into a powerful and personalized NixOS environment. Don't hesitate to experiment and make it your own!
+This configuration lays a robust groundwork for your customized NixOS environment. Dive in and tailor it to suit your unique requirements! With an array of customization options at your disposal, you have the power to shape this configuration into a dynamic and personalized NixOS environment that aligns perfectly with your workflow and preferences. Embrace experimentation and unleash your creativity to make it truly your own!
 
 #### Configuration Breakdown:
 
@@ -84,12 +82,12 @@ By leveraging these customization options, you can transform this base configura
     nixos-generate-config
     ```
 
-4. **Rebuild**
+4. **Rebuild (Applying Changes)**
 
-You should rebuild the NixOS to make changes
+After making customizations to your configuration, run the following command to rebuild your NixOS system and apply the changes:
 
 ```
-make rebuild
+sudo nixos-rebuild switch
 ```
 
 ## 🧞 Commands
@@ -98,10 +96,11 @@ All commands you can run from the root directory, from a terminal:
 
 | Command        | Description                                            |
 | -------------- | ------------------------------------------------------ |
-| `make up`      | Update the system                                      |
-| `make gc`      | Collect Nix garbage, also remove old NixOS generations |
-| `make history` | View NixOS generations history                         |
-| `make rebuild` | Rebuild NixOS                                          |
+| `make up`      | Updates the system by installing new packages and configurations.
+                                   |
+| `make gc`      | Collects Nix garbage, which removes unused Nix expressions and old generations of your NixOS system. This helps to free up disk space. |
+| `make history` | Displays a history of your NixOS generations, allowing you to view and potentially roll back to previous configurations.                       |
+| `make rebuild` | Rebuilds your entire NixOS system based on your current configuration. This is necessary after making changes to your configuration files.                                         |
 
 ## Screenshots
 
