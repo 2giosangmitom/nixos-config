@@ -1,0 +1,11 @@
+name: QA
+
+on: [  push, pull_request ]
+
+jobs:
+  spellcheck:
+    name: Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos@v1.19.0
