@@ -78,6 +78,7 @@
               extraSpecialArgs = {
                 inherit pkgs-unstable;
                 inherit pkgs;
+                feature = feature;
               };
               # Imports user-specific Home Manager configuration.
               users.chien = import ./home;
