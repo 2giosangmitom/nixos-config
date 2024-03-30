@@ -1,4 +1,5 @@
 <h1 align="center">❄️ NixOS Configuration ❄️</h1>
+<p align="center">A Flake-powered NixOS setup for Developers with Hyprland</p>
 
 <div align="center">
   <a href="https://github.com/2giosangmitom/dotfiles/stargazers">
@@ -27,8 +28,25 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 - **Flake Repository:** Leverage flakes for a future-proof, modular, and collaborative configuration.
 - **Modular Design:** Configuration is organized into modules for easier management and customization.
 - **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
+  - Pre-configured development tools like Git, tmux, and neovim
 - **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
 - **Hyprland WM:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
+
+## Getting Started
+
+1. **Take ownership of `/etc/nixos`** 
+> [!NOTE]
+> Replace **username** with your username
+   
+<pre>
+chown <b>username</b>:users /etc/nixos
+</pre>
+   
+3. **Clone the repository**
+   
+   <pre>
+   git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
+   </pre>
 
 ## Screenshots
 
