@@ -1,4 +1,4 @@
-<h1 align="center">❄️ NixOS Configuration ❄️</h1>
+<h1 align="center">❄️ Dotfiles ❄️</h1>
 <p align="center">A Flake-powered NixOS setup for Developers with Hyprland</p>
 
 <div align="center">
