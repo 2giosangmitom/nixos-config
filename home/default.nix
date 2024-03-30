@@ -1,9 +1,12 @@
-{pkgs-unstable, ...}: {
-  imports = [
+{
+  pkgs-unstable,
+  feature,
+  ...
+}: let
+  modules = [
     ./tmux.nix
     ./bottom.nix
     ./fish.nix
-    ./hyprland.nix
     ./alacritty.nix
     ./dunst.nix
     ./lazygit.nix
@@ -15,7 +18,14 @@
     ./fzf.nix
     ./vscode.nix
     ./bash.nix
+    (
+      if feature == "hyprland"
+      then ./hyprland.nix
+      else ./sway.nix # TODO: add sway window manager
+    )
   ];
+in {
+  imports = modules;
 
   home = {
     username = "chien";
