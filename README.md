@@ -28,7 +28,7 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 - **Flake Repository:** Leverage flakes for a future-proof, modular, and collaborative configuration.
 - **Modular Design:** Configuration is organized into modules for easier management and customization.
 - **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
-  - Pre-configured development tools like Git, tmux, and neovim
+  - Pre-configured development tools like alacritty, tmux, and neovim
 - **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
 - **Hyprland WM:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
 
@@ -63,11 +63,13 @@ git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
 
 This configuration provides a solid foundation for your personalized NixOS experience. Feel free to explore and modify it to fit your specific needs!
 
+By leveraging these customization options, you can transform this base configuration into a powerful and personalized NixOS environment. Don't hesitate to experiment and make it your own!
+
 #### Configuration Breakdown:
 
 - **Home Manager**:
 
-  - User-specific packages and configurations reside within the `./home` directory. This includes Hyprland configuration files for a seamless setup.
+  - User-specific packages and configurations reside within the `./home` directory. This includes Hyprland, CLI tools configuration files for a seamless setup.
   - `./home/default.nix`: This file acts as the entry point for your home manager configuration.
 
 - **Modules**:
@@ -82,8 +84,24 @@ This configuration provides a solid foundation for your personalized NixOS exper
     nixos-generate-config
     ```
 
-- **Embrace Customization!**:
-  By leveraging these customization options, you can transform this base configuration into a powerful and personalized NixOS environment. Don't hesitate to experiment and make it your own!
+4. **Rebuild**
+
+You should rebuild the NixOS to make changes
+
+```
+make rebuild
+```
+
+## 🧞 Commands
+
+All commands you can run from the root directory, from a terminal:
+
+| Command        | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| `make up`      | Update the system                                      |
+| `make gc`      | Collect Nix garbage, also remove old NixOS generations |
+| `make history` | View NixOS generations history                         |
+| `make rebuild` | Rebuild NixOS                                          |
 
 ## Screenshots
 
