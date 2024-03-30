@@ -39,9 +39,9 @@ Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland wi
 - **Flake Repository:** Leverage flakes for a future-proof, modular, and collaborative configuration.
 - **Modular Design:** Configuration is organized into modules for easier management and customization.
 - **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
-  - Pre-configured development tools like alacritty, tmux, and neovim
 - **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
 - **Hyprland WM:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
+- **Performance Optimization:** Optimized resource utilization, finely tuned configurations, and streamlined workflows ensure that your NixOS environment delivers unparalleled performance, enabling you to accomplish more with less, without compromising on speed, responsiveness, or stability.
 
 ## Getting Started
 
