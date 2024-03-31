@@ -3,7 +3,7 @@
     enable = true;
     package = pkgs-unstable.alacritty;
     settings = {
-      shell = "tmux";
+      shell = "fish";
       live_config_reload = true;
       env = {
         TERM = "xterm-256color";
@@ -12,7 +12,19 @@
         size = 10;
         normal = {
           family = "JetBrainsMono NF";
-          style = "Medium";
+          style = "Regular";
+        };
+        italic = {
+          family = "JetBrainsMono NF";
+          style = "Italic";
+        };
+        bold_italic = {
+          family = "JetBrainsMono NF";
+          style = "Bold Italic";
+        };
+        bold = {
+          family = "JetBrainsMono NF";
+          style = "Bold";
         };
       };
       colors.indexed_colors = [
