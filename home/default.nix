@@ -60,6 +60,7 @@ in {
       dconf
       tokei
       du-dust
+      tree-sitter
     ];
     stateVersion = "23.11";
   };
