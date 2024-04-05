@@ -5,9 +5,6 @@
     settings = {
       shell = "fish";
       live_config_reload = true;
-      env = {
-        TERM = "xterm-256color";
-      };
       font = {
         size = 10;
         normal = {

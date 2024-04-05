@@ -4,7 +4,6 @@
   ...
 }: let
   modules = [
-    ./tmux.nix
     ./bottom.nix
     ./fish.nix
     ./alacritty.nix
