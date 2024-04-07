@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 show_launcher() {
-	theme="~/.config/rofi/launcher.rasi"
+	theme="$HOME/.config/rofi/launcher.rasi"
 	rofi -show drun -theme "$theme"
 }
 
@@ -14,7 +14,7 @@ yes="󰗠 Yes"
 no="󰅙 No"
 
 show_powermenu() {
-	theme="~/.config/rofi/powermenu.rasi"
+	theme="$HOME/.config/rofi/powermenu.rasi"
 	uptime="$(uptime -p | sed -e 's/up //g')"
 	host="$(hostnamectl hostname)"
 	options=(
@@ -36,7 +36,7 @@ confirm_exit() {
 
 run_cmd() {
 	action="$1"
-	theme="~/.config/rofi/confirm.rasi"
+	theme="$HOME/.config/rofi/confirm.rasi"
 	selected="$(confirm_exit "$theme")"
 	if [[ "$selected" == "$yes" ]]; then
 		case "$action" in
