@@ -1,0 +1,6 @@
+[user]
+	email = yeuxacucodon.dev@proton.me
+	name = Vo Quang Chien
+	signingkey = F00478329B256883
+[commit]
+	gpgsign = true
