@@ -45,13 +45,13 @@ To use my dotfiles managed with Chezmoi in the Hyprland workspace, follow these 
 2. **Clone the Repository**: Clone my dotfiles repository to your local machine.
 
    ```bash
-   git clone https://github.com/2giosangmitom/dotfiles.git
+   git clone https://github.com/2giosangmitom/dotfiles.git ~/.local/share/chezmoi
    ```
 
-3. **Initialize Chezmoi**: Run the initialization command to initialize Chezmoi and apply my dotfiles configuration.
+3. **Apply configuration**: Apply my dotfiles configuration.
 
    ```bash
-   chezmoi init --apply yourusername
+   chezmoi apply
    ```
 
 4. **Customize Configuration**: Customize the configurations to suit your preferences and workflows within the Hyprland workspace.
