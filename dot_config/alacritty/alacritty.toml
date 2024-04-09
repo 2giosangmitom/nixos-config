@@ -82,3 +82,14 @@ color = "#FAB387"
 [[colors.indexed_colors]]
 index = 17
 color = "#F5E0DC"
+
+[window]
+decorations = "full"
+dynamic_title = true
+opacity = 1.0
+startup_mode = "Windowed"
+dynamic_padding = true
+
+[window.dimensions]
+columns = 100
+lines = 30
