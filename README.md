@@ -1,5 +1,11 @@
 # Hyprland Dotfiles Managed with Chezmoi
 
+![Stars](https://img.shields.io/github/stars/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41)
+![Last commit](https://img.shields.io/github/last-commit/2giosangmitom/dotfiles?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41)
+![Forks](https://img.shields.io/github/forks/2giosangmitom/dotfiles.svg?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41)
+![Repo size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
+![LICENSE](https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41)
+
 Welcome to my dotfiles repository managed with Chezmoi, customized specifically for my main workspace environment, Hyprland! This repository contains my configuration files and scripts tailored to enhance productivity and streamline workflows within the Hyprland workspace. Whether you're here to explore my setup, learn about Chezmoi, or seeking inspiration for your own Hyprland workspace, you're in the right place.
 
 ## Table of Contents
@@ -37,11 +43,13 @@ To use my dotfiles managed with Chezmoi in the Hyprland workspace, follow these 
 1. **Install Chezmoi**: If you haven't already, install Chezmoi by following the instructions in the [official documentation](https://www.chezmoi.io/docs/install/).
 
 2. **Clone the Repository**: Clone my dotfiles repository to your local machine.
+
    ```bash
    chezmoi init --apply yourusername
    ```
 
 3. **Initialize Chezmoi**: Run the initialization command to initialize Chezmoi and apply my dotfiles configuration.
+
    ```bash
    chezmoi init --apply yourusername
    ```
