@@ -1,5 +1,8 @@
 name: QA
-on: [push, pull_request]
+on:
+  push:
+    branches: [master]
+  pull_request:
 
 jobs:
   spellcheck:
@@ -7,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: crate-ci/typos@v1.20.0
+      - uses: crate-ci/typos@v1.20.4
 
   shellcheck:
      name: Shell check
@@ -15,5 +18,3 @@ jobs:
      steps:
        - uses: actions/checkout@v4
        - uses: ludeeus/action-shellcheck@master
-     
-  

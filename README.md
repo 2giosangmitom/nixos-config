@@ -1,152 +1,83 @@
-<h1 align="center">❄️ Dotfiles ❄️</h1>
-<p align="center">A Flake-powered NixOS setup for Developers with Hyprland</p>
+# Hyprland Dotfiles Managed with Chezmoi
 
-<div align="center">
-  <a href="https://github.com/2giosangmitom/dotfiles/stargazers">
-    <img src="https://img.shields.io/github/stars/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" />
-  </a>
-  <a href="https://github.com/2giosangmitom/dotfiles/pulse">
-    <img src="https://img.shields.io/github/last-commit/2giosangmitom/dotfiles?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41" />
-  </a>
-  <a href="https://github.com/2giosangmitom/dotfiles/forks">
-    <img src="https://img.shields.io/github/forks/2giosangmitom/dotfiles.svg?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41" />
-  </a>
-  <a>
-    <img src="https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41" />
-  </a>
-  <a href="https://github.com/2giosangmitom/dotfiles/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
-  </a>
-</div>
+![Stars](https://img.shields.io/github/stars/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41)
+![Last commit](https://img.shields.io/github/last-commit/2giosangmitom/dotfiles?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41)
+![Forks](https://img.shields.io/github/forks/2giosangmitom/dotfiles.svg?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41)
+![Repo size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
+![LICENSE](https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41)
+
+Welcome to my dotfiles repository managed with Chezmoi, customized specifically for my main workspace environment, Hyprland! This repository contains my configuration files and scripts tailored to enhance productivity and streamline workflows within the Hyprland workspace. Whether you're here to explore my setup, learn about Chezmoi, or seeking inspiration for your own Hyprland workspace, you're in the right place.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [What Awaits You?](#what-awaits-you)
-- [Getting Started](#getting-started)
-- [Essential NixOS Commands](#essential-nixos-commands)
-- [Screenshots](#screenshots)
-- [Nix Community Resources](#nix-community-resources)
+- [About Hyprland](#about-hyprland)
+- [About Chezmoi](#about-chezmoi)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
 - [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
-## Introduction
+## About Hyprland
 
-Welcome to my haven of personalized NixOS bliss, featuring the sleek Hyprland window manager and meticulously configured CLI tools! This repository crafts a delightful system experience using the power of flakes and home-manager. With this configuration, you can easily replicate my personalized development environment on any NixOS machine.
+Hyprland is a dynamic workspace environment designed for productivity and collaboration. It provides a seamless experience for developers, designers, and other professionals to work efficiently and creatively. With customizable layouts, powerful integrations, and intuitive workflows, Hyprland empowers individuals and teams to achieve their goals effectively.
 
-## What Awaits You?
+## About Chezmoi
 
-- **Flake Repository:** Leverage flakes for a future-proof, modular, and collaborative configuration.
-- **Modular Design:** Configuration is organized into modules for easier management and customization.
-- **CLI Command Central:** Enjoy a meticulously configured suite of command-line tools for a productive workflow.
-- **Home-Manager Integration:** Manage user-specific packages and configurations with ease.
-- **Hyprland WM:** Embrace the efficient and aesthetically pleasing Hyprland window manager.
-- **Performance Optimization:** Optimized resource utilization, finely tuned configurations, and streamlined workflows ensure that your NixOS environment delivers unparalleled performance, enabling you to accomplish more with less, without compromising on speed, responsiveness, or stability.
+[Chezmoi](https://github.com/twpayne/chezmoi) is a versatile dotfiles manager that simplifies the management and synchronization of configuration files across multiple machines. It offers a flexible and secure solution for maintaining consistent setups and workflows, ensuring a smooth experience whether you're working on your local machine or in a shared workspace like Hyprland.
 
-## Getting Started
+## Features
 
-This guide outlines the steps to set up your personalized NixOS environment using this dotfiles repository.
+Here's what you can expect from my dotfiles managed with Chezmoi within the Hyprland workspace:
 
-**Prerequisites:**
+- **Optimized Workspace Layouts**: Customized configurations for window managers and terminal emulators to maximize screen real estate and facilitate multitasking.
+- **Integrated Development Environment**: Configurations for IDEs, text editors, and version control systems tailored for seamless development workflows.
+- **Streamlined Automation**: Scripts and aliases to automate common tasks, boost productivity, and streamline repetitive actions within the Hyprland environment.
+- **Unified Theming**: Consistent theming across applications for a visually cohesive and aesthetically pleasing workspace experience.
 
-- **Nix Installed**: Ensure you have Nix installed on your system. Refer to the official documentation for installation instructions: [https://nixos.org/download/](https://nixos.org/download/)
-- **Git Installed**: You'll need Git to clone the repository.
-- **Flakes Enabled**: NixOS uses flakes as an experimental feature, you should enable it manually.
-  - For a more in-depth explanation of enabling flakes in NixOS, refer to this excellent resource: [https://thiscute.world/en/posts/nixos-and-flake-basics/](https://thiscute.world/en/posts/nixos-and-flake-basics/)
+## Installation
 
-**Deployment steps:**
+To use my dotfiles managed with Chezmoi in the Hyprland workspace, follow these steps:
 
-1. **Taking ownership**
+1. **Install Chezmoi**: If you haven't already, install Chezmoi by following the instructions in the [official documentation](https://www.chezmoi.io/docs/install/).
 
-Before cloning the repository, ensure your user has ownership of the /etc/nixos directory. Run the following command, replacing `username` with your actual username:
+2. **Clone the Repository**: Clone my dotfiles repository to your local machine.
 
-<pre>
-sudo chown <i>username</i>:users /etc/nixos
-</pre>
+   ```bash
+   git clone https://github.com/2giosangmitom/dotfiles.git
+   ```
 
-2. **Clone the repository**
+3. **Initialize Chezmoi**: Run the initialization command to initialize Chezmoi and apply my dotfiles configuration.
 
-Get started by cloning this repository into the `/etc/nixos` directory. This command pulls down the configuration files:
+   ```bash
+   chezmoi init --apply yourusername
+   ```
 
-```
-git clone https://github.com/2giosangmitom/dotfiles.git /etc/nixos
-```
+4. **Customize Configuration**: Customize the configurations to suit your preferences and workflows within the Hyprland workspace.
 
-3. **Unleash Your Customization Power!**
+## Usage
 
-This configuration lays a robust groundwork for your customized NixOS environment. Dive in and tailor it to suit your unique requirements! With an array of customization options at your disposal, you have the power to shape this configuration into a dynamic and personalized NixOS environment that aligns perfectly with your workflow and preferences. Embrace experimentation and unleash your creativity to make it truly your own!
+Once installed, you can manage your Hyprland workspace dotfiles with Chezmoi using simple commands. Here are some common tasks:
 
-**Configuration Breakdown:**
+- **Updating Dotfiles**: Make changes to your dotfiles as needed, and then commit and push them to your repository. Chezmoi will handle syncing the changes across your Hyprland workspace and other machines.
+- **Adding New Configurations**: Extend your Hyprland workspace setup by adding new configuration files or directories as needed.
+- **Managing Secrets**: Safely manage sensitive information using Chezmoi's encrypted secrets feature within the Hyprland workspace.
 
-- **Home Manager**:
+For a comprehensive guide on using Chezmoi, refer to the [official documentation](https://www.chezmoi.io/docs/).
 
-  - User-specific packages and configurations reside within the `./home` directory. This includes Hyprland, CLI tools configuration files for a seamless setup.
-  - `./home/default.nix`: This file acts as the entry point for your home manager configuration.
+## Customization
 
-- **Modules**:
+While my dotfiles are tailored for the Hyprland workspace, they are highly customizable to accommodate different preferences and workflows. Here's how you can tailor them to your needs:
 
-  - Shared NixOS configurations that multiple configurations rely on are organized within the `./modules` directory. This promotes reusability and reduces redundancy.
-
-- **Multi-Machine Management**:
-
-  - Manage configurations across different hardware setups using the `./hosts` directory.
-  - To generate the `hardware-configuration.nix` file for a specific machine, simply run the following command in your terminal:
-    ```bash
-    nixos-generate-config
-    ```
-
-4. **Rebuild (Applying Changes)**
-
-After making customizations to your configuration, run the following command to rebuild your NixOS system and apply the changes:
-
-```
-sudo nixos-rebuild switch
-```
-
-## Essential NixOS Commands
-
-This table summarizes some helpful NixOS commands you can run from the root directory of your terminal:
-
-| Command        | Description                                                                                                                                |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `make up`      | Updates the system by installing new packages.                                                                                             |
-| `make gc`      | Collects Nix garbage, which removes unused Nix expressions and old generations of your NixOS system. This helps to free up disk space.     |
-| `make history` | Displays a history of your NixOS generations, allowing you to view and potentially roll back to previous configurations.                   |
-| `make rebuild` | Rebuilds your entire NixOS system based on your current configuration. This is necessary after making changes to your configuration files. |
-
-## Screenshots
-
-<details>
-  <summary>Hyprland</summary>
-  <div align="center">
-    <img src="./screenshots/hyprland.png" />
-  </div>
-</details>
-
-<details>
-  <summary>Rofi</summary>
-  <div align="center">
-    <img src="./screenshots/rofi_launcher.png" />
-    <img src="./screenshots/rofi_powermenu.png" />
-  </div>
-</details>
-
-## Community Resources
-
-- NixOS Discourse: [https://discourse.nixos.org/](https://discourse.nixos.org/)
-- NixOS & Flakes Book: [https://nixos-and-flakes.thiscute.world/](https://nixos-and-flakes.thiscute.world/)
-- Hyprland Docs: [https://wiki.hyprland.org/](https://wiki.hyprland.org/)
-- Flakes Docs: [https://nixos.wiki/wiki/Flakes](https://nixos.wiki/wiki/Flakes)
-- Nix Reference Manual: [https://nix.dev/manual/nix/2.18/introduction](https://nix.dev/manual/nix/2.18/introduction)
+- **Modify Templates**: Customize template files to adjust settings and configurations according to your preferences within the Hyprland environment.
+- **Add New Configurations**: Extend your Hyprland workspace setup by adding new configuration files or directories specific to your projects and tools.
+- **Share Enhancements**: If you make improvements or additions to my dotfiles configuration for the Hyprland workspace, consider sharing them back with the community by opening a pull request.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, improvements, or new features to add, feel free to open an issue or pull request.
+Contributions to my dotfiles repository for the Hyprland workspace are welcome! If you have suggestions, enhancements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to make these dotfiles even more effective and versatile for the Hyprland community.
 
-## Acknowledgements
+## License
 
-Special thanks to the NixOS community for their excellent tools and resources, without which this configuration wouldn't be possible.
-
----
-
-Happy hacking! 🚀
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify my dotfiles configuration for the Hyprland workspace to suit your needs.

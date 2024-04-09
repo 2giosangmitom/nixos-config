@@ -1,5 +1,0 @@
-{
-  programs.fzf = {
-    enable = true;
-  };
-}
