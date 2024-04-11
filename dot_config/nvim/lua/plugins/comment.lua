@@ -1,24 +1,11 @@
 return {
   "numToStr/Comment.nvim",
-  keys = {
-    -- Use Ctrl + / to toggle comment
-    {
-      "<c-_>",
-      function() require("Comment.api").toggle.linewise.current() end,
-      desc = "Comment toggle current line",
-    },
-    {
-      "<c-_>",
-      "<esc><cmd>lua require('Comment.api').locked('toggle.linewise')(vim.fn.visualmode())<cr>",
-      mode = "x",
-      desc = "Comment toggle blockwise",
-    },
-  },
+  event = "VeryLazy",
   dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
   opts = {
     mappings = {
-      basic = false,
-      extra = false,
+      basic = true,
+      extra = true,
     },
     pre_hook = function() return vim.bo.commentstring end,
   },
