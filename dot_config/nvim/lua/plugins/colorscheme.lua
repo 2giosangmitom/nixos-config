@@ -1,7 +1,7 @@
 return {
   {
     "2giosangmitom/lienchi.nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
     opts = {},
@@ -13,6 +13,7 @@ return {
 
   {
     "folke/tokyonight.nvim",
+    enabled = false,
     lazy = false,
     priority = 1000,
     opts = {

@@ -18,8 +18,6 @@
           alejandra
           nil
           stylua
-          lua-language-server
-          selene
         ];
       in {
         devShells.default = pkgs.mkShell {
