@@ -13,6 +13,7 @@ Welcome to my dotfiles repository managed with Chezmoi, customized specifically 
 - [About Hyprland](#about-hyprland)
 - [About Chezmoi](#about-chezmoi)
 - [Features](#features)
+- [Neovim Configuration](#neovim-configuration)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
@@ -35,6 +36,18 @@ Here's what you can expect from my dotfiles managed with Chezmoi within the Hypr
 - **Integrated Development Environment**: Configurations for IDEs, text editors, and version control systems tailored for seamless development workflows.
 - **Streamlined Automation**: Scripts and aliases to automate common tasks, boost productivity, and streamline repetitive actions within the Hyprland environment.
 - **Unified Theming**: Consistent theming across applications for a visually cohesive and aesthetically pleasing workspace experience.
+
+## Neovim Configuration
+
+My Neovim configuration is finely tuned to enhance productivity and streamline coding workflows within the Hyprland workspace. Here are some highlights of my Neovim setup:
+
+- **Plugin Management with lazy.nvim**: I utilize lazy.nvim for efficient plugin management, allowing for on-demand loading of plugins to minimize startup times and optimize performance.
+- **Syntax Highlighting with nvim-treesitter**: Leveraging nvim-treesitter for advanced syntax highlighting, providing accurate and context-aware highlighting for various programming languages and file types.
+- **Autocompletion with nvim-cmp**: Employing nvim-cmp for intelligent autocompletion, offering fast and accurate suggestions as you type based on context and language semantics.
+- **Custom Themes**: Utilizing tokyonight.nvim and lienchi.nvim themes to personalize the appearance of Neovim. These themes provide visually pleasing color schemes and aesthetics, enhancing the editing experience within the Hyprland workspace.
+- **Keybindings**: Thoughtfully designed keybindings to expedite common tasks, navigate codebases efficiently, and access Neovim features seamlessly.
+
+Feel free to explore my Neovim configuration files within this repository to gain insights into how I optimize Neovim for my workflow in the Hyprland workspace.
 
 ## Installation
 
@@ -77,6 +90,10 @@ While my dotfiles are tailored for the Hyprland workspace, they are highly custo
 ## Contributing
 
 Contributions to my dotfiles repository for the Hyprland workspace are welcome! If you have suggestions, enhancements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to make these dotfiles even more effective and versatile for the Hyprland community.
+
+## Hyprland Customization Video
+
+For a visual demonstration of my Hyprland customization, check out my YouTube video: [https://youtu.be/69IiCUjgd04](https://youtu.be/69IiCUjgd04)
 
 ## License
 
