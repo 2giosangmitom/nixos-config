@@ -3,7 +3,7 @@ return {
   cmd = "Mason",
   build = ":MasonUpdate",
   opts = {
-    ensure_installed = { "stylua", "lua-language-server", "selene" },
+    ensure_installed = { "stylua", "lua-language-server" },
   },
   config = function(_, opts)
     require("mason").setup(opts)
