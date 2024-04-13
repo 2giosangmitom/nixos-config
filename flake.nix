@@ -15,12 +15,11 @@
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
         packages = with pkgs; [
-          statix
           alejandra
-          deadnix
           nil
           shellcheck
           shfmt
+          stylua
         ];
       in {
         devShell = pkgs.mkShell {
