@@ -6,6 +6,7 @@ return {
     priority = 1000,
     opts = {},
     config = function(_, opts)
+      vim.g.lienchi_debug = true
       require("lienchi").setup(opts)
       vim.cmd.colorscheme("lienchi")
     end,
