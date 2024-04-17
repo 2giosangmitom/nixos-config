@@ -6,7 +6,6 @@ return {
     priority = 1000,
     opts = {},
     config = function(_, opts)
-      vim.g.lienchi_debug = true
       require("lienchi").setup(opts)
       vim.cmd.colorscheme("lienchi")
     end,
@@ -14,7 +13,7 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
     opts = {
@@ -22,7 +21,20 @@ return {
     },
     config = function(_, opts)
       require("tokyonight").setup(opts)
-      vim.cmd.colorscheme("tokyonight")
+      -- vim.cmd.colorscheme("tokyonight")
+    end,
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    enabled = true,
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function(_, opts)
+      require("catppuccin").setup(opts)
+      -- vim.cmd.colorscheme("catppuccin")
     end,
   },
 }
