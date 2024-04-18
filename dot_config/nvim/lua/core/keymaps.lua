@@ -2,7 +2,7 @@ local map = vim.keymap.set
 vim.g.mapleader = " "
 
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
-map("n", "<c-s>", "<cmd>silent! update | redraw<cr>", { desc = "Save" })
+map("n", "<c-s>", "<cmd>w<cr>", { desc = "Save" })
 map("n", "<esc>", "<cmd>noh<cr>", { desc = "Clear highlights" })
 
 -- Window navigation
