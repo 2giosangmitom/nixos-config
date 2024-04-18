@@ -14,7 +14,7 @@ require("lazy").setup({
     { import = "extra.front-end" },
   },
   defaults = { lazy = true, version = false },
-  install = { colorscheme = { "lienchi", "tokyonight", "habamax" } },
+  install = { colorscheme = { "lienchi", "habamax" } },
   dev = {
     path = "~/Workspace/neovim-plugins",
     patterns = { "2giosangmitom" },
