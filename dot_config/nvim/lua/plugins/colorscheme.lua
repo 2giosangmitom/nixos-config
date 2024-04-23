@@ -4,8 +4,8 @@ return {
     enabled = true,
     lazy = false,
     priority = 1000,
+    version = "*",
     opts = {},
-    build = function() require("lienchi.compiler").compile() end,
     init = function() vim.g.lienchi_debug = true end,
     config = function(_, opts)
       require("lienchi").setup(opts)

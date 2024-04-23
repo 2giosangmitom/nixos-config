@@ -15,10 +15,10 @@ require("lazy").setup({
   },
   defaults = { lazy = true, version = false },
   install = { colorscheme = { "lienchi", "habamax" } },
-  dev = {
-    path = "~/Workspace/neovim-plugins",
-    patterns = { "2giosangmitom" },
-  },
+  -- dev = {
+  --   path = "~/Workspace/neovim-plugins",
+  --   patterns = { "2giosangmitom" },
+  -- },
   ui = {
     backdrop = 90,
   },
