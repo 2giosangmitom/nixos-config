@@ -53,7 +53,7 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     bindsym $mod+Shift+c reload
 
     # Exit sway
-    bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu
+    bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu sway
 
 ### Moving around:
     # Move your focus around
