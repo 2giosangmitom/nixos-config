@@ -13,6 +13,7 @@ Explore to learn about Chezmoi, get inspired for your Hyprland and Sway workspac
 ## Table of Contents
 
 - [About Hyprland](#about-hyprland)
+- [About Sway](#about-sway)
 - [About Chezmoi](#about-chezmoi)
 - [Features](#features)
 - [Neovim Configuration](#neovim-configuration)
@@ -36,12 +37,12 @@ Explore to learn about Chezmoi, get inspired for your Hyprland and Sway workspac
 
 ## Features
 
-Here's what you can expect from my dotfiles managed with Chezmoi within the Hyprland workspace:
+Here's what you can expect from my dotfiles managed with Chezmoi within the Hyprland and Sway workspace:
 
-- **Optimized Workspace Layouts**: Customized configurations for window managers and terminal emulators to maximize screen real estate and facilitate multitasking.
-- **Integrated Development Environment**: Configurations for IDEs, text editors, and version control systems tailored for seamless development workflows.
-- **Streamlined Automation**: Scripts and aliases to automate common tasks, boost productivity, and streamline repetitive actions within the Hyprland environment.
-- **Unified Theming**: Consistent theming across applications for a visually cohesive and aesthetically pleasing workspace experience.
+- **Optimized Workspace Layouts**: Customized configurations for window managers and terminal emulators to maximize screen real estate and facilitate multitasking seamlessly in both Hyprland and Sway environments.
+- **Integrated Development Environment**: Configurations for IDEs, text editors, and version control systems tailored for seamless development workflows across Hyprland and Sway.
+- **Streamlined Automation**: Scripts and aliases to automate common tasks, boost productivity, and streamline repetitive actions within the Hyprland and Sway environments.
+- **Unified Theming**: Consistent theming across applications for a visually cohesive and aesthetically pleasing workspace experience, maintaining harmony in both Hyprland and Sway environments.
 
 ## Neovim Configuration
 
@@ -77,30 +78,29 @@ To use my dotfiles managed with Chezmoi in the Hyprland workspace, follow these 
 
 ## Usage
 
-Once installed, you can manage your Hyprland workspace dotfiles with Chezmoi using simple commands. Here are some common tasks:
+Once installed, you can manage your dotfiles for both Hyprland and Sway with Chezmoi using simple commands. Here are some common tasks:
 
-- **Updating Dotfiles**: Make changes to your dotfiles as needed, and then commit and push them to your repository. Chezmoi will handle syncing the changes across your Hyprland workspace and other machines.
-- **Adding New Configurations**: Extend your Hyprland workspace setup by adding new configuration files or directories as needed.
-- **Managing Secrets**: Safely manage sensitive information using Chezmoi's encrypted secrets feature within the Hyprland workspace.
+- **Updating Dotfiles**: Make changes to your dotfiles as needed, and then commit and push them to your repository. Chezmoi will handle syncing the changes across your Hyprland and Sway workspaces and other machines.
+- **Adding New Configurations**: Extend your setup by adding new configuration files or directories as needed for both Hyprland and Sway.
+- **Managing Secrets**: Safely manage sensitive information using Chezmoi's encrypted secrets feature within both Hyprland and Sway workspaces.
 
 For a comprehensive guide on using Chezmoi, refer to the [official documentation](https://www.chezmoi.io/docs/).
 
 ## Customization
 
-While my dotfiles are tailored for the Hyprland workspace, they are highly customizable to accommodate different preferences and workflows. Here's how you can tailor them to your needs:
+While my dotfiles are tailored for both Hyprland and Sway workspaces, they are highly customizable to accommodate different preferences and workflows. Here's how you can tailor them to your needs:
 
-- **Modify Templates**: Customize template files to adjust settings and configurations according to your preferences within the Hyprland environment.
-- **Add New Configurations**: Extend your Hyprland workspace setup by adding new configuration files or directories specific to your projects and tools.
-- **Share Enhancements**: If you make improvements or additions to my dotfiles configuration for the Hyprland workspace, consider sharing them back with the community by opening a pull request.
+- **Modify Templates**: Customize template files to adjust settings and configurations according to your preferences within both Hyprland and Sway environments.
+- **Add New Configurations**: Extend your setup by adding new configuration files or directories specific to your projects and tools, ensuring compatibility with both Hyprland and Sway.
+- **Share Enhancements**: If you make improvements or additions to my dotfiles configuration for either Hyprland or Sway, consider sharing them back with the community by opening a pull request.
 
 ## Contributing
 
-Contributions to my dotfiles repository for the Hyprland workspace are welcome! If you have suggestions, enhancements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to make these dotfiles even more effective and versatile for the Hyprland community.
+Contributions to my dotfiles repository for both Hyprland and Sway workspaces are welcome! If you have suggestions, enhancements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to make these dotfiles even more effective and versatile for the Hyprland and Sway communities.
 
-## Hyprland Customization Video
+## Customization Video
 
-For a visual demonstration of my Hyprland customization, check out my YouTube video: [https://youtu.be/69IiCUjgd04](https://youtu.be/69IiCUjgd04)
+For a visual demonstration of my Hyprland and Sway customization, check out my YouTube videos: 
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify my dotfiles configuration for the Hyprland workspace to suit your needs.
+- [Hyprland](https://youtu.be/69IiCUjgd04)
+- [Sway](https://youtu.be/IpM8FoWltrY)
