@@ -6,9 +6,7 @@
 ![Repo size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
 ![LICENSE](https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41)
 
-Welcome to my dotfiles repository managed with Chezmoi, customized for my main workspace environment, Hyprland! Here, you'll find configurations and scripts to enhance productivity and streamline workflows.
-
-Recently, I've added configurations for Sway, a lightweight, tiling Wayland compositor. Combined with Hyprland's user-friendly interface, this setup creates a seamless and productive computing environment.
+Welcome to my dotfiles repository managed with Chezmoi, customized for my main workspace environment, which combines both Hyprland and Sway! Here, you'll find configurations and scripts to enhance productivity and streamline workflows in this unique setup.
 
 Explore to learn about Chezmoi, get inspired for your Hyprland and Sway workspace, or simply see how these configurations can optimize your Linux experience!
 
