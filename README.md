@@ -6,7 +6,11 @@
 ![Repo size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
 ![LICENSE](https://img.shields.io/github/license/2giosangmitom/dotfiles?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41)
 
-Welcome to my dotfiles repository managed with Chezmoi, customized specifically for my main workspace environment, Hyprland! This repository contains my configuration files and scripts tailored to enhance productivity and streamline workflows within the Hyprland workspace. Whether you're here to explore my setup, learn about Chezmoi, or seeking inspiration for your own Hyprland workspace, you're in the right place.
+Welcome to my dotfiles repository managed with Chezmoi, customized for my main workspace environment, Hyprland! Here, you'll find configurations and scripts to enhance productivity and streamline workflows.
+
+Recently, I've added configurations for Sway, a lightweight, tiling Wayland compositor. Combined with Hyprland's user-friendly interface, this setup creates a seamless and productive computing environment.
+
+Explore to learn about Chezmoi, get inspired for your Hyprland and Sway workspace, or simply see how these configurations can optimize your Linux experience!
 
 ## Table of Contents
 
@@ -22,7 +26,11 @@ Welcome to my dotfiles repository managed with Chezmoi, customized specifically 
 
 ## About Hyprland
 
-Hyprland is a dynamic workspace environment designed for productivity and collaboration. It provides a seamless experience for developers, designers, and other professionals to work efficiently and creatively. With customizable layouts, powerful integrations, and intuitive workflows, Hyprland empowers individuals and teams to achieve their goals effectively.
+[Hyprland](https://github.com/hyprwm/Hyprland) is a dynamic workspace environment designed for productivity and collaboration. It provides a seamless experience for developers, designers, and other professionals to work efficiently and creatively. With customizable layouts, powerful integrations, and intuitive workflows, Hyprland empowers individuals and teams to achieve their goals effectively.
+
+## About Sway
+
+[Sway](https://github.com/swaywm/sway) is a highly customizable, tiling Wayland compositor inspired by the popular X11 window manager, i3. It allows users to arrange application windows in a non-overlapping layout, maximizing screen real estate and efficiency. Unlike traditional desktop environments, Sway is designed to be lightweight, fast, and entirely configurable using simple text-based configuration files.
 
 ## About Chezmoi
 
