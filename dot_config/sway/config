@@ -52,7 +52,7 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway
+    # Powermenu
     bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu sway
 
 ### Moving around:

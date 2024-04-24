@@ -10,11 +10,13 @@ DIR="$HOME/.config/waybar"
 
 # Start waybar
 case "$1" in
-  "--sway") waybar -c $DIR/config-sway.jsonc -s $DIR/style-sway.css
-  ;;
-  "--hyprland") waybar -c $DIR/config-hyprland.jsonc -s $DIR/style-hyprland.css
-  ;;
-  *) echo "$1 is not a valid argument"
-  ;;
+"--sway")
+	waybar -c "$DIR/config-sway.jsonc" -s "$DIR/style-sway.css"
+	;;
+"--hyprland")
+	waybar -c "$DIR/config-hyprland.jsonc" -s "$DIR/style-hyprland.css"
+	;;
+*)
+	echo "$1 is not a valid argument"
+	;;
 esac
-
