@@ -38,6 +38,7 @@ run_cmd() {
 	action="$1"
 	theme="$HOME/.config/rofi/confirm.rasi"
 	selected="$(confirm_exit "$theme")"
+	wm="$2"
 	if [[ "$selected" == "$yes" ]]; then
 		case "$action" in
 		"--shutdown")
@@ -50,10 +51,18 @@ run_cmd() {
 			systemctl suspend
 			;;
 		"--logout")
-			hyprctl dispatch exit
+			if [[ $wm == "hyprland" ]]; then
+				hyprctl dispatch exit
+			else
+				swaymsg exit
+			fi
 			;;
 		"--lock")
-			hyprctl dispatch dpms off
+			if [[ $wm == "hyprland" ]]; then
+				hyprctl dispatch dpms off
+			else
+				swaylock
+			fi
 			;;
 		esac
 	else
@@ -73,13 +82,13 @@ case "$1" in
 		run_cmd --reboot
 		;;
 	"$lock")
-		run_cmd --lock
+		run_cmd --lock "$2"
 		;;
 	"$suspend")
 		run_cmd --suspend
 		;;
 	"$logout")
-		run_cmd --logout
+		run_cmd --logout "$2"
 		;;
 	esac
 	;;
