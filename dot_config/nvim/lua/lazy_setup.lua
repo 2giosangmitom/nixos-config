@@ -1,17 +1,7 @@
 require("lazy").setup({
   spec = {
     { import = "plugins" },
-    { import = "extra.nix" },
-    { import = "extra.golang" },
-    { import = "extra.dotnet" },
-    { import = "extra.json" },
-    { import = "extra.markdown" },
-    { import = "extra.yaml" },
-    { import = "extra.docker" },
-    { import = "extra.rust" },
-    { import = "extra.shell" },
-    { import = "extra.java" },
-    { import = "extra.front-end" },
+    { import = "extra" },
   },
   defaults = { lazy = true, version = false },
   install = { colorscheme = { "lienchi", "habamax" } },

@@ -25,6 +25,20 @@ return {
   },
 
   {
+    "williamboman/mason.nvim",
+    opts = function(_, opts) vim.list_extend(opts.ensure_installed, { "gopls" }) end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        go = { "gofmt" },
+      },
+    },
+  },
+
+  {
     "nvim-neotest/neotest",
     dependencies = { "nvim-neotest/neotest-go" },
     opts = function(_, opts) table.insert(opts.adapters, require("neotest-go")) end,
