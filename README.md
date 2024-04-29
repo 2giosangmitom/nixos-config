@@ -98,7 +98,7 @@ While my dotfiles are tailored for both Hyprland and Sway workspaces, they are h
 
 Contributions to my dotfiles repository for both Hyprland and Sway workspaces are welcome! If you have suggestions, enhancements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to make these dotfiles even more effective and versatile for the Hyprland and Sway communities.
 
-## Customization Video
+## Customization Videos
 
 For a visual demonstration of my Hyprland and Sway customization, check out my YouTube videos: 
 
