@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   keys = {
-    { "<leader>cf", function() require("conform").format({ lsp_fallback = true }) end, desc = "Format" },
+    { "<leader>cf", function() require("conform").format({ lsp_fallback = true, timeout_ms = 5000 }) end, desc = "Format" },
   },
   dependencies = {
     "williamboman/mason.nvim",
