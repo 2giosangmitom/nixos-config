@@ -55,6 +55,9 @@ client.placeholder           #1E222A       #1E222A         #FFFFFF      #98C379 
     # Powermenu
     bindsym $mod+Shift+e exec $HOME/.config/rofi/launch.sh powermenu sway
 
+    bindsym $mod+i exec $HOME/.config/input_method.sh -c
+    bindsym $mod+Shift+i exec $HOME/.config/input_method.sh -t
+
 ### Moving around:
     # Move your focus around
     bindsym $mod+$left focus left
