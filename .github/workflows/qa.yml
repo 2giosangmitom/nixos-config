@@ -13,8 +13,8 @@ jobs:
       - uses: crate-ci/typos@v1.20.10
 
   shellcheck:
-     name: Shell check
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v4
-       - uses: ludeeus/action-shellcheck@master
+    name: Shell check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ludeeus/action-shellcheck@master
