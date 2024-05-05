@@ -100,7 +100,7 @@ Contributions to my dotfiles repository for both Hyprland and Sway workspaces ar
 
 ## Customization Videos
 
-For a visual demonstration of my Hyprland and Sway customization, check out my YouTube videos: 
+For a visual demonstration of my Hyprland and Sway customization, check out my YouTube videos:
 
 - [Hyprland](https://youtu.be/69IiCUjgd04)
 - [Sway](https://youtu.be/IpM8FoWltrY)
