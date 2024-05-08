@@ -15,7 +15,6 @@
     ./yazi.nix
     ./zoxide.nix
     ./fzf.nix
-    ./vscode.nix
     ./bash.nix
     (
       if feature == "hyprland"
@@ -37,6 +36,7 @@ in {
       curl
       unzip
       bat
+      vscode.fhs
       zip
       ripgrep
       jq
