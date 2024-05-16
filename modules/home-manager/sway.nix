@@ -81,7 +81,7 @@
       defaultWorkspace = "workspace number 1";
       startup = [
         {command = "waybar";}
-        {command = "swww img $(shuf -en1 ${../../backgrounds}*)";}
+        {command = "${./scripts/random_bg.sh}";}
       ];
       keybindings = {
         "${modifier}+Return" = "exec ${terminal}";
