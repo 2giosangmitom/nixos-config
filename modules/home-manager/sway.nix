@@ -24,7 +24,12 @@
       floating = {
         titlebar = false;
         border = 2;
-        criteria = [{"class" = "Pavucontrol";}];
+        criteria = [{"class" = "pavucontrol";}];
+      };
+      output = {
+        "*" = let
+          bg = ../../backgrounds/autumn.png;
+        in {bg = "${bg} fill";};
       };
       colors = {
         background = "#1e1e2e";
