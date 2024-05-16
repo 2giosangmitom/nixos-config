@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     wl-clipboard
     rofi
+    swww
   ];
 
   wayland.windowManager.sway = {
@@ -25,11 +26,6 @@
         titlebar = false;
         border = 2;
         criteria = [{"class" = "pavucontrol";}];
-      };
-      output = {
-        "*" = let
-          bg = ../../backgrounds/autumn.png;
-        in {bg = "${bg} fill";};
       };
       colors = {
         background = "#1e1e2e";
@@ -85,6 +81,7 @@
       defaultWorkspace = "workspace number 1";
       startup = [
         {command = "waybar";}
+        {command = "swww img $(shuf -en1 ${../../backgrounds}*)";}
       ];
       keybindings = {
         "${modifier}+Return" = "exec ${terminal}";
