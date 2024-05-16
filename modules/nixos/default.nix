@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   boot = {
     tmp = {
       cleanOnBoot = true;
@@ -30,6 +31,11 @@
     networkmanager.enable = true;
     firewall.enable = true;
     proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  };
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    extraPackages = with pkgs; [swaylock swayidle];
   };
 
   time.timeZone = "Asia/Ho_Chi_Minh";
@@ -79,6 +85,7 @@
     enable = true;
     enableSSHSupport = true;
   };
+  programs.git = {enable = true;};
 
   fonts = {
     enableDefaultPackages = true;
