@@ -1,10 +1,16 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    wl-clipboard
+    rofi
+  ];
+
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures = {
       gtk = true;
     };
     config = rec {
+      bars = [];
       modifier = "Mod4";
       terminal = "alacritty";
       menu = "rofi -show drun";
@@ -12,6 +18,9 @@
         smartGaps = true;
         smartBorders = "on";
       };
+      startup = [
+        {command = "waybar";}
+      ];
       keybindings = {
         "${modifier}+Return" = "exec ${terminal}";
         "${modifier}+d" = "exec ${menu}";

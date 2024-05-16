@@ -38,6 +38,11 @@
     extraPackages = with pkgs; [swaylock swayidle];
   };
 
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
+
   time.timeZone = "Asia/Ho_Chi_Minh";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -85,7 +90,6 @@
     enable = true;
     enableSSHSupport = true;
   };
-  programs.git = {enable = true;};
 
   fonts = {
     enableDefaultPackages = true;
@@ -103,6 +107,5 @@
   };
 
   security.polkit.enable = true;
-
   system.stateVersion = "23.11";
 }
