@@ -22,6 +22,10 @@
   xdg.enable = true;
 
   gtk = {
+    gtk3.extraConfig = {
+      gtk-cursor-theme-name = "Vimix Cursors";
+      gtk-enable-animations = 0;
+    };
     font = {
       name = "Roboto";
       size = 10;
@@ -43,6 +47,7 @@
   };
 
   home = {
+    file.".icons/default".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
     packages = with pkgs; [
       curl
       brave
