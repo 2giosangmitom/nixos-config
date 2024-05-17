@@ -2,6 +2,7 @@
   programs.starship = {
     enableFishIntegration = true;
     enable = true;
+    catppuccin.enable = true;
     settings = {
       add_newline = true;
       scan_timeout = 10;
@@ -39,6 +40,7 @@
 
   programs.fish = {
     enable = true;
+    catppuccin.enable = true;
     interactiveShellInit = ''
       set -U fish_greeting
       builtin history clear

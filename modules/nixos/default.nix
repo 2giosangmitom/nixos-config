@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  catppuccin.enable = true;
   boot = {
     tmp = {
       cleanOnBoot = true;
@@ -41,6 +42,11 @@
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs;
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
   };
 
   time.timeZone = "Asia/Ho_Chi_Minh";

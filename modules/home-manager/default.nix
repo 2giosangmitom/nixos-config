@@ -9,6 +9,28 @@
     ./yazi.nix
   ];
   programs.home-manager.enable = true;
+  catppuccin.flavour = "mocha";
+
+  programs.bottom = {
+    enable = true;
+    catppuccin.enable = true;
+  };
+  programs.bat = {
+    enable = true;
+    catppuccin.enable = true;
+  };
+  xdg.enable = true;
+
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavour = "mocha";
+      accent = "pink";
+      size = "standard";
+      tweaks = ["normal"];
+    };
+  };
 
   home = {
     packages = with pkgs; [
@@ -26,7 +48,6 @@
       eza
       zip
       unzip
-      bat
     ];
 
     stateVersion = "23.11";
