@@ -6,7 +6,6 @@
     packages = with pkgs; [
       curl
       brave
-      neovim
       gnumake
       gammastep
       pavucontrol
