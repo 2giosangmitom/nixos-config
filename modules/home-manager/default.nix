@@ -1,19 +1,14 @@
 {pkgs, ...}: {
-  imports = [./alacritty.nix ./sway.nix ./lazygit.nix ./shell.nix ./git.nix ./waybar.nix ./theme.nix];
+  imports = [
+    ./alacritty.nix
+    ./sway.nix
+    ./lazygit.nix
+    ./shell.nix
+    ./git.nix
+    ./waybar.nix
+    ./yazi.nix
+  ];
   programs.home-manager.enable = true;
-  programs.yazi = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = {
-      log = {
-        enabled = false;
-      };
-      manager = {
-        show_hidden = true;
-        sort_dir_first = true;
-      };
-    };
-  };
 
   home = {
     packages = with pkgs; [
@@ -26,6 +21,12 @@
       tokei
       du-dust
       ripgrep
+      obs-studio
+      gimp
+      eza
+      zip
+      unzip
+      bat
     ];
 
     stateVersion = "23.11";
