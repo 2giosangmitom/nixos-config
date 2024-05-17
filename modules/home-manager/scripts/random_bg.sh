@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 if !(pgrep swww-daemon); then
+	swww clear-cache
 	swww-daemon --format xrgb &
 fi
 
