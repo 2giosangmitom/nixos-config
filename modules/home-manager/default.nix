@@ -22,13 +22,23 @@
   xdg.enable = true;
 
   gtk = {
+    font = {
+      name = "Roboto";
+      size = 10;
+    };
+    theme = {
+      name = "Sweet-Dark-v40";
+      package = pkgs.sweet;
+    };
     enable = true;
-    catppuccin = {
-      enable = true;
-      flavour = "mocha";
-      accent = "pink";
-      size = "standard";
-      tweaks = ["normal"];
+    iconTheme = {
+      package = pkgs.tela-icon-theme;
+      name = "Tela-dark";
+    };
+    cursorTheme = {
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
+      size = 24;
     };
   };
 
@@ -48,7 +58,14 @@
       eza
       zip
       unzip
+      clang
     ];
+    pointerCursor = {
+      gtk.enable = true;
+      size = 24;
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
+    };
 
     stateVersion = "23.11";
   };

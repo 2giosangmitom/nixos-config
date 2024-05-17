@@ -1,6 +1,7 @@
 {
   programs.waybar = {
     enable = true;
+    catppuccin.enable = true;
     settings = {
       mainBar = {
         layer = "top";
@@ -69,28 +70,28 @@
 
       window#waybar {
         background-color: transparent;
-        color: #cdd6f4;
+        color: @text;
       }
 
       #workspaces button {
         padding: 0 4px;
-        color: #cdd6f4;
+        color: @text;
       }
 
       #workspaces button.focused {
-        color: #89dceb;
+        color: @sapphire;
       }
 
       #workspaces button.urgent {
-        color: #f38ba8;
+        color: @pink;
       }
 
       #workspaces button.persistent {
-        color: #f9e2af;
+        color: @lavender;
       }
 
       #workspaces button:hover {
-        background: #1e1e2e;
+        background: @base;
       }
 
       #custom-uptime,
@@ -103,8 +104,8 @@
       #mode,
       #temperature,
       #cpu {
-        background: #1e1e2e;
-        color: #cdd6f4;
+        background: @base;
+        color: @text;
         margin: 2px 3px;
         padding: 0 10px;
         border-radius: 5px;
