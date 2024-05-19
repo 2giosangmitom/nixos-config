@@ -19,9 +19,6 @@
       config = {
         allowUnfree = true;
       };
-      overlays = [
-        (import ./overlays/neovim.nix)
-      ];
     };
   in {
     nixosConfigurations = {
