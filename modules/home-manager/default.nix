@@ -7,7 +7,6 @@
     ./git.nix
     ./waybar.nix
     ./yazi.nix
-    ./neovim
   ];
   programs.home-manager.enable = true;
   catppuccin.flavour = "mocha";
