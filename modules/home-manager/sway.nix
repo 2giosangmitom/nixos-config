@@ -3,6 +3,7 @@
     wl-clipboard
     rofi
     swww
+    sway-contrib.grimshot
   ];
 
   wayland.windowManager.sway = {
@@ -99,6 +100,8 @@
         "${modifier}+Shift+${down}" = "move down";
         "${modifier}+Shift+${up}" = "move up";
         "${modifier}+Shift+${right}" = "move right";
+        "Shift+Print" = "exec grimshot copy area";
+        "Print" = "exec grimshot copy screen";
 
         "${modifier}+b" = "splith";
         "${modifier}+v" = "splitv";
