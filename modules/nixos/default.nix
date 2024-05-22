@@ -101,11 +101,6 @@
     enable = true;
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -122,5 +117,5 @@
   };
 
   security.polkit.enable = true;
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }

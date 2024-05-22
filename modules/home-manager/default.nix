@@ -7,6 +7,7 @@
     ./git.nix
     ./waybar.nix
     ./yazi.nix
+    ./neovim
   ];
   programs.home-manager.enable = true;
   catppuccin.flavour = "mocha";
@@ -64,6 +65,7 @@
       zip
       unzip
       clang
+      vscode.fhs
     ];
     pointerCursor = {
       gtk.enable = true;
@@ -72,6 +74,6 @@
       name = "Vimix Cursors";
     };
 
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 }
