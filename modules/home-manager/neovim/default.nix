@@ -4,6 +4,6 @@
     defaultEditor = true;
     withRuby = false;
     withPython3 = false;
-    xdg.configFile."nvim".source = import ./config;
   };
+  home.file.".config/nvim".source = ./config;
 }
