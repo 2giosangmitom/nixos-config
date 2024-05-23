@@ -66,6 +66,7 @@
       clang
       vscode.fhs
       bob-nvim
+      procps
     ];
     pointerCursor = {
       gtk.enable = true;

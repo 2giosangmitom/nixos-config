@@ -6,8 +6,6 @@
     sway-contrib.grimshot
   ];
 
-  imports = [./rofi];
-
   wayland.windowManager.sway = {
     enable = true;
     catppuccin.enable = true;
@@ -88,7 +86,7 @@
       ];
       keybindings = {
         "${modifier}+Return" = "exec ${terminal}";
-        "${modifier}+d" = "exec ${./rofi/launch.sh} launcher";
+        "${modifier}+d" = "exec ${./rofi/launch.sh} launcher ${./rofi/launcher.rasi}";
         "${modifier}+q" = "kill";
         "${modifier}+Shift+c" = "reload";
 
@@ -105,7 +103,7 @@
         "Print" = "exec grimshot copy screen";
         "${modifier}+i" = "exec ${./scripts/input_method.sh} -c";
         "${modifier}+Shift+i" = "exec ${./scripts/input_method.sh} -t";
-        "${modifier}+Shift+e" = "exec ${./rofi/launch.sh} powermenu sway";
+        "${modifier}+Shift+e" = "exec ${./rofi/launch.sh} powermenu sway ${./rofi/powermenu.rasi} ${./rofi/confirm.rasi}";
 
         "${modifier}+b" = "splith";
         "${modifier}+v" = "splitv";
