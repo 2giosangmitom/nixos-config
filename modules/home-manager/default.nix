@@ -65,6 +65,7 @@
       unzip
       clang
       vscode.fhs
+      bob-nvim
     ];
     pointerCursor = {
       gtk.enable = true;

@@ -101,11 +101,6 @@
     enable = true;
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
