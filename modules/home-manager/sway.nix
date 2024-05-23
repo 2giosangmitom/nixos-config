@@ -1,10 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     wl-clipboard
-    rofi
+    rofi-wayland
     swww
     sway-contrib.grimshot
   ];
+
+  imports = [./rofi];
 
   wayland.windowManager.sway = {
     enable = true;
@@ -69,7 +71,6 @@
       };
       modifier = "Mod4";
       terminal = "alacritty";
-      menu = "rofi -show drun";
       left = "h";
       down = "j";
       up = "k";
@@ -87,7 +88,7 @@
       ];
       keybindings = {
         "${modifier}+Return" = "exec ${terminal}";
-        "${modifier}+d" = "exec ${menu}";
+        "${modifier}+d" = "exec ${./rofi/launch.sh} launcher";
         "${modifier}+q" = "kill";
         "${modifier}+Shift+c" = "reload";
 
@@ -104,6 +105,7 @@
         "Print" = "exec grimshot copy screen";
         "${modifier}+i" = "exec ${./scripts/input_method.sh} -c";
         "${modifier}+Shift+i" = "exec ${./scripts/input_method.sh} -t";
+        "${modifier}+Shift+e" = "exec ${./rofi/launch.sh} powermenu sway";
 
         "${modifier}+b" = "splith";
         "${modifier}+v" = "splitv";
