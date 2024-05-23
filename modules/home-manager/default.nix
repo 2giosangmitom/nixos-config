@@ -5,7 +5,6 @@
     ./lazygit.nix
     ./shell.nix
     ./git.nix
-    ./waybar.nix
     ./yazi.nix
   ];
   programs.home-manager.enable = true;
