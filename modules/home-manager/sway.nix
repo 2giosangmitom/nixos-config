@@ -102,6 +102,8 @@
         "${modifier}+Shift+${right}" = "move right";
         "Shift+Print" = "exec grimshot copy area";
         "Print" = "exec grimshot copy screen";
+        "${modifier}+i" = "exec ${./scripts/input_method.sh} -c";
+        "${modifier}+Shift+i" = "exec ${./scripts/input_method.sh} -t";
 
         "${modifier}+b" = "splith";
         "${modifier}+v" = "splitv";

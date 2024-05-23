@@ -9,7 +9,7 @@
     ./yazi.nix
   ];
   programs.home-manager.enable = true;
-  catppuccin.flavour = "mocha";
+  catppuccin.flavor = "mocha";
 
   programs.bottom = {
     enable = true;
