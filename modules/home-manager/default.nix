@@ -50,6 +50,8 @@
     packages = with pkgs; [
       curl
       brave
+      jq
+      gh
       gnumake
       gammastep
       pavucontrol
@@ -66,6 +68,7 @@
       vscode.fhs
       bob-nvim
       procps
+      xdg-utils
     ];
     pointerCursor = {
       gtk.enable = true;
@@ -74,6 +77,6 @@
       name = "Vimix Cursors";
     };
 
-    stateVersion = "24.05";
+    stateVersion = "24.11";
   };
 }

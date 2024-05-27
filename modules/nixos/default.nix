@@ -106,6 +106,7 @@
     packages = with pkgs; [
       (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
       roboto
+      crimson-pro
     ];
     fontconfig = {
       defaultFonts = {
@@ -117,5 +118,5 @@
   };
 
   security.polkit.enable = true;
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
