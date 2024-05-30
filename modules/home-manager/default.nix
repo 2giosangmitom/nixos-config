@@ -6,13 +6,33 @@
     ./shell.nix
     ./git.nix
     ./yazi.nix
+    ./dunst.nix
   ];
   programs.home-manager.enable = true;
   catppuccin.flavor = "mocha";
 
+  programs.fzf = {
+    enable = true;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   programs.bottom = {
     enable = true;
     catppuccin.enable = true;
+    settings = {
+      flags = {
+        dot_marker = true;
+        current_usage = true;
+        group_processes = true;
+        regex = true;
+        case_sensitive = false;
+        tree = true;
+      };
+    };
   };
   programs.bat = {
     enable = true;
