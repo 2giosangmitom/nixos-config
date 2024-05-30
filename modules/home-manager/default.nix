@@ -89,6 +89,7 @@
       bob-nvim
       procps
       xdg-utils
+      tree
     ];
     pointerCursor = {
       gtk.enable = true;
