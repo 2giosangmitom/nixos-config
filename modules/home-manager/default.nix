@@ -7,6 +7,7 @@
     ./git.nix
     ./yazi.nix
     ./dunst.nix
+    ./vscodium.nix
   ];
   programs.home-manager.enable = true;
   catppuccin.flavor = "mocha";
@@ -85,7 +86,6 @@
       zip
       unzip
       clang
-      vscode.fhs
       bob-nvim
       procps
       xdg-utils
