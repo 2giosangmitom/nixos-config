@@ -11,6 +11,8 @@ Welcome to my personal NixOS configuration! This setup is tailored for my daily 
 
 This repository contains my customized NixOS configuration files aimed at providing a robust and efficient environment for daily tasks. The configuration utilizes the Sway window manager, offering a seamless and dynamic tiling experience. Additionally, Home-Manager is used to manage user-specific configurations and dotfiles, and Nix flakes are used for better reproducibility.
 
+![demo](https://i.imgur.com/zh2HeVg.png)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
