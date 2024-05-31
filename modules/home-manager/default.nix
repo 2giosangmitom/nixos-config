@@ -7,10 +7,14 @@
     ./git.nix
     ./yazi.nix
     ./dunst.nix
-    ./vscodium.nix
   ];
   programs.home-manager.enable = true;
   catppuccin.flavor = "mocha";
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
+  };
 
   programs.fzf = {
     enable = true;
