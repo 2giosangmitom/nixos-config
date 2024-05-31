@@ -13,9 +13,8 @@ Welcome to my personal NixOS configuration! This setup is tailored for my daily 
 2. [Prerequisites](#prerequisites)
 3. [Deployment Steps](#deployment-steps)
 4. [Configuration Structure](#configuration-structure)
-5. [Key Components](#key-components)
-6. [Community Resources](#community-resources)
-7. [Contributing](#contributing)
+5. [Community Resources](#community-resources)
+6. [Contributing](#contributing)
 
 ## Overview
 
@@ -72,7 +71,7 @@ dotfiles/
 ├── hosts                    # Directory for host-specific configurations
 │   └── nixos
 │       └── default.nix      # Host-specific configuration for NixOS
-├── Makefile                 # Simplify some command
+├── Makefile                 # Make some commands easier
 ├── modules                  # Directory containing Nix modules
 │   ├── home-manager         # Home-Manager configurations
 │   │   ├── alacritty.nix
@@ -100,16 +99,6 @@ dotfiles/
 └── pkgs                     # Custom packages
     └── bob-nvim.nix
 ```
-
-## Key Components 🔑
-
-- **Sway Window Manager**: A tiling window manager inspired by i3, but built for Wayland.
-- **Waybar**: A customizable status bar for Sway.
-- **Nixpkgs**: Custom packages and overlays.
-- **Home-Manager**: Manages user-specific configurations and dotfiles.
-- **Alacritty**: A fast, cross-platform, OpenGL terminal emulator.
-- **fish**: A friendly interactive shell, managed through Home-Manager.
-- **Nix Flakes**: For reproducible and manageable configurations.
 
 ## Community Resources 📚
 
