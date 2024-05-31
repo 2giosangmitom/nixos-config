@@ -90,6 +90,7 @@
       procps
       xdg-utils
       tree
+      libnotify
     ];
     pointerCursor = {
       gtk.enable = true;

@@ -27,6 +27,7 @@
     };
   };
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
