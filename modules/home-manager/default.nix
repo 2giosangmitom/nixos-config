@@ -7,6 +7,7 @@
     ./git.nix
     ./yazi.nix
     ./dunst.nix
+    ./fastfetch.nix
   ];
   programs.home-manager.enable = true;
   catppuccin.flavor = "mocha";
@@ -95,6 +96,7 @@
       xdg-utils
       tree
       libnotify
+      discord
     ];
     pointerCursor = {
       gtk.enable = true;
