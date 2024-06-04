@@ -82,11 +82,8 @@
       defaultWorkspace = "workspace number 1";
       startup = [
         {
-          command = "waybar";
+          command = "${./scripts/autostart.sh}";
           always = true;
-        }
-        {
-          command = "ibus-daemon -rxRd &";
         }
         {command = "${./scripts/random_bg.sh}";}
       ];
@@ -162,7 +159,7 @@
         height = 0;
         modules-left = ["clock" "sway/workspaces" "sway/mode"];
         modules-center = ["custom/uptime"];
-        modules-right = ["pulseaudio" "temperature" "cpu" "memory" "tray"];
+        modules-right = ["pulseaudio" "temperature" "cpu" "memory" "custom/ibus" "tray"];
         clock = {
           format = "{:%b %d - %H:%M}";
           tooltip = false;
@@ -180,6 +177,23 @@
           interval = "60";
           tooltip = false;
           format = "{}";
+        };
+        "custom/ibus" = {
+          exec = "ibus engine";
+          tooltip = false;
+          format = "{}";
+          on-click = ''
+            if [[ $(ibus engine) == "BambooUs" ]]; then
+              ibus engine Bamboo
+              pkill -SIGRTMIN+10 waybar
+            else
+              ibus engine BambooUs
+              pkill -SIGRTMIN+10 waybar
+            fi
+          '';
+          signal = 10;
+          exec-on-event = false;
+          interval = "once";
         };
         pulseaudio = {
           format = "<span color='#cba6f7'>{icon}</span>{volume}%";
@@ -244,6 +258,7 @@
       }
 
       #custom-uptime,
+      #custom-ibus,
       #pulseaudio,
       #clock,
       #workspaces,
