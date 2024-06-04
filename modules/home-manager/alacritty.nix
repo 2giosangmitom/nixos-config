@@ -8,19 +8,19 @@
       font = {
         size = 10;
         normal = {
-          family = "FiraCode Nerd Font";
+          family = "JetBrainsMono NF";
           style = "Regular";
         };
         italic = {
-          family = "FiraCode Nerd Font";
+          family = "JetBrainsMono NF";
           style = "Italic";
         };
         bold_italic = {
-          family = "FiraCode Nerd Font";
+          family = "JetBrainsMono NF";
           style = "Bold Italic";
         };
         bold = {
-          family = "FiraCode Nerd Font";
+          family = "JetBrainsMono NF";
           style = "Bold";
         };
       };
