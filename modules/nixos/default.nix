@@ -104,7 +104,7 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
       roboto
       crimson-pro
     ];
@@ -112,11 +112,11 @@
       defaultFonts = {
         serif = ["Roboto"];
         sansSerif = ["Roboto"];
-        monospace = ["FiraCode NF"];
+        monospace = ["JetBrainsMono NF"];
       };
     };
   };
 
   security.polkit.enable = true;
-  system.stateVersion = "24.11";
+  system.stateVersion = "24.05";
 }

@@ -10,7 +10,6 @@
     ./fastfetch.nix
   ];
   programs.home-manager.enable = true;
-  catppuccin.flavor = "mocha";
 
   programs.vscode = {
     enable = true;
@@ -105,6 +104,6 @@
       name = "Vimix Cursors";
     };
 
-    stateVersion = "24.11";
+    stateVersion = "24.05";
   };
 }
