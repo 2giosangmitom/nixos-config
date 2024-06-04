@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-input_method=$(ibus engine)
+if ! pgrep ibus-daemon &>/dev/null; then
+	notify-send "Starting ibus-daemon..."
+	ibus-daemon -rxRd &
+fi
+
+input_method=$(ibus engine &>/dev/null)
 
 display_help() {
-	printf "\033[1;97mUsage:\033[0m\n"
+	printf "Usage:\n"
 	printf "\t%s [option]\n" "$0"
-	printf "\033[1;97mOptions:\033[0m\n"
+	printf "Options:\n"
 	printf "\t-c, --check\tCheck for current input method\n"
 	printf "\t-t, --toggle\tToggle input method\n"
 }
