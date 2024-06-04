@@ -81,7 +81,13 @@
       };
       defaultWorkspace = "workspace number 1";
       startup = [
-        {command = "waybar";}
+        {
+          command = "waybar";
+          always = true;
+        }
+        {
+          command = "ibus-daemon -rxRd &";
+        }
         {command = "${./scripts/random_bg.sh}";}
       ];
       keybindings = {
@@ -101,8 +107,6 @@
         "${modifier}+Shift+${right}" = "move right";
         "Shift+Print" = "exec grimshot copy area";
         "Print" = "exec grimshot copy screen";
-        "${modifier}+i" = "exec ${./scripts/input_method.sh} -c";
-        "${modifier}+Shift+i" = "exec ${./scripts/input_method.sh} -t";
         "${modifier}+Shift+e" = "exec ${./rofi/launch.sh} powermenu sway ${./rofi/powermenu.rasi} ${./rofi/confirm.rasi}";
 
         "${modifier}+b" = "splith";
@@ -208,7 +212,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "FiraCode Nerd Font";
+        font-family: "JetBrainsMono NF";
         font-size: 12.5px;
         font-weight: bold;
       }
