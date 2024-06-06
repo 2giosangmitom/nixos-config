@@ -48,7 +48,7 @@
   gtk = {
     gtk3.extraConfig = {
       gtk-cursor-theme-name = "Vimix Cursors";
-      gtk-enable-animations = 0;
+      gtk-enable-animations = 1;
     };
     font = {
       name = "Roboto";
