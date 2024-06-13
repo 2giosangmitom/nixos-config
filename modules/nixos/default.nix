@@ -14,6 +14,7 @@
         devices = ["nodev"];
         efiSupport = true;
         timeoutStyle = "menu";
+        configurationLimit = 10;
       };
       timeout = 5;
     };
@@ -25,6 +26,11 @@
       "kernel.nmi_watchdog" = 0;
       "kernel.core_pattern" = "/dev/null";
     };
+  };
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
   };
   nix.settings.auto-optimise-store = true;
   networking = {
