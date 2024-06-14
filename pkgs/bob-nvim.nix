@@ -1,4 +1,4 @@
-{pkgs}:
+{pkgs, ...}:
 pkgs.stdenv.mkDerivation rec {
   pname = "bob-nvim";
   version = "v2.9.1";
