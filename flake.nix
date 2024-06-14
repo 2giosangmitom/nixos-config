@@ -11,7 +11,7 @@
   };
 
   outputs = {flake-parts, ...} @ inputs: let
-    overlays = import ./pkgs/overlays.nix {inherit inputs;};
+    overlays = import ./pkgs/overlays.nix;
     inherit (import ./hosts/lib.nix {inherit inputs overlays;}) mkSystems;
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
