@@ -67,6 +67,7 @@
           }
           ./${host}
           ../nixos/common
+          ../nixos
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
         ]
