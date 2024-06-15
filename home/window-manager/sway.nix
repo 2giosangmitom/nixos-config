@@ -4,7 +4,13 @@
   config,
   ...
 }: {
-  config = lib.mkIf (config.isGraphical && (osConfig.dotfiles.window-manager == "sway")) {
+  config = lib.mkIf (osConfig.dotfiles.window-manager == "sway") {
+    fonts.fontconfig.enable = true;
+    services = {
+      gnome-keyring = {
+        enable = true;
+      };
+    };
     wayland.windowManager.sway = {
       enable = true;
       catppuccin.enable = true;
