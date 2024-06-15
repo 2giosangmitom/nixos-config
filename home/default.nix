@@ -11,6 +11,7 @@
     ./programs/yazi.nix
     ./programs/dunst.nix
     ./programs/bottom.nix
+    ./theme.nix
   ];
   home = {
     stateVersion = "24.05";
