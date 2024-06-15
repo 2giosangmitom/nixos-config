@@ -27,20 +27,10 @@
             description = "Whether the system is a graphical target";
             type = types.bool;
           };
-          location = {
-            latitude = mkOption {
-              default = osConfig.location.latitude;
-              type = types.nullOr types.float;
-            };
-            longitude = mkOption {
-              default = osConfig.location.longitude;
-              type = types.nullOr types.float;
-            };
-          };
         };
       }
     )
-    ./.
     hmStandaloneConfig
+    inputs.catppuccin.homeManagerModules.catppuccin
   ];
 }
