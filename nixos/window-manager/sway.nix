@@ -25,6 +25,7 @@
         wl-clipboard
         rofi-wayland
         swww
+        gammastep
       ];
 
       extraSessionCommands = ''
