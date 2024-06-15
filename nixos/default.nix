@@ -40,6 +40,21 @@
     enable = true;
     package = pkgs.nix-ld-rs;
   };
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      roboto
+      crimson-pro
+    ];
+    fontconfig = {
+      defaultFonts = {
+        serif = ["Roboto"];
+        sansSerif = ["Roboto"];
+        monospace = ["JetBrainsMono NF"];
+      };
+    };
+  };
 
   system.stateVersion = "24.05";
 }
