@@ -8,5 +8,8 @@
     shellAliases = {
       ls = "eza";
     };
+    bashrcExtra = ''
+      PATH=$PATH:~/.local/share/bob/nvim-bin
+    '';
   };
 }
