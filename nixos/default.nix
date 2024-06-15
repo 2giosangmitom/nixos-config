@@ -3,6 +3,10 @@
   config,
   ...
 }: {
+  imports = [
+    ./window-manager/sway.nix
+    ./window-manager/hyprland.nix
+  ];
   catppuccin.enable = true;
   environment.systemPackages = with pkgs;
     [
