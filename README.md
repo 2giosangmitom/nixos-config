@@ -133,7 +133,7 @@ The repository is organized as follows:
 
 - **NixOS & Flakes Book**: [https://nixos-and-flakes.thiscute.world/](https://nixos-and-flakes.thiscute.world/)
 - **Flakes Docs**: [https://nixos.wiki/wiki/Flakes](https://nixos.wiki/wiki/Flakes)
-- **Nix Reference Manual**: [https://nix.dev/manual/nix/2.18/introduction](https://nix.dev/manual/nix/2.18/introduction)
+- **Nix Reference Manual**: [https://nix.dev/manual/nix/2.22/](https://nix.dev/manual/nix/2.22/)
 - **Zero to Nix**: [https://zero-to-nix.com/](https://zero-to-nix.com/)
 - **MyNixOS**: [https://mynixos.com/](https://mynixos.com/)
 - **Nix Pills**: [https://nixos.org/guides/nix-pills/](https://nixos.org/guides/nix-pills/)
