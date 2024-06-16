@@ -4,12 +4,18 @@
       cleanOnBoot = true;
     };
     loader = {
+      efi = {
+        canTouchEfiVariables = true;
+      };
+      grub = {
+        enable = true;
+        devices = ["nodev"];
+        efiSupport = true;
+        timeoutStyle = "menu";
+        configurationLimit = 10;
+      };
       timeout = 5;
-      efi.canTouchEfiVariables = true;
-      systemd-boot.enable = true;
-      systemd-boot.configurationLimit = 10;
     };
-    initrd.systemd.enable = true;
     kernelParams = [
       "nowatchdog"
     ];
