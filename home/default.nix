@@ -12,9 +12,20 @@
     ./programs/dunst.nix
     ./programs/bottom.nix
     ./theme.nix
+    ./programs/bat.nix
+    ./programs/zoxide.nix
+    ./programs/eza.nix
   ];
   home = {
     stateVersion = "24.05";
+    sessionVariables = {};
+  };
+  xdg = {
+    enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {};
+    };
   };
   programs.home-manager.enable = true;
 }
