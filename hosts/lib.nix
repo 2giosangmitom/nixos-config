@@ -33,7 +33,6 @@
   in {
     nixosConfigurations.${host} = inputs.nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit inputs;};
       modules =
         [
           {
@@ -65,6 +64,11 @@
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
           (hmCommonConfig {inherit username;})
+          {
+            _module.args = {
+              inherit inputs;
+            };
+          }
         ]
         ++ extraModules;
     };
