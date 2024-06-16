@@ -23,7 +23,6 @@
       procps
       xdg-utils
       bob-nvim
-      eza
     ]
     ++ pkgs.lib.optionals config.isGraphical [
       brave
