@@ -1,10 +1,9 @@
 {
   lib,
-  osConfig,
-  config,
+  nixosConfig,
   ...
 }: {
-  config = lib.mkIf (osConfig.dotfiles.window-manager == "sway") {
+  config = lib.mkIf (nixosConfig.isGraphical && nixosConfig.dotfiles.window-manager == "sway") {
     fonts.fontconfig.enable = true;
     services = {
       gnome-keyring = {
