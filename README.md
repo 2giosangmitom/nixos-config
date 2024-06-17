@@ -5,11 +5,11 @@
 ![GitHub forks](https://img.shields.io/github/forks/2giosangmitom/dotfiles.svg?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41)
 ![Repository size](https://img.shields.io/github/repo-size/2giosangmitom/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
 
-Welcome to my personal NixOS configuration! This setup is tailored for my daily use with the Sway and Hyprland window manager and includes the management of home configurations using Home-Manager. Additionally, this configuration leverages Nix flakes for improved reproducibility and ease of use. This README will guide you through the structure, components, and instructions to deploy this configuration.
+Welcome to my personal NixOS configuration! This setup is tailored for my daily use with the Sway and Hyprland window managers and includes the management of home configurations using Home Manager. Additionally, this configuration leverages Nix flakes for improved reproducibility and ease of use. This README will guide you through the structure, components, and instructions to deploy this configuration.
 
 ## Overview 🪲
 
-This repository contains my customized NixOS configuration files aimed at providing a robust and efficient environment for daily tasks. The configuration utilizes the Sway and Hyprland window manager, offering a seamless and dynamic tiling experience. Additionally, Home-Manager is used to manage user-specific configurations and dotfiles, and Nix flakes are used for better reproducibility.
+This repository contains my customized NixOS configuration files aimed at providing a robust and efficient environment for daily tasks. The configuration utilizes the Sway and Hyprland window managers, offering a seamless and dynamic tiling experience. Additionally, Home Manager is used to manage user-specific configurations and dotfiles, and Nix flakes are used for better reproducibility.
 
 ![demo](https://i.imgur.com/zh2HeVg.png)
 
@@ -56,77 +56,42 @@ The repository is organized as follows:
 
 ```
 .
-├── backgrounds
-│  ├── uwp4227671.jpeg
-│  └── uwp4227673.jpeg
-├── home
-│  ├── programs
-│  │  ├── rofi
-│  │  │  ├── confirm.rasi
-│  │  │  ├── launch.sh
-│  │  │  ├── launcher.rasi
-│  │  │  └── powermenu.rasi
-│  │  ├── alacritty.nix
-│  │  ├── bash.nix
-│  │  ├── bat.nix
-│  │  ├── bottom.nix
-│  │  ├── dunst.nix
-│  │  ├── eza.nix
-│  │  ├── fastfetch.nix
-│  │  ├── fzf.nix
-│  │  ├── git.nix
-│  │  ├── lazydocker.nix
-│  │  ├── lazygit.nix
-│  │  ├── podman-tui.nix
-│  │  ├── starship.nix
-│  │  ├── yazi.nix
-│  │  └── zoxide.nix
-│  ├── window-manager
-│  │  ├── scripts
-│  │  │  ├── autostart.sh
-│  │  │  ├── random_bg.sh
-│  │  │  └── uptime.sh
-│  │  ├── hyprland.nix
-│  │  └── sway.nix
-│  ├── default.nix
-│  ├── lib.nix
-│  └── theme.nix
-├── hosts
-│  ├── nixos
-│  │  ├── default.nix
-│  │  └── hardware-configuration.nix
-│  └── lib.nix
-├── nixos
-│  ├── common
-│  │  ├── boot.nix
-│  │  ├── default.nix
-│  │  ├── locale.nix
-│  │  ├── network.nix
-│  │  ├── nix.nix
-│  │  ├── sound.nix
-│  │  └── user.nix
-│  ├── window-manager
-│  │  ├── hyprland.nix
-│  │  └── sway.nix
-│  ├── default.nix
-│  ├── docker.nix
-│  ├── podman.nix
-│  └── services.nix
-├── pkgs
-│  ├── bob-nvim.nix
-│  └── overlays.nix
-├── templates
-│  ├── golang
-│  │  └── flake.nix
-│  ├── nodejs
-│  │  └── flake.nix
-│  ├── rust
-│  │  └── flake.nix
-│  └── default.nix
-├── flake.lock
-├── flake.nix
-├── Makefile
-└── README.md
+├── backgrounds                       # Directory containing background images
+│   ├── ...
+├── home                              # Home Manager configurations and scripts
+│   ├── programs                      # Configurations for various programs
+│   │   ├── ...
+│   ├── window-manager                # Window manager configurations and scripts
+│   │   ├── scripts                   # Scripts for window manager
+│   │   │   ├── ...
+│   │   ├── ...
+│   ├── default.nix                   # Default home configuration
+│   ├── lib.nix                       # Library functions for home configuration
+│   └── ...
+├── hosts                             # Host-specific configurations
+│   ├── lib.nix                       # Library functions for host configuration
+│   └── ...
+├── nixos                             # System-wide NixOS configurations
+│   ├── common                        # Common configurations shared across systems
+│   │   ├── ...
+│   ├── window-manager                # System-wide window manager configurations
+│   │   ├── ...
+│   ├── default.nix                   # System-wide configuration
+│   └── ...
+├── pkgs                              # Custom package definitions
+│   ├── overlays.nix                  # Nixpkgs overlay definitions
+│   └── ...
+├── templates                         # Flake.nix templates for various projects
+│   ├── golang                        # Go language project template
+│   │   ├── flake.nix
+│   ├── nodejs                        # Node.js project template
+│   │   ├── flake.nix
+│   ├── rust                          # Rust language project template
+│   │   ├── flake.nix
+│   └── default.nix
+├── flake.nix                         # Entry point for NixOS configuration
+├── Makefile                          # Simplified commands for NixOS
+└── ...
 ```
 
 ## Community Resources 📚
