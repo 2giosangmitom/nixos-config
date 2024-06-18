@@ -31,7 +31,7 @@
     pkgs = import inputs.nixpkgs {inherit system;};
     inherit (pkgs.lib) mkOption types;
   in {
-    nixosConfigurations.${host} = inputs.nixpkgs.lib.nixosSystem {
+    ${host} = inputs.nixpkgs.lib.nixosSystem {
       inherit system;
       modules =
         [

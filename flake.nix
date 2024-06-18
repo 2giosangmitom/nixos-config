@@ -15,7 +15,7 @@
     inherit (import ./hosts/lib.nix {inherit inputs overlays;}) mkSystems;
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
-      flake = mkSystems [
+      flake.nixosConfigurations = mkSystems [
         {
           host = "nixos";
           system = "x86_64-linux";
@@ -23,6 +23,21 @@
           isGraphical = true;
         }
       ];
+      flake.templates = {
+        rust = {
+          path = ./templates/rust;
+          description = "Development environment for Rust";
+        };
+        nodejs = {
+          path = ./templates/nodejs;
+          description = "Development environment for NodeJS";
+        };
+        go = {
+          path = ./templates/golang;
+          description = "Development environment for Golang";
+        };
+      };
+
       systems = ["x86_64-linux"];
       perSystem = {pkgs, ...}: {
         devShells.default = pkgs.mkShellNoCC {
