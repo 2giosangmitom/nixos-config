@@ -1,8 +1,8 @@
 {
-  description = "NixOS configuration for a reproducible and customizable system.";
-
+  description = "2giosangmitom's NixOS configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -10,60 +10,44 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    catppuccin,
-    ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      overlays = [
-        (import ./overlays/bob-nvim.nix)
+  outputs = {flake-parts, ...} @ inputs: let
+    overlays = import ./pkgs/overlays.nix;
+    inherit (import ./hosts/lib.nix {inherit inputs overlays;}) mkSystems;
+  in
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      flake.nixosConfigurations = mkSystems [
+        {
+          host = "nixos";
+          system = "x86_64-linux";
+          username = "chien";
+          isGraphical = true;
+        }
       ];
-      config = {
-        allowUnfree = true;
-      };
-    };
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit pkgs;
+      flake.templates = {
+        rust = {
+          path = ./templates/rust;
+          description = "Development environment for Rust";
         };
-        modules = [
-          ./hosts/nixos
-          ./modules/nixos
-          catppuccin.nixosModules.catppuccin
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit pkgs;
-              };
-              users.chien = {
-                imports = [
-                  ./modules/home-manager
-                  catppuccin.homeManagerModules.catppuccin
-                ];
-              };
-            };
-          }
-        ];
+        nodejs = {
+          path = ./templates/nodejs;
+          description = "Development environment for NodeJS";
+        };
+        go = {
+          path = ./templates/golang;
+          description = "Development environment for Golang";
+        };
+      };
+
+      systems = ["x86_64-linux"];
+      perSystem = {pkgs, ...}: {
+        devShells.default = pkgs.mkShellNoCC {
+          buildInputs = with pkgs; [
+            nil
+            alejandra
+            statix
+          ];
+        };
+        formatter = pkgs.alejandra;
       };
     };
-
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = with pkgs; [
-        nodejs_22
-        nil
-        alejandra
-        statix
-      ];
-    };
-    formatter.${system} = pkgs.alejandra;
-  };
 }
