@@ -1,6 +1,6 @@
 {
   programs.starship = {
-    enableFishIntegration = true;
+    enableBashIntegration = true;
     enable = true;
     catppuccin.enable = true;
     settings = {
@@ -35,19 +35,6 @@
       rust.symbol = " ";
       ruby.symbol = " ";
       zig.symbol = " ";
-    };
-  };
-
-  programs.fish = {
-    enable = true;
-    catppuccin.enable = true;
-    interactiveShellInit = ''
-      set -U fish_greeting
-      builtin history clear
-    '';
-    shellAliases = {
-      ls = "eza";
-      cat = "bat";
     };
   };
 }
