@@ -1,11 +1,11 @@
 {pkgs, ...}:
 pkgs.stdenv.mkDerivation rec {
   pname = "bob-nvim";
-  version = "v2.9.1";
+  version = "v3.0.1";
 
   src = pkgs.fetchurl {
     url = "https://github.com/MordechaiHadad/bob/releases/download/${version}/bob-linux-x86_64.zip";
-    hash = "sha256-iH/YbnSLEPIB9jhb6m/4aTnGHLpqHc9jv77wfLrN9gI=";
+    hash = "sha256-p95vFHr318ddWa4j1IpsBO0ebPS5HHkjtTeAfeES0gY=";
   };
 
   dontConfigure = true;
