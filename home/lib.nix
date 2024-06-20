@@ -10,7 +10,10 @@
     inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
-  extraSpecialArgs = {
+  extraSpecialArgs = let
+    pkgs-unstable = import inputs.nixpkgs-unstable {config.allowUnfree = true;};
+  in {
     inherit inputs;
+    inherit pkgs-unstable;
   };
 }

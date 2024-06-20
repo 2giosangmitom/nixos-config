@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   ...
 }: {
@@ -28,7 +29,10 @@
       brave
       gh
       pavucontrol
-    ];
+    ]
+    ++ (with pkgs-unstable; [
+      vscode.fhs
+    ]);
   security.polkit.enable = true;
   programs.gnupg.agent = {
     enable = true;
