@@ -1,7 +1,8 @@
 {
   description = "2giosangmitom's NixOS configuration";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {

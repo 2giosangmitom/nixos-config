@@ -29,6 +29,10 @@
     extraModules ? [],
   }: let
     pkgs = import inputs.nixpkgs {inherit system;};
+    pkgs-unstable = import inputs.nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
     inherit (pkgs.lib) mkOption types;
   in {
     ${host} = inputs.nixpkgs.lib.nixosSystem {
@@ -67,6 +71,7 @@
           {
             _module.args = {
               inherit inputs;
+              inherit pkgs-unstable;
             };
           }
         ]

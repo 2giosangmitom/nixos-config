@@ -22,9 +22,9 @@
     sessionVariables = {};
   };
   xdg = {
-    enable = true;
+    enable = false;
     mimeApps = {
-      enable = true;
+      enable = false;
       defaultApplications = {};
     };
   };
