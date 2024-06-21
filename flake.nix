@@ -46,6 +46,7 @@
             nil
             alejandra
             statix
+            deadnix
           ];
         };
         formatter = pkgs.alejandra;
