@@ -1,6 +1,7 @@
 {
   lib,
   nixosConfig,
+  pkgs-unstable,
   ...
 }: {
   config = lib.mkIf (nixosConfig.isGraphical && nixosConfig.dotfiles.window-manager == "sway") {
@@ -12,6 +13,7 @@
     };
     wayland.windowManager.sway = {
       enable = true;
+      package = pkgs-unstable.sway;
       catppuccin.enable = true;
       wrapperFeatures = {
         gtk = true;

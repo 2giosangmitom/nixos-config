@@ -1,6 +1,7 @@
 {
   inputs,
   username,
+  system,
 }: {
   modules = [
     {
@@ -11,7 +12,10 @@
   ];
 
   extraSpecialArgs = let
-    pkgs-unstable = import inputs.nixpkgs-unstable {config.allowUnfree = true;};
+    pkgs-unstable = import inputs.nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     inherit inputs;
     inherit pkgs-unstable;

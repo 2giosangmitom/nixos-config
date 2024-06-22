@@ -1,6 +1,6 @@
 {
   config,
-  pkgs,
+  pkgs-unstable,
   lib,
   ...
 }: {
@@ -10,7 +10,7 @@
     xdg.portal = {
       enable = true;
       wlr.enable = true;
-      extraPortals = with pkgs; [
+      extraPortals = with pkgs-unstable; [
         xdg-desktop-portal-gtk
       ];
       xdgOpenUsePortal = true;
@@ -18,8 +18,9 @@
 
     programs.sway = {
       enable = true;
+      package = pkgs-unstable.sway;
 
-      extraPackages = with pkgs; [
+      extraPackages = with pkgs-unstable; [
         swayidle
         sway-contrib.grimshot
         wl-clipboard
