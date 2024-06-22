@@ -21,18 +21,12 @@
       package = pkgs.tela-icon-theme;
       name = "Tela-dark";
     };
-
-    cursorTheme = {
-      package = pkgs.vimix-cursors;
-      name = "Vimix Cursors";
-      size = 24;
-    };
   };
 
   home = {
     pointerCursor = {
       gtk.enable = true;
-      size = 24;
+      size = 16;
       package = pkgs.vimix-cursors;
       name = "Vimix Cursors";
     };

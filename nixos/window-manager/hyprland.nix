@@ -1,10 +1,21 @@
 {
   config,
-  pkgs,
+  pkgs-unstable,
   lib,
   ...
 }: {
   config = lib.mkIf (config.dotfiles.window-manager == "hyprland") {
-    programs.hyprland.enable = true;
+    environment.systemPackages = with pkgs-unstable; [
+      wl-clipboard
+      rofi-wayland
+      swww
+      gammastep
+      grimblast
+    ];
+
+    programs.hyprland = {
+      enable = true;
+      package = pkgs-unstable.hyprland;
+    };
   };
 }

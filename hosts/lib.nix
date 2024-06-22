@@ -2,12 +2,9 @@
   inputs,
   overlays,
 }: rec {
-  hmCommonConfig = {username}: {
-    config,
-    pkgs,
-    ...
-  }: let
-    homeLib = import ../home/lib.nix {inherit inputs username;};
+  hmCommonConfig = {username}: {pkgs, ...}: let
+    inherit (pkgs) system;
+    homeLib = import ../home/lib.nix {inherit inputs username system;};
   in {
     config = {
       nixpkgs.overlays = overlays;
