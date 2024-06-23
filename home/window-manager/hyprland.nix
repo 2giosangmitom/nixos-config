@@ -16,9 +16,10 @@
       catppuccin.enable = true;
       package = pkgs-unstable.hyprland;
       settings = {
-        exec = [
+        exec-once = [
           "${./scripts/autostart.sh}"
           "${./scripts/random_bg.sh}"
+          "hyprctl setcursor default 16"
         ];
         "$mod" = "SUPER";
         bind =
