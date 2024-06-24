@@ -164,12 +164,6 @@
           format = "{3}";
           keyColor = "33";
         }
-        "break"
-        {
-          type = "colors";
-          symbol = "block";
-        }
-        "break"
       ];
     };
   };
