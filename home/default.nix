@@ -19,7 +19,9 @@
   ];
   home = {
     stateVersion = "24.05";
-    sessionVariables = {};
+    sessionVariables = {
+      "_JAVA_AWT_WM_NONREPARENTING" = 1;
+    };
   };
   xdg = {
     enable = false;
