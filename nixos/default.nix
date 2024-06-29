@@ -28,13 +28,11 @@
       xdg-utils
       bob-nvim
     ]
-    ++ pkgs.lib.optionals config.isGraphical [
+    ++ (with pkgs-unstable; [
+      vscode.fhs
       brave
       gh
       pavucontrol
-    ]
-    ++ (with pkgs-unstable; [
-      vscode.fhs
     ]);
   security.polkit.enable = true;
   programs.gnupg.agent = {
