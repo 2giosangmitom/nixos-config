@@ -14,6 +14,15 @@
   catppuccin.enable = true;
   environment.systemPackages = with pkgs;
     [
+      bob-nvim
+      mesa
+      libva
+    ]
+    ++ (with pkgs-unstable; [
+      vscode.fhs
+      brave
+      gh
+      pavucontrol
       curl
       gnumake
       fd
@@ -26,13 +35,8 @@
       clang
       procps
       xdg-utils
-      bob-nvim
-    ]
-    ++ (with pkgs-unstable; [
-      vscode.fhs
-      brave
-      gh
-      pavucontrol
+      nix-index
+      zstd
     ]);
   security.polkit.enable = true;
   programs.gnupg.agent = {

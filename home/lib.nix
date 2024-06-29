@@ -9,6 +9,7 @@
       xdg.mime.enable = true;
     }
     inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.nix-index-database.hmModules.nix-index
   ];
 
   extraSpecialArgs = let
