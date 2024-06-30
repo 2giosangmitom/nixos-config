@@ -11,7 +11,9 @@
     ./podman.nix
     ./services.nix
   ];
+
   catppuccin.enable = true;
+
   environment.systemPackages = with pkgs;
     [
       bob-nvim
@@ -28,32 +30,38 @@
             cups
             dbus
             expat
-            file
             fontconfig
             freetype
-            fuse
+            gdk-pixbuf
             glib
-            gtk3
-            libGL
-            libnotify
-            libxml2
-            libxslt
-            netcat
+            pango
+            gtk3-x11
+            gtk2-x11
             nspr
             nss
-            openjdk8
-            openssl.dev
-            pango
-            pkg-config
-            strace
-            udev
-            vulkan-loader
-            watch
-            wget
+            stdenv.cc.cc
+            zlib
+            libuuid
+            jre8
+            cpio
+            file
+            giflib
+            gnome2.GConf
+            gnome2.gnome_vfs
+            gtk2
+            libjpeg
+            libGL
+            perl
             which
             xorg.libX11
             xorg.libxcb
             xorg.libXcomposite
+            xorg.libICE
+            xorg.libXinerama
+            xorg.xrandr
+            xorg.libXt
+            zip
+            zlib
             xorg.libXcursor
             xorg.libXdamage
             xorg.libXext
@@ -61,14 +69,11 @@
             xorg.libXi
             xorg.libXrandr
             xorg.libXrender
-            xorg.libXScrnSaver
-            xorg.libxshmfence
             xorg.libXtst
-            xorg.xcbutilkeysyms
-            zlib
-            fontconfig.lib
+            xorg.libXScrnSaver
+            xorg.libXxf86vm
           ];
-        profile = ''export FHS=1'';
+        profile = "export FHS=1";
         runScript = "bash";
       })
     ]
@@ -91,17 +96,25 @@
       xdg-utils
       nix-index
       zstd
+      nodePackages_latest.npm
+      go
+      wget
     ]);
+
   security.polkit.enable = true;
+
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
+
   systemd.services.systemd-journal-flush.enable = false;
+
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs;
   };
+
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
