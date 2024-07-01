@@ -8,8 +8,8 @@
       scan_timeout = 10;
       command_timeout = 5000;
       character = {
-        success_symbol = "[➜](bold green)";
-        error_symbol = "[➜](bold red)";
+        success_symbol = "[~>](bold green)";
+        error_symbol = "[~>](bold red)";
       };
       aws.symbol = "  ";
       buf.symbol = " ";

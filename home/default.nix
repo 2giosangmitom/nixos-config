@@ -16,6 +16,7 @@
     ./programs/zoxide.nix
     ./programs/eza.nix
     ./programs/fzf.nix
+    ./programs/fish.nix
   ];
   home = {
     stateVersion = "24.05";
