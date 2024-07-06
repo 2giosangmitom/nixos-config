@@ -19,7 +19,7 @@
             alejandra
             nil
             nodejs_20
-            corepack_20
+            pnpm
           ];
         };
       }
