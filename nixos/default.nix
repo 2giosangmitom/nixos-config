@@ -96,9 +96,11 @@
       xdg-utils
       nix-index
       zstd
-      nodePackages_latest.npm
       go
       wget
+      nodejs_20
+      google-chrome
+      firefox
     ]);
 
   security.polkit.enable = true;
