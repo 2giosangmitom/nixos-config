@@ -6,11 +6,12 @@ Welcome to my personal NixOS configuration! This setup is tailored for my daily 
 
 This repository contains my customized NixOS configuration files aimed at providing a robust and efficient environment for daily tasks. The configuration utilizes the Sway and Hyprland window managers, offering a seamless and dynamic tiling experience. Additionally, Home Manager is used to manage user-specific configurations and dotfiles, and Nix flakes are used for better reproducibility.
 
-![demo](https://i.imgur.com/zh2HeVg.png)
+![fastfetch](./screenshots/fastfetch.png)
 
 ## Prerequisites 🦖
 
 Before you begin, ensure you have met the following requirements:
+
 - A basic understanding of NixOS and its configuration system.
 - A machine ready to install NixOS.
 - Nix with flakes enabled. If flakes are not enabled, you can do so by adding `experimental-features = nix-command flakes` to your `~/.config/nix/nix.conf`.
