@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 pkgs.stdenv.mkDerivation rec {
   pname = "bob-nvim";
   version = "v3.0.1";
@@ -10,7 +10,7 @@ pkgs.stdenv.mkDerivation rec {
 
   dontConfigure = true;
   dontBuild = true;
-  buildInputs = with pkgs; [unzip];
+  buildInputs = with pkgs; [ unzip ];
 
   installPhase = ''
     runHook preInstall

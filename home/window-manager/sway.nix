@@ -3,7 +3,8 @@
   nixosConfig,
   pkgs-unstable,
   ...
-}: {
+}:
+{
   config = lib.mkIf (nixosConfig.isGraphical && nixosConfig.dotfiles.window-manager == "sway") {
     fonts.fontconfig.enable = true;
     services = {
@@ -19,9 +20,12 @@
         gtk = true;
       };
       config = rec {
-        bars = [];
+        bars = [ ];
         fonts = {
-          names = ["Roboto" "FiraCode Nerd Font"];
+          names = [
+            "Roboto"
+            "FiraCode Nerd Font"
+          ];
           style = "Regular";
           size = 9.0;
         };
@@ -33,7 +37,7 @@
         floating = {
           titlebar = false;
           border = 2;
-          criteria = [{"class" = "pavucontrol";}];
+          criteria = [ { "class" = "pavucontrol"; } ];
         };
         colors = {
           background = "$base";
@@ -91,7 +95,7 @@
             command = "${./scripts/autostart.sh}";
             always = true;
           }
-          {command = "${./scripts/random_bg.sh}";}
+          { command = "${./scripts/random_bg.sh}"; }
         ];
         keybindings = {
           "${modifier}+Return" = "exec ${terminal}";
@@ -163,9 +167,19 @@
           passthrough = false;
           gtk-layer-shell = true;
           height = 0;
-          modules-left = ["clock" "sway/workspaces" "sway/mode"];
-          modules-center = ["custom/uptime"];
-          modules-right = ["pulseaudio" "temperature" "cpu" "memory" "tray"];
+          modules-left = [
+            "clock"
+            "sway/workspaces"
+            "sway/mode"
+          ];
+          modules-center = [ "custom/uptime" ];
+          modules-right = [
+            "pulseaudio"
+            "temperature"
+            "cpu"
+            "memory"
+            "tray"
+          ];
           clock = {
             format = "{:%b %d - %H:%M}";
             tooltip = false;
@@ -189,7 +203,11 @@
             tooltip = false;
             format-muted = "<span color='#f38ba8'> </span>Muted";
             format-icons = {
-              default = [" " " " " "];
+              default = [
+                " "
+                " "
+                " "
+              ];
             };
             on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
             scroll-step = 5;
@@ -197,16 +215,43 @@
           temperature = {
             "tooltip" = false;
             "format" = "<span color='#ea76cb'>{icon}</span> {temperatureC}°C";
-            "format-icons" = ["" "" "" "" "" ""];
+            "format-icons" = [
+              ""
+              ""
+              ""
+              ""
+              ""
+              ""
+            ];
           };
           cpu = {
             format = "<span color='#eba0ac'>{icon}</span>{usage}%";
-            format-icons = [" " "󰪞 " "󰪟 " "󰪠 " "󰪡 " "󰪢 " "󰪣 " "󰪤 " "󰪥 "];
+            format-icons = [
+              " "
+              "󰪞 "
+              "󰪟 "
+              "󰪠 "
+              "󰪡 "
+              "󰪢 "
+              "󰪣 "
+              "󰪤 "
+              "󰪥 "
+            ];
             tooltip = false;
           };
           memory = {
             format = "<span color='#fab387'>{icon}</span>{used}/{total}";
-            format-icons = [" " "󰪞 " "󰪟 " "󰪠 " "󰪡 " "󰪢 " "󰪣 " "󰪤 " "󰪥 "];
+            format-icons = [
+              " "
+              "󰪞 "
+              "󰪟 "
+              "󰪠 "
+              "󰪡 "
+              "󰪢 "
+              "󰪣 "
+              "󰪤 "
+              "󰪥 "
+            ];
             tooltip = false;
           };
         };

@@ -3,7 +3,8 @@
   pkgs-unstable,
   config,
   ...
-}: {
+}:
+{
   imports = [
     ./window-manager/sway.nix
     ./window-manager/hyprland.nix
@@ -14,7 +15,8 @@
 
   catppuccin.enable = true;
 
-  environment.systemPackages = with pkgs;
+  environment.systemPackages =
+    with pkgs;
     [
       bob-nvim
       mesa
@@ -61,17 +63,24 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       roboto
       crimson-pro
     ];
     fontconfig = {
       defaultFonts = {
-        serif = ["Roboto"];
-        sansSerif = ["Roboto"];
-        monospace = ["JetBrainsMono NF"];
+        serif = [ "Roboto" ];
+        sansSerif = [ "Roboto" ];
+        monospace = [ "JetBrainsMono NF" ];
       };
     };
+  };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
   };
 
   system.stateVersion = "24.05";

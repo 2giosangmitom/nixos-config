@@ -32,7 +32,9 @@
         icon_theme = "Tela-dark";
         line_height = 2;
         markup = "full";
-        format = "<b>%s</b>\n%b";
+        format = ''
+          <b>%s</b>
+          %b'';
         alignment = "left";
         vertical_alignment = "center";
         show_age_threshold = 60;

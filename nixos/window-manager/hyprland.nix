@@ -3,7 +3,8 @@
   pkgs-unstable,
   lib,
   ...
-}: {
+}:
+{
   config = lib.mkIf (config.dotfiles.window-manager == "hyprland") {
     environment.systemPackages = with pkgs-unstable; [
       wl-clipboard

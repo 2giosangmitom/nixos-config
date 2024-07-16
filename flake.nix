@@ -13,11 +13,13 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {flake-parts, ...} @ inputs: let
-    overlays = import ./pkgs/overlays.nix;
-    inherit (import ./hosts/lib.nix {inherit inputs overlays;}) mkSystems;
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs =
+    { flake-parts, ... }@inputs:
+    let
+      overlays = import ./pkgs/overlays.nix;
+      inherit (import ./hosts/lib.nix { inherit inputs overlays; }) mkSystems;
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
       flake.nixosConfigurations = mkSystems [
         {
           host = "nixos";
@@ -41,17 +43,12 @@
         };
       };
 
-      systems = ["x86_64-linux"];
-      perSystem = {pkgs, ...}: {
-        devShells.default = pkgs.mkShellNoCC {
-          buildInputs = with pkgs; [
-            nil
-            alejandra
-            statix
-            deadnix
-          ];
+      systems = [ "x86_64-linux" ];
+      perSystem =
+        { pkgs, ... }:
+        {
+          devShells.default = pkgs.mkShellNoCC { buildInputs = with pkgs; [ deadnix ]; };
+          formatter = pkgs.nixfmt-rfc-style;
         };
-        formatter = pkgs.alejandra;
-      };
     };
 }

@@ -3,16 +3,15 @@
   pkgs-unstable,
   lib,
   ...
-}: {
+}:
+{
   config = lib.mkIf (config.dotfiles.window-manager == "sway") {
     programs.dconf.enable = true;
 
     xdg.portal = {
       enable = true;
       wlr.enable = true;
-      extraPortals = with pkgs-unstable; [
-        xdg-desktop-portal-gtk
-      ];
+      extraPortals = with pkgs-unstable; [ xdg-desktop-portal-gtk ];
       xdgOpenUsePortal = true;
     };
 

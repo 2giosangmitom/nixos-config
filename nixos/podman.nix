@@ -1,4 +1,5 @@
-{pkgs-unstable, ...}: {
+{ pkgs-unstable, ... }:
+{
   virtualisation = {
     podman = {
       enable = true;
@@ -17,5 +18,5 @@
       ];
     };
   };
-  environment.systemPackages = with pkgs-unstable; [podman-compose];
+  environment.systemPackages = with pkgs-unstable; [ podman-compose ];
 }

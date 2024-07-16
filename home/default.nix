@@ -28,7 +28,7 @@
     enable = false;
     mimeApps = {
       enable = false;
-      defaultApplications = {};
+      defaultApplications = { };
     };
   };
   programs.home-manager.enable = true;

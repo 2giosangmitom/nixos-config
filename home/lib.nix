@@ -2,7 +2,8 @@
   inputs,
   username,
   system,
-}: {
+}:
+{
   modules = [
     {
       home.username = username;
@@ -12,13 +13,15 @@
     inputs.nix-index-database.hmModules.nix-index
   ];
 
-  extraSpecialArgs = let
-    pkgs-unstable = import inputs.nixpkgs-unstable {
-      inherit system;
-      config.allowUnfree = true;
+  extraSpecialArgs =
+    let
+      pkgs-unstable = import inputs.nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      inherit inputs;
+      inherit pkgs-unstable;
     };
-  in {
-    inherit inputs;
-    inherit pkgs-unstable;
-  };
 }

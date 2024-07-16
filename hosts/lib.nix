@@ -1,41 +1,45 @@
-{
-  inputs,
-  overlays,
-}: rec {
-  hmCommonConfig = {username}: {pkgs, ...}: let
-    inherit (pkgs) system;
-    homeLib = import ../home/lib.nix {inherit inputs username system;};
-  in {
-    config = {
-      nixpkgs.overlays = overlays;
-      home-manager = {
-        inherit (homeLib) extraSpecialArgs;
-        sharedModules = homeLib.modules;
-        useGlobalPkgs = true;
-        useUserPackages = true;
-        users.${username}.imports = [../home];
+{ inputs, overlays }:
+rec {
+  hmCommonConfig =
+    { username }:
+    { pkgs, ... }:
+    let
+      inherit (pkgs) system;
+      homeLib = import ../home/lib.nix { inherit inputs username system; };
+    in
+    {
+      config = {
+        nixpkgs.overlays = overlays;
+        home-manager = {
+          inherit (homeLib) extraSpecialArgs;
+          sharedModules = homeLib.modules;
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.${username}.imports = [ ../home ];
+        };
       };
     };
-  };
 
-  mkSystem = {
-    host,
-    system,
-    username,
-    isGraphical ? false,
-    extraModules ? [],
-  }: let
-    pkgs = import inputs.nixpkgs {inherit system;};
-    pkgs-unstable = import inputs.nixpkgs-unstable {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    inherit (pkgs.lib) mkOption types;
-  in {
-    ${host} = inputs.nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules =
-        [
+  mkSystem =
+    {
+      host,
+      system,
+      username,
+      isGraphical ? false,
+      extraModules ? [ ],
+    }:
+    let
+      pkgs = import inputs.nixpkgs { inherit system; };
+      pkgs-unstable = import inputs.nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      inherit (pkgs.lib) mkOption types;
+    in
+    {
+      ${host} = inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
           {
             options = {
               dotfiles.username = mkOption {
@@ -44,7 +48,12 @@
                 description = "The username for user";
               };
               dotfiles.window-manager = mkOption {
-                type = types.nullOr (types.enum ["sway" "hyprland"]);
+                type = types.nullOr (
+                  types.enum [
+                    "sway"
+                    "hyprland"
+                  ]
+                );
                 default = "sway";
                 description = "The window manager to use";
               };
@@ -64,17 +73,16 @@
           ../nixos
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
-          (hmCommonConfig {inherit username;})
+          (hmCommonConfig { inherit username; })
           {
             _module.args = {
               inherit inputs;
               inherit pkgs-unstable;
             };
           }
-        ]
-        ++ extraModules;
+        ] ++ extraModules;
+      };
     };
-  };
 
   mkSystems = systems: inputs.nixpkgs.lib.mkMerge (map mkSystem systems);
 }
