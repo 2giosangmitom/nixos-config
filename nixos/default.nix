@@ -1,10 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  config,
-  ...
-}:
-{
+{ pkgs, pkgs-unstable, config, ... }: {
   imports = [
     ./window-manager/sway.nix
     ./window-manager/hyprland.nix
@@ -15,14 +9,8 @@
 
   catppuccin.enable = true;
 
-  environment.systemPackages =
-    with pkgs;
-    [
-      bob-nvim
-      mesa
-      libva
-    ]
-    ++ (with pkgs-unstable; [
+  environment.systemPackages = with pkgs;
+    [ bob-nvim mesa libva ] ++ (with pkgs-unstable; [
       brave
       gh
       pavucontrol
@@ -76,12 +64,8 @@
     };
   };
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
+  hardware.opengl.enable = true;
+  hardware.opengl.extraPackages = with pkgs-unstable; [ vpl-gpu-rt ];
 
   system.stateVersion = "24.05";
 }
