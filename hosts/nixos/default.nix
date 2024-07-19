@@ -1,4 +1,4 @@
 {
   imports = [ ./hardware-configuration.nix ];
-  config.dotfiles.window-manager = "sway";
+  config.dotfiles.window-manager.sway = true;
 }

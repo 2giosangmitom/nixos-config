@@ -5,7 +5,7 @@
   ...
 }:
 {
-  config = lib.mkIf (config.dotfiles.window-manager == "sway") {
+  config = lib.mkIf (config.dotfiles.window-manager.sway == true) {
     programs.dconf.enable = true;
 
     xdg.portal = {

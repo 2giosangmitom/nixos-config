@@ -5,7 +5,7 @@
   ...
 }:
 {
-  config = lib.mkIf (nixosConfig.isGraphical && nixosConfig.dotfiles.window-manager == "hyprland") {
+  config = lib.mkIf (nixosConfig.dotfiles.window-manager.hyprland == true) {
     fonts.fontconfig.enable = true;
     services = {
       gnome-keyring = {

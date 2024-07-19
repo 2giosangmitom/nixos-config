@@ -25,7 +25,6 @@
           host = "nixos";
           system = "x86_64-linux";
           username = "chien";
-          isGraphical = true;
         }
       ];
       flake.templates = {

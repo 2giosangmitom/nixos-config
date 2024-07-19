@@ -5,7 +5,7 @@
   ...
 }:
 {
-  config = lib.mkIf (config.dotfiles.window-manager == "hyprland") {
+  config = lib.mkIf (config.dotfiles.window-manager.hyprland == true) {
     environment.systemPackages = with pkgs-unstable; [
       wl-clipboard
       rofi-wayland

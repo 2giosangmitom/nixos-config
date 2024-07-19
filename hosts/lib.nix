@@ -25,7 +25,6 @@ rec {
       host,
       system,
       username,
-      isGraphical ? false,
       extraModules ? [ ],
     }:
     let
@@ -47,24 +46,20 @@ rec {
                 default = username;
                 description = "The username for user";
               };
-              dotfiles.window-manager = mkOption {
-                type = types.nullOr (
-                  types.enum [
-                    "sway"
-                    "hyprland"
-                  ]
-                );
-                default = "sway";
-                description = "The window manager to use";
-              };
-              isGraphical = mkOption {
-                type = types.bool;
-                default = isGraphical;
-                description = "Whether the system is a graphical target";
+              dotfiles.window-manager = {
+                sway = mkOption {
+                  type = types.bool;
+                  default = false;
+                  description = "Enable sway window manager";
+                };
+                hyprland = mkOption {
+                  type = types.bool;
+                  default = false;
+                  description = "Enable Hyprland window manager";
+                };
               };
             };
             config = {
-              dotfiles.window-manager = pkgs.lib.mkIf (!isGraphical) null;
               networking.hostName = host;
             };
           }

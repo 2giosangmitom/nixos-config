@@ -3,7 +3,7 @@
   security.rtkit.enable = true;
   services = {
     pipewire = {
-      enable = config.isGraphical;
+      enable = true;
       pulse.enable = true;
       alsa.enable = true;
     };
