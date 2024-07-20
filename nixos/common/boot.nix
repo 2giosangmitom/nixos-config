@@ -13,6 +13,7 @@
         efiSupport = true;
         timeoutStyle = "menu";
         configurationLimit = 10;
+        useOSProber = true;
       };
       timeout = 5;
     };
