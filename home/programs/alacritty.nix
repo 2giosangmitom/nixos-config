@@ -3,7 +3,7 @@
     enable = true;
     catppuccin.enable = true;
     settings = {
-      shell = "bash";
+      shell = "fish";
       live_config_reload = true;
       font = {
         size = 10;
