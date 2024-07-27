@@ -9,7 +9,6 @@
     ./window-manager/sway.nix
     ./window-manager/hyprland.nix
     ./docker.nix
-    ./podman.nix
     ./services.nix
   ];
 
