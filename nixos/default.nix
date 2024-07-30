@@ -43,6 +43,7 @@
       wget
       nodejs_20
       bleachbit
+      python3
     ]);
 
   security.polkit.enable = true;
