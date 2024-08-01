@@ -9,7 +9,6 @@
     ./programs/git.nix
     ./programs/lazygit.nix
     ./programs/yazi.nix
-    ./programs/dunst.nix
     ./programs/bottom.nix
     ./theme.nix
     ./programs/bat.nix

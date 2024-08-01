@@ -46,7 +46,7 @@
       perSystem =
         { pkgs, ... }:
         {
-          devShells.default = pkgs.mkShellNoCC { buildInputs = with pkgs; [ deadnix ]; };
+          devShells.default = pkgs.mkShellNoCC { buildInputs = with pkgs; [ deadnix nil ]; };
           formatter = pkgs.nixfmt-rfc-style;
         };
     };
