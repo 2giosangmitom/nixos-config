@@ -10,7 +10,8 @@
 
     ./programs/docker.nix
     ./programs/neovim.nix
-    ./graphical/hyprland.nix
+
+    ./graphical/sway.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -36,6 +37,29 @@
     python3
     du-dust
   ];
+
+  systemd.services.systemd-journal-flush.enable = false;
+
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
+
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      roboto
+      crimson-pro
+    ];
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Roboto" ];
+        sansSerif = [ "Roboto" ];
+        monospace = [ "JetBrainsMono NF" ];
+      };
+    };
+  };
 
   system.stateVersion = "24.05";
 }
