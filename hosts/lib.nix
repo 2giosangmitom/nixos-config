@@ -6,6 +6,7 @@ rec {
       system,
       username,
       fullname,
+      email,
     }:
     let
       pkgs = import inputs.nixpkgs { inherit system; };
@@ -26,7 +27,10 @@ rec {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = {
-                imports = [ ../home ];
+                imports = [
+                  ../home
+                  ./${hostname}/home.nix
+                ];
               };
             };
           }
@@ -51,7 +55,7 @@ rec {
                 };
                 email = mkOption {
                   type = types.str;
-                  default = "example@proton.me";
+                  default = email;
                   description = "The email of the user";
                 };
               };

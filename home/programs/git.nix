@@ -2,8 +2,8 @@
 {
   programs.git = {
     enable = true;
-    userName = osConfig.fullname;
-    userEmail = osConfig.email;
+    userName = osConfig.dotfiles.fullname;
+    userEmail = osConfig.dotfiles.email;
     delta.enable = true;
   };
 }

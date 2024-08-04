@@ -25,6 +25,7 @@
           system = "x86_64-linux";
           username = "chien";
           fullname = "Vo Quang Chien";
+          email = "voquangchien.dev@proton.me";
         }
       ];
       systems = [ "x86_64-linux" ];

@@ -1,6 +1,6 @@
-{ osConfig, lib, ... }:
+{ config, lib, ... }:
 let
-  cfg = osConfig.graphical.hyprland;
+  cfg = config.graphical.hyprland;
 in
 {
   options.graphical.hyprland = {

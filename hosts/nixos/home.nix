@@ -1,0 +1,5 @@
+{
+  dotfiles = {
+    alacritty.enable = true;
+  };
+}

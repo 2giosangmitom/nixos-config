@@ -1,6 +1,6 @@
-{ osConfig, lib, ... }:
+{ config, lib, ... }:
 let
-  cfg = osConfig.dotfiles.alacritty;
+  cfg = config.dotfiles.alacritty;
 in
 {
   options.dotfiles.alacritty = {

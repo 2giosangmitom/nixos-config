@@ -10,6 +10,7 @@
 
     ./programs/docker.nix
     ./programs/neovim.nix
+    ./graphical/hyprland.nix
   ];
 
   environment.systemPackages = with pkgs; [
