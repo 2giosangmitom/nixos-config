@@ -3,6 +3,7 @@
   imports = [
     ./programs/alacritty.nix
     ./programs/bat.nix
+    ./programs/bottom.nix
     ./programs/eza.nix
     ./programs/git.nix
     ./programs/lazygit.nix

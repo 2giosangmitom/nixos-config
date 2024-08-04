@@ -92,7 +92,7 @@ in
         ];
         keybindings = {
           "${modifier}+Return" = "exec ${terminal}";
-          "${modifier}+d" = "exec rofi --show drun";
+          "${modifier}+d" = "exec ~/.config/rofi/launch.sh launcher";
           "${modifier}+q" = "kill";
           "${modifier}+Shift+c" = "reload";
 
@@ -105,9 +105,9 @@ in
           "${modifier}+Shift+${down}" = "move down";
           "${modifier}+Shift+${up}" = "move up";
           "${modifier}+Shift+${right}" = "move right";
-          "Shift+Print" = "exec grimshot copy area";
+          "Shift+Print" = "exec flameshot gui";
           "Print" = "exec grimshot copy screen";
-          # "${modifier}+Shift+e" = ""; # TODO: implement later
+          "${modifier}+Shift+e" = "exec ~/.config/rofi/launch.sh powermenu";
 
           "${modifier}+b" = "splith";
           "${modifier}+v" = "splitv";

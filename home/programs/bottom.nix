@@ -10,7 +10,6 @@ in
   config = lib.mkIf cfg.enable {
     programs.bottom = {
       enable = true;
-      catppuccin.enable = true;
       settings = {
         flags = {
           dot_marker = true;

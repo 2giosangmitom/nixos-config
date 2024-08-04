@@ -16,6 +16,7 @@ in
     environment.systemPackages = with pkgs; [
       flameshot
       wl-clipboard
+      swaybg
     ];
     programs.sway = {
       enable = true;
