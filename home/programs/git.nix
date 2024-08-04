@@ -1,8 +1,9 @@
+{ osConfig, ... }:
 {
   programs.git = {
     enable = true;
-    userName = "Vo Quang Chien";
-    userEmail = "voquangchien.dev@proton.me";
+    userName = osConfig.fullname;
+    userEmail = osConfig.email;
     delta.enable = true;
   };
 }

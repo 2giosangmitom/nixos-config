@@ -13,7 +13,7 @@
         efiSupport = true;
         timeoutStyle = "menu";
         configurationLimit = 10;
-        useOSProber = true;
+        useOSProber = false;
       };
       timeout = 5;
     };
@@ -21,7 +21,7 @@
     kernel.sysctl = {
       "vm.swappiness" = 100;
       "kernel.nmi_watchdog" = 0;
-      "kernel.core_pattern" = "/dev/null";
+      "kernel.core_pattern" = "/dev/null"; # Disable core dumps
     };
   };
 }
