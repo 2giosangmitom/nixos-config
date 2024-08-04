@@ -15,7 +15,7 @@
         efiSupport = true;
         timeoutStyle = "menu";
         configurationLimit = 10;
-        useOSProber = false;
+        useOSProber = true;
       };
       timeout = 1;
     };
