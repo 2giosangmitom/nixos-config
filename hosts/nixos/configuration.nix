@@ -9,10 +9,6 @@
   # Email
   email = "voquangchien.dev@proton.me";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -22,18 +18,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     firefox
-  #     tree
-  #   ];
-  # };
-
   environment.systemPackages = with pkgs; [
     vim
     wget
   ];
+
+  common.sound.enable = true;
+  graphical.hyprland.enable = true;
+  dotfiles.docker.enable = true;
+  dotfiles.alacritty.enable = true;
 }

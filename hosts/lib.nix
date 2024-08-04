@@ -17,6 +17,7 @@ rec {
 
         modules = [
           inputs.home-manager.nixosModules.home-manager
+          inputs.nix-index-database.nixosModules.nix-index
           ./${hostname}
           ../nixos
 

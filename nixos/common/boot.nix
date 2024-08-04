@@ -17,9 +17,14 @@
         configurationLimit = 10;
         useOSProber = false;
       };
-      timeout = 5;
+      timeout = 1;
     };
-    kernelParams = [ "nowatchdog" ];
+    kernelParams = [
+      "nowatchdog"
+      "quiet"
+      "splash"
+      "mitigations=off"
+    ];
     kernel.sysctl = {
       "vm.swappiness" = 100;
       "kernel.nmi_watchdog" = 0;

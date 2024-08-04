@@ -1,9 +1,9 @@
 { osConfig, lib, ... }:
 let
-  cfg = osConfig.programs.alacritty;
+  cfg = osConfig.dotfiles.alacritty;
 in
 {
-  options.programs.alacritty = {
+  options.dotfiles.alacritty = {
     enable = lib.mkEnableOption "Alacritty";
   };
 
