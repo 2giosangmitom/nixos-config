@@ -36,7 +36,6 @@
     bleachbit
     python3
     du-dust
-    uutils-coreutils
   ];
 
   systemd.services.systemd-journal-flush.enable = false;

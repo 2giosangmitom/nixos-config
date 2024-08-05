@@ -89,6 +89,7 @@ in
             command = "${./scripts/autostart.sh}";
             always = true;
           }
+          { command = "${./scripts/random_bg.sh}"; }
         ];
         keybindings = {
           "${modifier}+Return" = "exec ${terminal}";
