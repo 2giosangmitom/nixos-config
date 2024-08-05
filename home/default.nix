@@ -8,9 +8,9 @@
     ./programs/git.nix
     ./programs/lazygit.nix
     ./programs/rofi.nix
+    ./programs/starship.nix
     ./programs/yazi.nix
     ./programs/zellij.nix
-    ./programs/zsh.nix
 
     ./graphical/sway.nix
   ];
