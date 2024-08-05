@@ -36,9 +36,9 @@ in
       extraPackages = with pkgs; [
         swayidle
         gammastep
-        flameshot
         wl-clipboard
         swaybg
+        sway-contrib.grimshot
       ];
 
       wrapperFeatures = {

@@ -16,10 +16,7 @@ in
       config = rec {
         bars = [ ];
         fonts = {
-          names = [
-            "Roboto"
-            "FiraCode Nerd Font"
-          ];
+          names = [ "Roboto" ];
           style = "Regular";
           size = 9.0;
         };
@@ -106,7 +103,7 @@ in
           "${modifier}+Shift+${down}" = "move down";
           "${modifier}+Shift+${up}" = "move up";
           "${modifier}+Shift+${right}" = "move right";
-          "Shift+Print" = "exec flameshot gui";
+          "Shift+Print" = "exec grimshot copy area";
           "Print" = "exec grimshot copy screen";
           "${modifier}+Shift+e" = "exec ~/.config/rofi/launch.sh powermenu";
 
