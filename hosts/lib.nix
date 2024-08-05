@@ -10,6 +10,10 @@ rec {
     }:
     let
       pkgs = import inputs.nixpkgs { inherit system; };
+      pkgs-unstable = import inputs.nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       inherit (pkgs.lib) mkOption types;
     in
     {
@@ -26,6 +30,10 @@ rec {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = {
+                inherit inputs;
+                inherit pkgs-unstable;
+              };
               users.${username} = {
                 imports = [
                   ../home
@@ -65,6 +73,7 @@ rec {
           {
             _module.args = {
               inherit inputs;
+              inherit pkgs-unstable;
             };
           }
         ];
