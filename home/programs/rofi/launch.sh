@@ -15,10 +15,7 @@ yes="󰗠 Yes"
 no="󰅙 No"
 
 show_powermenu() {
-  local uptime
-  local host
-  local choice
-  local options=(
+  options=(
     "$lock"
     "$suspend"
     "$logout"
@@ -26,7 +23,26 @@ show_powermenu() {
     "$shutdown"
   )
 
-  uptime=$(uptime -p | sed -e 's/up //g')
+  UPTIME=$(uptime | awk '{print $3}' | tr -d ',')
+  IFS=':' read -r hours minutes <<<"$UPTIME"
+
+  # Ensure that hours and minutes are treated as integers
+  hours=$((10#$hours))
+  minutes=$((10#$minutes))
+
+  if [[ $hours -gt 1 ]]; then
+    hour_unit="hours"
+  else
+    hour_unit="hour"
+  fi
+
+  if [[ $minutes -gt 1 ]]; then
+    minute_unit="minutes"
+  else
+    minute_unit="minute"
+  fi
+
+  uptime="$hours $hour_unit $minutes $minute_unit"
   host=$(hostnamectl hostname)
   choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$DIR/powermenu.rasi")
   echo "$choice"
