@@ -10,5 +10,6 @@
       enabled = "ibus";
       ibus.engines = with pkgs-unstable.ibus-engines; [ bamboo ];
     };
+    environment.systemPackages = with pkgs-unstable; [ vesktop ];
   };
 }
