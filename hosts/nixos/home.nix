@@ -7,6 +7,8 @@
     starship.enable = true;
     eza.enable = true;
     lazygit.enable = true;
+    zellij.enable = true;
+    yazi.enable = true;
   };
   graphical.sway.enable = true;
 }
