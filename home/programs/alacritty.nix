@@ -11,7 +11,13 @@ in
     programs.alacritty = {
       enable = true;
       settings = {
-        shell = "zsh";
+        shell = {
+          program = "zsh";
+          args = [
+            "-c"
+            "zellij"
+          ];
+        };
         font = {
           size = 10;
           normal = {
