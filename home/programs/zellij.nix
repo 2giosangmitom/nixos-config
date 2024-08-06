@@ -10,6 +10,9 @@ in
   config = lib.mkIf cfg.enable {
     programs.zellij = {
       enable = true;
+      settings = {
+        simplified_ui = true;
+      };
     };
   };
 }
