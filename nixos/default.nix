@@ -1,57 +1,42 @@
-{
-  pkgs,
-  pkgs-unstable,
-  config,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
-    ./window-manager/sway.nix
-    ./window-manager/hyprland.nix
-    ./docker.nix
-    ./services.nix
+    ./common/boot.nix
+    ./common/networking.nix
+    ./common/nix.nix
+    ./common/shell.nix
+    ./common/sound.nix
+    ./common/user.nix
+
+    ./programs/docker.nix
+    ./programs/neovim.nix
+
+    ./graphical/sway.nix
   ];
 
-  catppuccin.enable = true;
-
-  environment.systemPackages =
-    with pkgs;
-    [
-      bob-nvim
-      mesa
-      libva
-    ]
-    ++ (with pkgs-unstable; [
-      brave
-      gh
-      pavucontrol
-      curl
-      gnumake
-      fd
-      tokei
-      du-dust
-      ripgrep
-      jq
-      zip
-      unzip
-      clang
-      procps
-      xdg-utils
-      nix-index
-      zstd
-      go
-      wget
-      nodejs_20
-      bleachbit
-      python3
-    ]);
-
-  security.polkit.enable = true;
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  environment.systemPackages = with pkgs; [
+    mesa
+    brave
+    gh
+    pavucontrol
+    curl
+    gnumake
+    fd
+    tokei
+    ripgrep
+    jq
+    zip
+    unzip
+    clang
+    xdg-utils
+    nix-index
+    go
+    wget
+    nodejs_20
+    bleachbit
+    python3
+    du-dust
+  ];
 
   systemd.services.systemd-journal-flush.enable = false;
 
@@ -75,9 +60,6 @@
       };
     };
   };
-
-  hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs-unstable; [ vpl-gpu-rt ];
 
   system.stateVersion = "24.05";
 }

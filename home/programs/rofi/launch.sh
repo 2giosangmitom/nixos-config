@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-# Function to show launcher with the given theme
+DIR="$HOME/.config/rofi"
+
 show_launcher() {
-	local theme="$1"
-	rofi -show drun -theme "$theme"
+  rofi -show drun -theme "$DIR/launcher.rasi"
 }
 
-# Power options and confirmation labels
 shutdown="⏻ Shutdown"
 reboot=" Reboot"
 lock="󰌾 Lock"
@@ -15,109 +14,105 @@ logout=" Logout"
 yes="󰗠 Yes"
 no="󰅙 No"
 
-# Function to show power menu with the given theme
 show_powermenu() {
-	local theme="$1"
-	local uptime
-	local host
-	local choice
-	local options=(
-		"$lock"
-		"$suspend"
-		"$logout"
-		"$reboot"
-		"$shutdown"
-	)
+  options=(
+    "$lock"
+    "$suspend"
+    "$logout"
+    "$reboot"
+    "$shutdown"
+  )
 
-	uptime=$(uptime -p | sed -e 's/up //g')
-	host=$(hostnamectl hostname)
-	choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$theme")
-	echo "$choice"
+  UPTIME=$(uptime | awk '{print $3}' | tr -d ',')
+  IFS=':' read -r hours minutes <<<"$UPTIME"
+
+  # Ensure that hours and minutes are treated as integers
+  hours=$((10#$hours))
+  minutes=$((10#$minutes))
+
+  if [[ $hours -gt 1 ]]; then
+    hour_unit="hours"
+  else
+    hour_unit="hour"
+  fi
+
+  if [[ $minutes -gt 1 ]]; then
+    minute_unit="minutes"
+  else
+    minute_unit="minute"
+  fi
+
+  uptime="$hours $hour_unit $minutes $minute_unit"
+  host=$(hostnamectl hostname)
+  choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$DIR/powermenu.rasi")
+  echo "$choice"
 }
 
-# Function to confirm exit with the given theme
 confirm_exit() {
-	local theme="$1"
-	local selected
-
-	selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$theme")
-	echo "$selected"
+  selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$DIR/confirm.rasi")
+  echo "$selected"
 }
 
-# Function to run the selected command
 run_cmd() {
-	local action="$1"
-	local theme="$2"
-	local wm="$3"
-	local selected
-
-	selected=$(confirm_exit "$theme")
-	if [[ "$selected" == "$yes" ]]; then
-		case "$action" in
-		"--shutdown")
-			systemctl poweroff
-			;;
-		"--reboot")
-			systemctl reboot
-			;;
-		"--suspend")
-			systemctl suspend
-			;;
-		"--logout")
-			if [[ "$wm" == "sway" ]]; then
-				swaymsg exit
-			else
-				pkill -KILL -u "$USER"
-			fi
-			;;
-		"--lock")
-			swaylock
-			;;
-		*)
-			echo "Invalid action: $action"
-			exit 1
-			;;
-		esac
-	else
-		exit 0
-	fi
+  action="$1"
+  selected=$(confirm_exit "$DIR/confirm.rasi")
+  if [[ "$selected" == "$yes" ]]; then
+    case "$action" in
+    "--shutdown")
+      systemctl poweroff
+      ;;
+    "--reboot")
+      systemctl reboot
+      ;;
+    "--suspend")
+      systemctl suspend
+      ;;
+    "--logout")
+      swaymsg exit
+      ;;
+    "--lock")
+      swaylock
+      ;;
+    *)
+      echo "Invalid action: $action"
+      exit 1
+      ;;
+    esac
+  else
+    exit 0
+  fi
 }
 
-# Main script logic
 case "$1" in
 "launcher")
-	show_launcher "$2"
-	;;
+  show_launcher
+  ;;
 "powermenu")
-	wm="$2"
-	theme="$3"
-	confirm_theme="$4"
-
-	choice=$(show_powermenu "$theme")
-	case "$choice" in
-	"$shutdown")
-		run_cmd --shutdown "$confirm_theme"
-		;;
-	"$reboot")
-		run_cmd --reboot "$confirm_theme"
-		;;
-	"$lock")
-		run_cmd --lock "$confirm_theme" "$wm"
-		;;
-	"$suspend")
-		run_cmd --suspend "$confirm_theme"
-		;;
-	"$logout")
-		run_cmd --logout "$confirm_theme" "$wm"
-		;;
-	*)
-		echo "Invalid choice: $choice"
-		exit 1
-		;;
-	esac
-	;;
+  choice=$(show_powermenu "$DIR/powermenu.rasi")
+  case "$choice" in
+  "$shutdown")
+    run_cmd --shutdown
+    ;;
+  "$reboot")
+    run_cmd --reboot
+    ;;
+  "$lock")
+    run_cmd --lock
+    ;;
+  "$suspend")
+    run_cmd --suspend
+    ;;
+  "$logout")
+    run_cmd --logout
+    ;;
+  *)
+    echo "Invalid choice: $choice"
+    exit 1
+    ;;
+  esac
+  ;;
 *)
-	echo "Usage: $0 {launcher|powermenu} [args...]"
-	exit 1
-	;;
+  echo "Usage: $0 {launcher|powermenu}"
+  exit 1
+  ;;
 esac

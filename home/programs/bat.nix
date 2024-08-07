@@ -1,6 +1,15 @@
+{ config, lib, ... }:
+let
+  cfg = config.dotfiles.bat;
+in
 {
-  programs.bat = {
-    enable = true;
-    catppuccin.enable = true;
+  options.dotfiles.bat = {
+    enable = lib.mkEnableOption "Bat";
+  };
+
+  config = lib.mkIf cfg.enable {
+    programs.bat = {
+      enable = true;
+    };
   };
 }

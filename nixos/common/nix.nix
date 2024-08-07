@@ -7,11 +7,9 @@
         "nix-command"
         "flakes"
       ];
-      auto-optimise-store = true;
       trusted-users = [
-        "@sudo"
         "@wheel"
-        "chien"
+        "root"
       ];
       use-xdg-base-directories = true;
       warn-dirty = false;

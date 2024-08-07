@@ -1,4 +1,6 @@
 {
-  imports = [ ./hardware-configuration.nix ];
-  config.dotfiles.window-manager.sway = true;
+  imports = [
+    ./configuration.nix
+    ./hardware-configuration.nix
+  ];
 }

@@ -1,31 +1,12 @@
-{ inputs, overlays }:
+{ inputs }:
 rec {
-  hmCommonConfig =
-    { username }:
-    { pkgs, ... }:
-    let
-      inherit (pkgs) system;
-      homeLib = import ../home/lib.nix { inherit inputs username system; };
-    in
+  mkHost =
     {
-      config = {
-        nixpkgs.overlays = overlays;
-        home-manager = {
-          inherit (homeLib) extraSpecialArgs;
-          sharedModules = homeLib.modules;
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          users.${username}.imports = [ ../home ];
-        };
-      };
-    };
-
-  mkSystem =
-    {
-      host,
+      hostname,
       system,
       username,
-      extraModules ? [ ],
+      fullname,
+      email,
     }:
     let
       pkgs = import inputs.nixpkgs { inherit system; };
@@ -36,48 +17,68 @@ rec {
       inherit (pkgs.lib) mkOption types;
     in
     {
-      ${host} = inputs.nixpkgs.lib.nixosSystem {
+      ${hostname} = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
+
         modules = [
+          inputs.home-manager.nixosModules.home-manager
+          inputs.nix-index-database.nixosModules.nix-index
+          ./${hostname}
+          ../nixos
+
           {
-            options = {
-              dotfiles.username = mkOption {
-                type = types.str;
-                default = username;
-                description = "The username for user";
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {
+                inherit inputs;
+                inherit pkgs-unstable;
               };
-              dotfiles.window-manager = {
-                sway = mkOption {
-                  type = types.bool;
-                  default = false;
-                  description = "Enable sway window manager";
-                };
-                hyprland = mkOption {
-                  type = types.bool;
-                  default = false;
-                  description = "Enable Hyprland window manager";
-                };
+              users.${username} = {
+                imports = [
+                  ../home
+                  ./${hostname}/home.nix
+                ];
               };
-            };
-            config = {
-              networking.hostName = host;
             };
           }
-          ./${host}
-          ../nixos/common
-          ../nixos
-          inputs.catppuccin.nixosModules.catppuccin
-          inputs.home-manager.nixosModules.home-manager
-          (hmCommonConfig { inherit username; })
+
+          {
+            options = {
+              dotfiles = {
+                hostName = mkOption {
+                  type = types.str;
+                  default = hostname;
+                  description = "The hostname of the machine";
+                };
+                username = mkOption {
+                  type = types.str;
+                  default = username;
+                  description = "The username for user";
+                };
+                fullname = mkOption {
+                  type = types.str;
+                  default = fullname;
+                  description = "The full name of the user";
+                };
+                email = mkOption {
+                  type = types.str;
+                  default = email;
+                  description = "The email of the user";
+                };
+              };
+            };
+          }
+
           {
             _module.args = {
               inherit inputs;
               inherit pkgs-unstable;
             };
           }
-        ] ++ extraModules;
+        ];
       };
     };
 
-  mkSystems = systems: inputs.nixpkgs.lib.mkMerge (map mkSystem systems);
+  mkHosts = systems: inputs.nixpkgs.lib.mkMerge (map mkHost systems);
 }

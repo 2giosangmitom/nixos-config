@@ -2,11 +2,9 @@
 {
   users.users.${config.dotfiles.username} = {
     isNormalUser = true;
-    description = "Vo Quang Chien";
+    description = config.dotfiles.fullname;
     initialPassword = "123";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+    extraGroups = [ "wheel" ];
+    useDefaultShell = true;
   };
 }

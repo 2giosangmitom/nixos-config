@@ -1,5 +1,7 @@
+{ pkgs, ... }:
 {
   boot = {
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     tmp = {
       cleanOnBoot = true;
     };
@@ -15,13 +17,18 @@
         configurationLimit = 10;
         useOSProber = true;
       };
-      timeout = 5;
+      timeout = 1;
     };
-    kernelParams = [ "nowatchdog" ];
+    kernelParams = [
+      "nowatchdog"
+      "quiet"
+      "splash"
+      "mitigations=off"
+    ];
     kernel.sysctl = {
       "vm.swappiness" = 100;
       "kernel.nmi_watchdog" = 0;
-      "kernel.core_pattern" = "/dev/null";
+      "kernel.core_pattern" = "/dev/null"; # Disable core dumps
     };
   };
 }

@@ -1,34 +1,57 @@
+{ pkgs, ... }:
 {
   imports = [
-    ./window-manager/sway.nix
-    ./window-manager/hyprland.nix
-    ./programs/bash.nix
-    ./programs/starship.nix
     ./programs/alacritty.nix
-    ./programs/fastfetch.nix
+    ./programs/bat.nix
+    ./programs/bottom.nix
+    ./programs/eza.nix
     ./programs/git.nix
     ./programs/lazygit.nix
+    ./programs/rofi.nix
+    ./programs/starship.nix
+    ./programs/waybar
     ./programs/yazi.nix
-    ./programs/bottom.nix
-    ./theme.nix
-    ./programs/bat.nix
-    ./programs/zoxide.nix
-    ./programs/eza.nix
-    ./programs/fzf.nix
-    ./programs/fish.nix
+    ./programs/zellij.nix
+
+    ./graphical/sway.nix
   ];
+
   home = {
+    pointerCursor = {
+      gtk.enable = true;
+      size = 16;
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
+    };
+
+    file.".icons/default".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
+
     stateVersion = "24.05";
-    sessionVariables = {
-      "_JAVA_AWT_WM_NONREPARENTING" = 1;
+  };
+
+  gtk = {
+    enable = true;
+
+    gtk3.extraConfig = {
+      gtk-cursor-theme-name = "Vimix Cursors";
+      gtk-enable-animations = 1;
+    };
+
+    font = {
+      name = "Roboto";
+      size = 10;
+    };
+
+    theme = {
+      name = "Sweet-Dark-v40";
+      package = pkgs.sweet;
+    };
+
+    iconTheme = {
+      package = pkgs.tela-icon-theme;
+      name = "Tela-dark";
     };
   };
-  xdg = {
-    enable = false;
-    mimeApps = {
-      enable = false;
-      defaultApplications = { };
-    };
-  };
+
   programs.home-manager.enable = true;
 }

@@ -1,10 +1,17 @@
+{ config, lib, ... }:
+let
+  cfg = config.common.sound;
+in
 {
-  security.rtkit.enable = true;
-  services = {
-    pipewire = {
+  options.common.sound = {
+    enable = lib.mkEnableOption "sound support";
+  };
+
+  config = lib.mkIf cfg.enable {
+    security.rtkit.enable = true;
+    services.pipewire = {
       enable = true;
       pulse.enable = true;
-      alsa.enable = true;
     };
   };
 }
