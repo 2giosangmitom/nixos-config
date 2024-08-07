@@ -27,6 +27,8 @@ in
           modules-right = [
             "pulseaudio"
             "network"
+            "memory"
+            "cpu"
             "tray"
           ];
           clock = {
@@ -54,6 +56,14 @@ in
             };
             on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
             scroll-step = 5;
+          };
+          cpu = {
+            format = "<span color='#eba0ac'>󰘚 </span>{usage}%";
+            tooltip = false;
+          };
+          memory = {
+            format = "<span color='#fab387'> </span>{used}/{total}";
+            tooltip = false;
           };
           network = {
             tooltip = false;

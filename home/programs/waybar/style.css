@@ -35,6 +35,8 @@ window#waybar {
 #pulseaudio,
 #tray,
 #workspaces,
-#network {
+#network,
+#cpu,
+#memory {
   margin-right: 10px;
 }
