@@ -9,6 +9,7 @@
     lazygit.enable = true;
     zellij.enable = true;
     yazi.enable = true;
+    waybar.enable = true;
   };
   graphical.sway.enable = true;
 }

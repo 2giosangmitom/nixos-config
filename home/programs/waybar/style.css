@@ -1,0 +1,47 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono NF";
+  font-size: 12.5px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  color: #eeeeee;
+}
+
+#workspaces button.focused {
+  color: #5c8374;
+}
+
+#workspaces button.urgent {
+  color: #ce5a67;
+}
+
+#workspaces button.persistent {
+  color: #5272f2;
+}
+
+#workspaces button:hover {
+  background: #222831;
+}
+
+#pulseaudio,
+#clock,
+#workspaces,
+#tray,
+#mode,
+#network,
+#cpu {
+  background: #222831;
+  color: #eeeeee;
+  margin: 2px 3px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
