@@ -30,44 +30,44 @@ in
           border = 2;
           criteria = [ { "class" = "pavucontrol"; } ];
         };
-        # colors = {
-        #   background = "$base";
-        #   focused = {
-        #     border = "$lavender";
-        #     background = "$base";
-        #     text = "$text";
-        #     indicator = "$rosewater";
-        #     childBorder = "$lavender";
-        #   };
-        #   placeholder = {
-        #     background = "#1e1e2e";
-        #     text = "#cdd6f4";
-        #     indicator = "#6c7086";
-        #     border = "#6c7086";
-        #     childBorder = "#6c7086";
-        #   };
-        #   urgent = {
-        #     background = "$base";
-        #     text = "$text";
-        #     indicator = "$overlay0";
-        #     border = "$peach";
-        #     childBorder = "$peach";
-        #   };
-        #   unfocused = {
-        #     background = "$base";
-        #     text = "$text";
-        #     indicator = "$rosewater";
-        #     border = "$overlay0";
-        #     childBorder = "$overlay0";
-        #   };
-        #   focusedInactive = {
-        #     border = "$overlay0";
-        #     background = "$base";
-        #     text = "$text";
-        #     indicator = "$rosewater";
-        #     childBorder = "$overlay0";
-        #   };
-        # };
+        colors = {
+          background = "#1e1e2e";
+          focused = {
+            border = "#b4befe";
+            background = "#1e1e2e";
+            text = "#cdd6f4";
+            indicator = "#f5e0dc";
+            childBorder = "#b4befe";
+          };
+          placeholder = {
+            background = "#1e1e2e";
+            text = "#cdd6f4";
+            indicator = "#6c7086";
+            border = "#6c7086";
+            childBorder = "#6c7086";
+          };
+          urgent = {
+            background = "#1e1e2e";
+            text = "#cdd6f4";
+            indicator = "#6c7086";
+            border = "#fab387";
+            childBorder = "#fab387";
+          };
+          unfocused = {
+            background = "#1e1e2e";
+            text = "#cdd6f4";
+            indicator = "#f5e0dc";
+            border = "#6c7086";
+            childBorder = "#6c7086";
+          };
+          focusedInactive = {
+            border = "#6c7086";
+            background = "#1e1e2e";
+            text = "#cdd6f4";
+            indicator = "#f5e0dc";
+            childBorder = "#6c7086";
+          };
+        };
         modifier = "Mod4";
         terminal = "alacritty";
         left = "h";
