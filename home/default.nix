@@ -9,7 +9,7 @@
     ./programs/lazygit.nix
     ./programs/rofi.nix
     ./programs/starship.nix
-    ./programs/waybar.nix
+    ./programs/waybar
     ./programs/yazi.nix
     ./programs/zellij.nix
 

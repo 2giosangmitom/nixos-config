@@ -57,10 +57,20 @@ in
           };
           network = {
             tooltip = false;
+            format = "{ifname}";
+            format-wifi = "{icon} {essid}";
+            format-ethernet = "<span color='#98ABEE'>󰈀 </span>Connected";
+            format-disconnected = "No connection";
+            format-icons = [
+              "󰤟"
+              "󰤢"
+              "󰤥"
+              "󰤨"
+            ];
           };
         };
       };
-      style = ./style.css;
+      # style = ./style.css;
     };
   };
 }
