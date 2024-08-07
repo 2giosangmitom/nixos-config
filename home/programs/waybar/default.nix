@@ -70,7 +70,7 @@ in
           };
         };
       };
-      # style = ./style.css;
+      style = ./style.css;
     };
   };
 }
