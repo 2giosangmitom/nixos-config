@@ -11,13 +11,7 @@ in
     programs.alacritty = {
       enable = true;
       settings = {
-        shell = {
-          program = "zsh";
-          args = [
-            "-c"
-            "zellij"
-          ];
-        };
+        shell = "tmux";
         font = {
           size = 10;
           normal = {

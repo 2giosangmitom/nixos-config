@@ -7,7 +7,7 @@
     starship.enable = true;
     eza.enable = true;
     lazygit.enable = true;
-    zellij.enable = true;
+    tmux.enable = true;
     yazi.enable = true;
     waybar.enable = true;
   };
