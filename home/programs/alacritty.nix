@@ -12,6 +12,9 @@ in
       enable = true;
       settings = {
         shell = "tmux";
+        env = {
+          TERM = "xterm-256color";
+        };
         font = {
           size = 10;
           normal = {
