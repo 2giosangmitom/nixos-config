@@ -20,6 +20,15 @@ in
           style = "Regular";
           size = 9.0;
         };
+        input = {
+          "type:touchpad" = {
+            dwt = "enabled";
+            tap = "enabled";
+            dwtp = "enabled";
+            tap_button_map = "lrm";
+            natural_scroll = "enabled";
+          };
+        };
         window = {
           border = 2;
           titlebar = false;
