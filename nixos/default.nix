@@ -36,9 +36,11 @@
     bleachbit
     python3
     du-dust
+    lshw
   ];
 
   systemd.services.systemd-journal-flush.enable = false;
+  services.fstrim.enable = true;
 
   programs.nix-ld = {
     enable = true;
