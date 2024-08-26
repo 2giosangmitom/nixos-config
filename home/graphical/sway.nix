@@ -29,6 +29,13 @@ in
             natural_scroll = "enabled";
           };
         };
+        output = {
+          "Chimei Innolux Corporation 0x1521 Unknown" = {
+            adaptive_sync = "on";
+            mode = "1920x1080@144.003Hz";
+            scale = "1.25";
+          };
+        };
         window = {
           border = 2;
           titlebar = false;
