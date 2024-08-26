@@ -11,6 +11,7 @@
     ./programs/starship.nix
     ./programs/waybar
     ./programs/yazi.nix
+    ./programs/zellij.nix
 
     ./graphical/sway.nix
   ];
