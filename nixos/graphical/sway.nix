@@ -31,6 +31,11 @@ in
       _JAVA_AWT_WM_NONREPARENTING = 1;
     };
 
+    services.xserver = {
+      enable = true;
+      displayManager.gdm.enable = true;
+    };
+
     programs.sway = {
       enable = true;
       extraPackages = with pkgs; [
@@ -39,6 +44,7 @@ in
         wl-clipboard
         swaybg
         sway-contrib.grimshot
+        brightnessctl
       ];
 
       wrapperFeatures = {

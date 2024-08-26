@@ -17,11 +17,13 @@
         enable = true;
         enableUserService = true;
       };
+      xserver.videoDrivers = [ "nvidia" ];
     };
+
     hardware.opengl.enable = true;
     hardware.nvidia = {
       modesetting.enable = true;
-      open = false;
+      open = true;
       nvidiaSettings = true;
       powerManagement.enable = false;
       prime = {

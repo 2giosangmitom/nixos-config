@@ -88,7 +88,7 @@ in
             format = "{ifname}";
             format-wifi = "<span color='#98ABEE'>{icon}</span> {essid}";
             format-ethernet = "<span color='#98ABEE'>󰈀 </span>Connected";
-            format-disconnected = "No connection";
+            format-disconnected = "<span color='#98ABEE'></span> No connection";
             format-icons = [
               "󰤟"
               "󰤢"

@@ -24,6 +24,7 @@
       "quiet"
       "splash"
       "mitigations=off"
+      "acpi_backlight=video"
     ];
     kernel.sysctl = {
       "vm.swappiness" = 100;
