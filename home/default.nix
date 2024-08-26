@@ -10,7 +10,6 @@
     ./programs/rofi.nix
     ./programs/starship.nix
     ./programs/waybar
-    ./programs/tmux.nix
     ./programs/yazi.nix
 
     ./graphical/sway.nix

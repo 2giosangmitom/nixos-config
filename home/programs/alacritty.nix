@@ -11,10 +11,7 @@ in
     programs.alacritty = {
       enable = true;
       settings = {
-        shell = "tmux";
-        env = {
-          TERM = "xterm-256color";
-        };
+        shell = "zsh";
         font = {
           size = 10;
           normal = {
