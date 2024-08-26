@@ -37,6 +37,7 @@
     python3
     du-dust
     lshw
+    obs-studio
   ];
 
   systemd.services.systemd-journal-flush.enable = false;
