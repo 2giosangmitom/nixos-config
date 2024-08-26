@@ -11,5 +11,24 @@
       ibus.engines = with pkgs-unstable.ibus-engines; [ bamboo ];
     };
     environment.systemPackages = with pkgs-unstable; [ vesktop ];
+
+    services = {
+      asusd = {
+        enable = true;
+        enableUserService = true;
+      };
+    };
+    hardware.opengl.enable = true;
+    hardware.nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      powerManagement.enable = false;
+      prime = {
+        amdgpuBusId = "PCI:5:0:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
+    };
+    services.power-profiles-daemon.enable = true;
   };
 }
