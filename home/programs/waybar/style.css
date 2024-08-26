@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: "JetBrains Mono NF";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -37,6 +37,7 @@ window#waybar {
 #workspaces,
 #network,
 #cpu,
+#battery,
 #memory {
   margin-right: 10px;
 }

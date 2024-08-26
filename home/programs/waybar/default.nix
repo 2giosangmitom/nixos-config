@@ -27,6 +27,7 @@ in
           modules-right = [
             "pulseaudio"
             "network"
+            "battery"
             "memory"
             "cpu"
             "tray"
@@ -34,6 +35,23 @@ in
           clock = {
             format = "{:%b %d - %H:%M}";
             tooltip = false;
+          };
+          battery = {
+            tooltip = false;
+            format = "<span color='#A1D6B2'>{icon}</span> {capacity}%";
+            format-icons = [
+              "󰂎"
+              "󰁺"
+              "󰁻"
+              "󰁼"
+              "󰁽"
+              "󰁾"
+              "󰁿"
+              "󰂀"
+              "󰂁"
+              "󰂂"
+              "󰁹"
+            ];
           };
           "sway/mode" = {
             tooltip = false;
@@ -68,7 +86,7 @@ in
           network = {
             tooltip = false;
             format = "{ifname}";
-            format-wifi = "{icon} {essid}";
+            format-wifi = "<span color='#98ABEE'>{icon}</span> {essid}";
             format-ethernet = "<span color='#98ABEE'>󰈀 </span>Connected";
             format-disconnected = "No connection";
             format-icons = [
