@@ -12,11 +12,24 @@
     ./graphical/hyprland.nix
   ];
 
-  # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  # Nix & Nixpkgs settings
+  nixpkgs.config.allowUnfree = true;
+  nix = {
+    settings = {
+      # Enable the Flakes feature and the accompanying new nix command-line tool
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      trusted-users = [
+        "@wheel"
+        "root"
+      ];
+      use-xdg-base-directories = true;
+      warn-dirty = false;
+    };
+    package = pkgs-unstable.nixVersions.nix_2_22;
+  };
 
   # Enable nix-ld
   programs.nix-ld = {

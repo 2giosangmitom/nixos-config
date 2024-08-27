@@ -39,7 +39,7 @@
                   users.${username} = {
                     imports = [
                       ../modules/home
-                      ./hosts/${hostname}/home.nix
+                      ../hosts/${hostname}/home.nix
                     ];
                   };
                 };
