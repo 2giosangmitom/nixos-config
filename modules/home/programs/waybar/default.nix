@@ -20,9 +20,8 @@ in
           gtk-layer-shell = true;
           height = 0;
           modules-left = [
-            "custom/logo"
             "hyprland/workspaces"
-            "hyprland/window"
+            # "hyprland/window"
           ];
           modules-right = [
             "clock"
@@ -31,7 +30,6 @@ in
             "battery"
             "memory"
             "cpu"
-            "custom/brightness"
             "tray"
           ];
           clock = {
@@ -55,13 +53,8 @@ in
               "󰁹"
             ];
           };
-          "sway/mode" = {
-            tooltip = false;
-          };
-          "sway/workspaces" = {
-            disable-click = true;
-            disable-scroll = true;
-            disable-markup = true;
+          "hyprland/workspaces" = {
+            active-only = false;
           };
           pulseaudio = {
             format = "<span color='#cba6f7'>{icon}</span>{volume}%";
@@ -78,19 +71,19 @@ in
             scroll-step = 5;
           };
           cpu = {
-            format = "<span color='#eba0ac'>󰘚 </span>{usage}%";
+            format = "<span color='#eba0ac'> </span>{usage}%";
             tooltip = false;
           };
           memory = {
-            format = "<span color='#fab387'> </span>{used}/{total}";
+            format = "<span color='#fab387'> </span>{used}/{total}";
             tooltip = false;
           };
           network = {
             tooltip = false;
             format = "{ifname}";
-            format-wifi = "<span color='#98ABEE'>{icon}</span> {essid}";
+            format-wifi = "<span color='#98ABEE'>{icon} </span>{essid}";
             format-ethernet = "<span color='#98ABEE'>󰈀 </span>Connected";
-            format-disconnected = "<span color='#98ABEE'></span> No connection";
+            format-disconnected = "<span color='#98ABEE'> </span>No connection";
             format-icons = [
               "󰤟"
               "󰤢"

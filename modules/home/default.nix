@@ -17,6 +17,7 @@
     ./programs/fish.nix
 
     ./graphical/hyprland.nix
+    ./theme.nix
   ];
 
   home = {

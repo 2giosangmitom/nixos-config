@@ -60,7 +60,7 @@
     python3
     du-dust
     lshw
-    lspci
+    pciutils
     obs-studio
     go
     wget

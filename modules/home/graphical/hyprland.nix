@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   pkgs-unstable,
   ...
 }:
@@ -40,6 +41,25 @@ in
           touchpad.disable_while_typing = false;
           resolve_binds_by_sym = true;
         };
+        exec =
+          let
+            autostart = lib.getExe (
+              pkgs.writeShellScriptBin "autostart" ''
+                # Terminate already running bar instances
+                pkill waybar
+
+                # Wait until the processes have been shut down
+                while pgrep -u $UID -x waybar >/dev/null; do sleep 1; done
+
+                # Start waybar
+                waybar &
+              ''
+            );
+          in
+          [
+            "hyprctl setcursor ${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}"
+            autostart
+          ];
         dwindle = {
           split_width_multiplier = 1.35;
           pseudotile = true;
