@@ -1,5 +1,6 @@
 {
-  description = "2giosangmitom's NixOS configuration for daily use";
+  description = "2giosangmitom's NixOS configuration";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -16,30 +17,12 @@
 
   outputs =
     { flake-parts, ... }@inputs:
-    let
-      inherit (import ./hosts/lib.nix { inherit inputs; }) mkHosts;
-    in
     flake-parts.lib.mkFlake { inherit inputs; } {
-      flake.nixosConfigurations = mkHosts [
-        {
-          hostname = "nixos";
-          system = "x86_64-linux";
-          username = "chien";
-          fullname = "Vo Quang Chien";
-          email = "voquangchien.dev@proton.me";
-        }
-      ];
       systems = [ "x86_64-linux" ];
-      perSystem =
-        { pkgs, ... }:
-        {
-          devShells.default = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              nil
-              nixfmt-rfc-style
-            ];
-          };
-          formatter = pkgs.nixfmt-rfc-style;
-        };
+
+      imports = [
+        ./flakes/devShells.nix
+        ./flakes/nixosConfigurations.nix
+      ];
     };
 }
