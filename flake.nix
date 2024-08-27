@@ -20,6 +20,17 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
+      flake.templates = {
+        nodejs = {
+          path = ./templates/nodejs;
+          description = "Development environment for NodeJS";
+        };
+        go = {
+          path = ./templates/go;
+          description = "Development environment for Golang";
+        };
+      };
+
       imports = [
         ./flakes/devShells.nix
         ./flakes/nixosConfigurations.nix

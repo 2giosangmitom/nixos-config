@@ -1,6 +1,8 @@
-{config, lib,...}:let
+{ config, lib, ... }:
+let
   cfg = config.dotfiles.fzf;
-in{
+in
+{
   options.dotfiles.fzf = {
     enable = lib.mkEnableOption "Fzf";
   };
