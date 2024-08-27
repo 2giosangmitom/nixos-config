@@ -4,7 +4,10 @@
     isNormalUser = true;
     description = config.dotfiles.fullname;
     initialPassword = "123";
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     useDefaultShell = true;
   };
 }
