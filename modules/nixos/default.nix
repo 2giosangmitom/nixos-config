@@ -67,6 +67,7 @@
     go
     wget
     nodejs_20
+    gimp
 
     # Docker
     docker-compose

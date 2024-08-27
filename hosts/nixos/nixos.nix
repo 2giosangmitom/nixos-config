@@ -1,1 +1,5 @@
-{}
+{
+  config = {
+    device.isHybrid = true;
+  };
+}
