@@ -15,7 +15,7 @@
         efiSupport = true;
         timeoutStyle = "menu";
         configurationLimit = 10;
-        useOSProber = true;
+        useOSProber = false;
       };
       timeout = 1;
     };
@@ -25,6 +25,7 @@
       "splash"
       "mitigations=off"
       "acpi_backlight=video"
+      "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1"
     ];
     kernel.sysctl = {
       "vm.swappiness" = 100;
