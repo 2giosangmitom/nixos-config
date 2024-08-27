@@ -13,6 +13,8 @@
     ./programs/yazi.nix
     ./programs/zellij.nix
     ./programs/zoxide.nix
+    ./programs/dunst.nix
+    ./programs/fish.nix
 
     ./graphical/hyprland.nix
   ];

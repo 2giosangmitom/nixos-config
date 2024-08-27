@@ -21,6 +21,11 @@ in
       systemd.setPath.enable = true;
     };
 
+    environment.systemPackages = with pkgs-unstable; [
+      grimblast
+      hyprpicker
+    ];
+
     services.hypridle.enable = true;
     programs.hyprlock.enable = true;
   };
