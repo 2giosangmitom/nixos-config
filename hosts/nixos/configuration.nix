@@ -23,12 +23,16 @@
     hardware.opengl.enable = true;
     hardware.nvidia = {
       modesetting.enable = true;
-      open = true;
+      open = false;
       nvidiaSettings = true;
       powerManagement.enable = false;
       prime = {
         amdgpuBusId = "PCI:5:0:0";
         nvidiaBusId = "PCI:1:0:0";
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
       };
     };
     services.power-profiles-daemon.enable = true;
