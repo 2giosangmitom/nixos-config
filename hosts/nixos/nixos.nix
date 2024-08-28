@@ -5,5 +5,7 @@
 
     # Enable fstrim for SSD
     services.fstrim.enable = true;
+
+    services.hardware.openrgb.enable = true;
   };
 }
