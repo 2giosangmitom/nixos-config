@@ -1,14 +1,5 @@
 { pkgs, ... }:
 {
-  home = {
-    pointerCursor = {
-      gtk.enable = true;
-      size = 16;
-      package = pkgs.vimix-cursors;
-      name = "Vimix Cursors";
-    };
-  };
-
   gtk = {
     enable = true;
 
@@ -31,5 +22,16 @@
       package = pkgs.tela-icon-theme;
       name = "Tela-dark";
     };
+  };
+
+  home = {
+    pointerCursor = {
+      gtk.enable = true;
+      size = 16;
+      package = pkgs.vimix-cursors;
+      name = "Vimix Cursors";
+    };
+
+    file.".icons/default".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
   };
 }

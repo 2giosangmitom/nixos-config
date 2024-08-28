@@ -91,7 +91,6 @@
         fullname = "Vo Quang Chien";
         email = "voquangchien.dev@proton.me";
         extraModules = [
-          ../extras/hardware/touchpad.nix
           ../extras/hardware/cpu/amd.nix
           ../extras/hardware/gpu/nvidia.nix
           ../extras/hardware/gpu/radeon.nix
