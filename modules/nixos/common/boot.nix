@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    # kernelPackages = pkgs.linuxPackages_xanmod_stable;
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     consoleLogLevel = 3;
     tmp = {
       cleanOnBoot = true;

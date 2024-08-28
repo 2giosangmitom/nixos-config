@@ -23,9 +23,7 @@
       WLR_NO_HARDWARE_CURSORS = "1";
     };
 
-    environment.systemPackages = with pkgs; [
-      mesa
-    ];
+    environment.systemPackages = with pkgs; [ mesa ];
 
     hardware = {
       opengl.enable = true;

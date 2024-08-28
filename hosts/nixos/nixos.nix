@@ -1,6 +1,6 @@
 {
   config = {
-    # device.isHybrid = true;
+    device.isHybrid = true;
     graphical.hyprland.enable = true;
 
     # Enable fstrim for SSD
