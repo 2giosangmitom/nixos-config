@@ -33,12 +33,6 @@ in
         mv = "mv -i";
         rm = "rm -i";
       };
-      plugins = [
-        {
-          name = "grc";
-          src = pkgs-unstable.fishPlugins.grc.src;
-        }
-      ];
     };
   };
 }

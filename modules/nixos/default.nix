@@ -10,8 +10,9 @@
     ./common/user.nix
 
     ./graphical/hyprland.nix
-    ./graphical/gnome.nix
   ];
+
+  services.dbus.implementation = "broker";
 
   # Nix & Nixpkgs settings
   nixpkgs.config.allowUnfree = true;

@@ -25,14 +25,11 @@
 
     environment.systemPackages = with pkgs; [
       mesa
-      egl-wayland
-      libva
-      vulkan-loader
     ];
 
     hardware = {
+      opengl.enable = true;
       nvidia = {
-        package = config.boot.kernelPackages.nvidiaPackages.production;
         modesetting.enable = true;
 
         # Hybrid graphics settings
@@ -55,7 +52,6 @@
         nvidiaPersistenced = true;
         forceFullCompositionPipeline = true;
       };
-      graphics.enable = true;
     };
   };
 }

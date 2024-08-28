@@ -31,11 +31,5 @@
       package = pkgs.tela-icon-theme;
       name = "Tela-dark";
     };
-
-    cursorTheme = {
-      name = "Vimix Cursors";
-      size = 16;
-      package = pkgs.vimix-cursors;
-    };
   };
 }
