@@ -17,7 +17,6 @@ in
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      package = pkgs-unstable.hyprland;
       xwayland.enable = true;
       systemd.enable = true;
 
@@ -61,7 +60,10 @@ in
           "XDG_SESSION_DESKTOP, hyprland"
           "XDG_SESSION_TYPE, wayland"
           "_JAVA_AWT_WM_NONREPARENTING, 1"
+          "LIBVA_DRIVER_NAME, nvidia"
+          "__GLX_VENDOR_LIBRARY_NAME, nvidia"
         ];
+        cursor.no_hardware_cursors = true;
         xwayland.force_zero_scaling = true;
         exec =
           let

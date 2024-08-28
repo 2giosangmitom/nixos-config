@@ -22,6 +22,7 @@ in
       grimblast
       hyprpicker
       wl-clipboard
+      egl-wayland
     ];
 
     services.hypridle.enable = true;
