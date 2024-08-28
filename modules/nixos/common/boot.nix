@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
     tmp = {
       cleanOnBoot = true;
@@ -22,7 +22,6 @@
       "quiet" # Quiet boot
       "mitigations=off" # Disable mitigations
       "acpi_backlight=native" # Allow systemd to set and save backlight state
-      "nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1" # Enable brightness control for NVIDIA
       "loglevel=3" # Kernel log level
       "udev.log_level=3" # Udev log level
       "systemd.show_status=auto" # Disable systemd status messages

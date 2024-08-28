@@ -24,19 +24,15 @@
     };
 
     environment.systemPackages = with pkgs; [
-      nvtopPackages.nvidia
       mesa
-      vulkan-tools
-      vulkan-loader
-      vulkan-validation-layers
-      vulkan-extension-layer
+      egl-wayland
       libva
-      libva-utils
+      vulkan-loader
     ];
 
     hardware = {
       nvidia = {
-        package = config.boot.kernelPackages.nvidiaPackages.latest;
+        package = config.boot.kernelPackages.nvidiaPackages.production;
         modesetting.enable = true;
 
         # Hybrid graphics settings
@@ -54,11 +50,12 @@
           finegrained = false;
         };
 
-        open = false;
+        open = true;
         nvidiaSettings = false;
         nvidiaPersistenced = true;
         forceFullCompositionPipeline = true;
       };
+      graphics.enable = true;
     };
   };
 }

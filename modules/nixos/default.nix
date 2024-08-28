@@ -10,6 +10,7 @@
     ./common/user.nix
 
     ./graphical/hyprland.nix
+    ./graphical/gnome.nix
   ];
 
   # Nix & Nixpkgs settings
@@ -66,6 +67,7 @@
     wget
     nodejs_20
     gimp
+    neovim
 
     # Docker
     docker-compose
