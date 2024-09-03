@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Run typos check
-        uses: crate-ci/typos@v1.24.1
+        uses: crate-ci/typos@v1.24.3
 
   shellcheck:
     name: Shellcheck
