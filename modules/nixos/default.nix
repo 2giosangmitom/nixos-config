@@ -60,6 +60,7 @@
     nodejs_20
     gimp
     firefox
+    vscode.fhs
 
     # Docker
     docker-compose
