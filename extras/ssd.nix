@@ -1,0 +1,1 @@
+{ services.fstrim.enable = true; }
