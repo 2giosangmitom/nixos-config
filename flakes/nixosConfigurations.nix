@@ -65,7 +65,10 @@
         system = "x86_64-linux";
         username = "chien";
         fullName = "Vo Quang Chien";
-        extraModules = [ ../extras/ssd.nix ];
+        extraModules = [
+          ../extras/ssd.nix
+          ../extras/battery.nix
+        ];
       }
     ];
 }
