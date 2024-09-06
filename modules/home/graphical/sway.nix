@@ -179,8 +179,18 @@ in
           "XF86MonBrightnessDown" = "exec light -U 10";
           "XF86MonBrightnessUp" = "exec light -A 10";
         };
-
       };
+      extraConfig = ''
+        set $gnome-schema org.gnome.desktop.interface
+        seat * xcursor_theme "Vimix-Cursors" 20
+
+        exec_always {
+          gsettings set $gnome-schema gtk-theme "Sweet-Dark-v40"
+          gsettings set $gnome-schema icon-theme "Papirus-Dark"
+          gsettings set $gnome-schema cursor-theme "Vimix-Cursors"
+          gsettings set $gnome-schema font-name "Roboto"
+        }
+      '';
     };
   };
 }

@@ -3,9 +3,10 @@
   gtk = {
     enable = true;
 
-    gtk3.extraConfig = {
-      gtk-cursor-theme-name = "Vimix Cursors";
-      gtk-enable-animations = 1;
+    cursorTheme = {
+      package = pkgs.vimix-cursor-theme;
+      name = "Vimix-Cursors";
+      size = 20;
     };
 
     font = {
@@ -27,9 +28,10 @@
   home = {
     pointerCursor = {
       gtk.enable = true;
+      x11.enable = true;
       size = 20;
-      package = pkgs.vimix-cursors;
-      name = "Vimix Cursors";
+      package = pkgs.vimix-cursor-theme;
+      name = "Vimix-Cursors";
     };
   };
 }
