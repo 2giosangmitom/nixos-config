@@ -68,6 +68,7 @@
         extraModules = [
           ../extras/ssd.nix
           ../extras/battery.nix
+          # ../extras/nvidia.nix
         ];
       }
     ];

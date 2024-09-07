@@ -42,6 +42,7 @@
     pavucontrol
     curl
     gnumake
+    fastfetch
     fd
     tokei
     ripgrep
