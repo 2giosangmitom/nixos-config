@@ -75,7 +75,7 @@ in
           network = {
             format = "{ifname}";
             format-wifi = "<span color='#8caaee'>{icon}</span> {signalStrength}";
-            format-wifi-icons = [
+            format-icons = [
               "󰤟"
               "󰤢"
               "󰤥"
