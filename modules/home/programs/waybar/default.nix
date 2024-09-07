@@ -73,8 +73,7 @@ in
             tooltip = false;
           };
           network = {
-            format = "{ifname}";
-            format-wifi = "<span color='#8caaee'>{icon}</span> {signalStrength}";
+            format-wifi = "<span color='#8caaee'>{icon}</span> {ifname}";
             format-icons = [
               "󰤟"
               "󰤢"
