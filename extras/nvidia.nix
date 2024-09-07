@@ -26,10 +26,26 @@
 
   boot.extraModprobeConfig = ''
     options nvidia "NVreg_DynamicPowerManagement=0x02"
+    blacklist nouveau
   '';
 
-  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
-  boot.initrd.kernelModules = [ "amdgpu" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+  boot.kernelParams = [
+    "rd.driver.blacklist=nouveau"
+    "nvidia-drm.modeset=1"
+  ];
+
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [
+    "amdgpu"
+    "nvidia"
+  ];
+  boot.initrd.kernelModules = [
+    "amdgpu"
+    "nvidia"
+    "nvidia_modeset"
+    "nvidia_uvm"
+    "nvidia_drm"
+  ];
 
   hardware.opengl = {
     enable = true;
