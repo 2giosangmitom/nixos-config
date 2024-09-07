@@ -103,7 +103,7 @@ in
               "󰂂"
               "󰁹"
             ];
-            tooltip-format = "Status: {timeTo}\nHealth: {health}%";
+            tooltip = false;
           };
           disk = {
             interval = 30;
