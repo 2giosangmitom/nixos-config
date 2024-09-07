@@ -136,6 +136,7 @@ in
           };
         };
       };
+      style = ./style.css;
     };
   };
 }
