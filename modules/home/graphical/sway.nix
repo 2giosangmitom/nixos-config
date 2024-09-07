@@ -108,6 +108,10 @@ in
         up = "k";
         right = "l";
         output = {
+          "eDP-1" = {
+            mode = "1920x1080@144Hz";
+            adaptive_sync = "on";
+          };
           "*" = {
             bg = "${./bg.jpeg} fill";
           };
