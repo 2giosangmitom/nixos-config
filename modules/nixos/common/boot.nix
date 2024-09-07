@@ -18,6 +18,7 @@
       timeout = 1;
     };
     kernelParams = [
+      "rhgb"
       "quiet"
       "acpi_backlight=native"
       "loglevel=3"
