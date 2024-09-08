@@ -6,20 +6,18 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  environment.variables = {
-    GTK_IM_MODULE = "ibus";
-    QT_IM_MODULE = "ibus";
-    XMODIFIERS = "@im=ibus";
-  };
-
   environment.etc.environment.text = ''
-    GTK_IM_MODULE=ibus
-    QT_IM_MODULE=ibus
-    XMODIFIERS=@im=ibus
+    GTK_IM_MODULE=fcitx
+    QT_IM_MODULE=fcitx
+    XMODIFIERS=@im=fcitx
+    SDL_IM_MODULE=fcitx
   '';
 
   i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs-unstable.ibus-engines; [ bamboo ];
+    enabled = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = with pkgs-unstable; [ fcitx5-bamboo fcitx5-gtk ];
   };
+
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 }
