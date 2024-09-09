@@ -23,7 +23,7 @@
       use-xdg-base-directories = true;
       warn-dirty = false;
     };
-    package = pkgs-unstable.nixVersions.nix_2_22;
+    package = pkgs-unstable.nixVersions.latest;
   };
 
   # Enable nix-ld
@@ -62,6 +62,7 @@
     gimp
     firefox
     vscode.fhs
+    google-chrome
 
     # Docker
     docker-compose
