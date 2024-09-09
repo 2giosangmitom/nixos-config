@@ -22,7 +22,7 @@ in
       swaybg
       sway-contrib.grimshot
     ];
-    environment.variables = {
+    environment.sessionVariables = {
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "sway";
       XDG_CURRENT_DESKTOP = "sway";
@@ -38,6 +38,7 @@ in
       base = true;
       gtk = true;
     };
+    programs.sway.extraOptions = [ "--unsupported-gpu" ];
     xdg.portal = {
       enable = true;
       wlr.enable = true;
