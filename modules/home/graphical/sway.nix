@@ -11,6 +11,12 @@ in
   options.dotfiles.sway.enable = lib.mkEnableOption "Sway";
 
   config = lib.mkIf cfg.enable {
+    dotfiles = {
+      rofi.enable = true;
+      waybar.enable = true;
+      dunst.enable = true;
+    };
+
     wayland.windowManager.sway = {
       enable = true;
       wrapperFeatures = {
