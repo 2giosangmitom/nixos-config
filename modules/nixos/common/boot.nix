@@ -1,7 +1,6 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs-unstable.linuxPackages_zen;
     consoleLogLevel = 3;
     tmp = {
       cleanOnBoot = true;

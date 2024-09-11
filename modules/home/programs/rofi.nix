@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs-unstable,
   ...
 }:
 let
@@ -15,7 +14,6 @@ in
   config = lib.mkIf cfg.enable {
     programs.rofi = {
       enable = true;
-      package = pkgs-unstable.rofi-wayland;
     };
 
     home.file = {

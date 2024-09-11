@@ -10,6 +10,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.bottom = {
       enable = true;
+      catppuccin.enable = true;
       settings = {
         flags = {
           dot_marker = true;
@@ -18,6 +19,7 @@ in
           regex = true;
           case_sensitive = false;
           tree = true;
+          disable_gpu = false;
         };
       };
     };

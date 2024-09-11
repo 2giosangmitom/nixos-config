@@ -19,6 +19,11 @@ in
 
     wayland.windowManager.sway = {
       enable = true;
+      systemd = {
+        enable = true;
+        xdgAutostart = true;
+      };
+      xwayland = true;
       wrapperFeatures = {
         gtk = true;
       };

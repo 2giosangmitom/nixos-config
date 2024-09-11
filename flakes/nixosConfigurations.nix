@@ -11,10 +11,6 @@
           extraModules ? [ ],
         }:
         let
-          pkgs-unstable = import inputs.nixpkgs-unstable {
-            inherit system;
-            config.allowUnfree = true;
-          };
           inherit (lib) mkOption types;
         in
         {
@@ -36,7 +32,6 @@
                   useUserPackages = true;
                   extraSpecialArgs = {
                     inherit inputs;
-                    inherit pkgs-unstable;
                   };
                   users.${username} = {
                     imports = [
@@ -51,7 +46,6 @@
               {
                 _module.args = {
                   inherit inputs;
-                  inherit pkgs-unstable;
                 };
               }
             ] ++ extraModules;
@@ -68,7 +62,7 @@
         extraModules = [
           ../extras/ssd.nix
           ../extras/battery.nix
-          # ../extras/nvidia.nix
+          ../extras/nvidia.nix
         ];
       }
     ];

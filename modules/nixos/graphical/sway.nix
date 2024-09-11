@@ -31,18 +31,22 @@ in
       MOZ_ENABLE_WAYLAND = "1";
       QT_QPA_PLATFORM = "wayland";
       SDL_VIDEODRIVER = "wayland";
-      _JAVA_AWT_WM_NONREPARENTING = 1;
+      _JAVA_AWT_WM_NONREPARENTING = "1";
+      WLR_NO_HARDWARE_CURSORS = "1";
+      XWAYLAND_NO_GLAMOR = "1";
     };
     programs.xwayland.enable = true;
     programs.sway.wrapperFeatures = {
       base = true;
       gtk = true;
     };
-    programs.sway.extraOptions = [ "--unsupported-gpu" ];
     xdg.portal = {
       enable = true;
       wlr.enable = true;
       xdgOpenUsePortal = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+      ];
     };
   };
 }

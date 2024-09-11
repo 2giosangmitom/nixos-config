@@ -1,7 +1,7 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
-  # Needed for vendor fish-completions
   programs.fish.enable = true;
+  programs.zsh.enable = true;
 
-  users.defaultUserShell = pkgs-unstable.zsh;
+  users.defaultUserShell = pkgs.zsh;
 }

@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs-unstable,
   ...
 }:
 let
@@ -15,7 +14,6 @@ in
   config = lib.mkIf cfg.enable {
     programs.fish = {
       enable = true;
-      package = pkgs-unstable.fish;
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
       '';

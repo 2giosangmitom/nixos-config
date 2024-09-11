@@ -1,4 +1,4 @@
-{ pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./common/boot.nix
@@ -23,20 +23,20 @@
       use-xdg-base-directories = true;
       warn-dirty = false;
     };
-    package = pkgs-unstable.nixVersions.latest;
+    package = pkgs.nixVersions.latest;
   };
 
   # Enable nix-ld
   programs.nix-ld = {
     enable = true;
-    package = pkgs-unstable.nix-ld-rs;
+    package = pkgs.nix-ld-rs;
   };
 
   # Disable systemd journal flush
   systemd.services.systemd-journal-flush.enable = false;
 
   # Essential packages
-  environment.systemPackages = with pkgs-unstable; [
+  environment.systemPackages = with pkgs; [
     brave
     gh
     pavucontrol
@@ -62,7 +62,6 @@
     gimp
     firefox
     vscode.fhs
-    google-chrome
 
     # Docker
     docker-compose
@@ -73,7 +72,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    package = pkgs-unstable.neovim-unwrapped;
   };
 
   # Enable docker rootless
@@ -82,5 +80,5 @@
     setSocketVariable = true;
   };
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
