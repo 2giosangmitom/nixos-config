@@ -64,6 +64,7 @@
     nodejs_20
     gimp
     vscode.fhs
+    libreoffice-fresh
 
     # Docker
     docker-compose
