@@ -17,4 +17,12 @@
     LC_TELEPHONE = "vi_VN";
     LC_TIME = "vi_VN";
   };
+
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [
+      bamboo
+    ];
+  };
 }
