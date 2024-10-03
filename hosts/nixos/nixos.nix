@@ -1,6 +1,7 @@
 {
   config = {
-    graphical.sway.enable = true;
+    graphical.hyprland.enable = true;
+    # graphical.gnome.enable = true;
     services.hardware.openrgb.enable = true;
   };
 }

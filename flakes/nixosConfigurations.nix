@@ -18,7 +18,6 @@
             inherit system;
 
             modules = [
-              inputs.catppuccin.nixosModules.catppuccin
               inputs.home-manager.nixosModules.home-manager
               inputs.nix-index-database.nixosModules.nix-index
               ../modules/nixos
@@ -37,7 +36,6 @@
                     imports = [
                       ../modules/home
                       ../hosts/${hostName}/home.nix
-                      inputs.catppuccin.homeManagerModules.catppuccin
                     ];
                   };
                 };
@@ -61,8 +59,8 @@
         fullName = "Vo Quang Chien";
         extraModules = [
           ../extras/ssd.nix
+          ../extras/asus.nix
           ../extras/battery.nix
-          ../extras/nvidia.nix
         ];
       }
     ];

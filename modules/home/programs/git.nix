@@ -4,6 +4,5 @@
     userName = "Vo Quang Chien";
     userEmail = "voquangchien.dev@proton.me";
     delta.enable = true;
-    delta.catppuccin.enable = true;
   };
 }

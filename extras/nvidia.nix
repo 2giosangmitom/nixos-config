@@ -20,26 +20,19 @@
     vdpauinfo
   ];
 
-  boot.extraModprobeConfig = ''
-    blacklist nouveau
-  '';
+  boot.kernelModules =
+    [
+    ];
 
-  boot.kernelModules = [
-    "nvidia"
-    "nvidia-drm"
-  ];
-
-  boot.kernelParams = [
-    "rd.driver.blacklist=nouveau"
-    "nvidia-drm.modeset=1"
-    "nvidia-drm.fbdev=1"
-  ];
+  boot.kernelParams =
+    [
+    ];
 
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     modesetting.enable = true;
-    open = true;
-    nvidiaSettings = true;
+    open = false;
+    nvidiaSettings = false;
     prime = {
       sync.enable = true;
       amdgpuBusId = "PCI:5:0:0";

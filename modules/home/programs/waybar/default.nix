@@ -25,10 +25,10 @@ in
           margin-left = 10;
 
           modules-left = [
-            "sway/workspaces"
-            "sway/mode"
+            "clock"
+            "hyprland/workspaces"
           ];
-          modules-center = [ "clock" ];
+          modules-center = [ ];
           modules-right = [
             "pulseaudio"
             "network"
@@ -38,8 +38,19 @@ in
             "memory"
             "temperature"
             "cpu"
+            "power-profiles-daemon"
             "tray"
           ];
+
+          power-profiles-daemon = {
+            format = "<span color='#A5B68D'>{icon}</span>  {profile}";
+            format-icons = {
+              default = "";
+              performance = "";
+              balanced = "";
+              power-saver = "";
+            };
+          };
 
           backlight = {
             format = "<span color='#fab387'>󰃠</span> {percent}%";
@@ -65,11 +76,8 @@ in
             tooltip = false;
           };
 
-          "sway/workspaces" = {
-            disable-scroll = true;
-            format = "{name}";
-            disable-click = true;
-            disable-markup = true;
+          "hyprland/workspaces" = {
+            format = "{id}";
             tooltip = false;
           };
 

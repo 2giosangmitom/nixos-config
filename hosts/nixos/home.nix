@@ -11,6 +11,6 @@
     fish.enable = true;
     fzf.enable = true;
     zoxide.enable = true;
-    sway.enable = true;
+    hyprland.enable = true;
   };
 }

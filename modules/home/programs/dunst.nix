@@ -38,7 +38,7 @@ in
           sort = true;
           idle_threshold = 120;
           font = "JetBrainsMono Nerd Font 10";
-          icon_theme = "Tela-dark";
+          icon_theme = "Papirus-Dark";
           line_height = 2;
           markup = "full";
           format = ''

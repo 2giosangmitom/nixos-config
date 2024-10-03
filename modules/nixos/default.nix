@@ -4,15 +4,20 @@
     ./common/boot.nix
     ./common/fonts.nix
     ./common/locale.nix
-    ./common/shell.nix
     ./common/sound.nix
 
-    ./graphical/sway.nix
+    ./graphical/hyprland.nix
+    ./graphical/gnome.nix
   ];
+
+  programs.git = {
+    enable = true;
+  };
+
+  programs.fish.enable = true;
 
   services.dbus.implementation = "broker";
 
-  # Nix & Nixpkgs settings
   nixpkgs.config.allowUnfree = true;
   nix = {
     settings = {
@@ -32,12 +37,10 @@
     package = pkgs.nix-ld-rs;
   };
 
-  # Disable systemd journal flush
-  systemd.services.systemd-journal-flush.enable = false;
-
   # Essential packages
   environment.systemPackages = with pkgs; [
     brave
+    git
     gh
     pavucontrol
     curl
@@ -60,7 +63,6 @@
     wget
     nodejs_20
     gimp
-    firefox
     vscode.fhs
 
     # Docker
@@ -74,7 +76,6 @@
     defaultEditor = true;
   };
 
-  # Enable docker rootless
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;

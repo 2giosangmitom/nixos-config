@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   boot = {
-    consoleLogLevel = 3;
+    kernelPackages = pkgs.linuxPackages_latest;
     tmp = {
       cleanOnBoot = true;
     };
@@ -17,10 +17,7 @@
       timeout = 1;
     };
     kernelParams = [
-      "rhgb"
-      "quiet"
       "acpi_backlight=native"
-      "loglevel=3"
     ];
   };
 }

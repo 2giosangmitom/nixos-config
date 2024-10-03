@@ -16,7 +16,7 @@
     ./programs/dunst.nix
     ./programs/fish.nix
 
-    ./graphical/sway.nix
+    ./graphical/hyprland.nix
     ./theme.nix
   ];
 

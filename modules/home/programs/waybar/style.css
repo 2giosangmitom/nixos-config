@@ -46,7 +46,7 @@ tooltip label {
   color: #cdd6f4;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
   color: #7287fd;
 }
 

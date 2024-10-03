@@ -10,7 +10,6 @@ in
   config = lib.mkIf cfg.enable {
     programs.lazygit = {
       enable = true;
-      catppuccin.enable = true;
       settings = {
         gui = {
           windowSize = "normal";

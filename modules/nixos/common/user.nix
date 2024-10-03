@@ -9,6 +9,5 @@
       "wheel"
       "video"
     ];
-    useDefaultShell = true;
   };
 }
