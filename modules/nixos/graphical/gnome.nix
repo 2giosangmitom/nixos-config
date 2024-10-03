@@ -19,7 +19,7 @@ in
       enable = true;
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas # for org.gnome.desktop
-        pkgs.gnome.gnome-shell # for org.gnome.shell
+        pkgs.gnome-shell # for org.gnome.shell
       ];
     };
     services.xserver.displayManager.gdm.enable = true;
