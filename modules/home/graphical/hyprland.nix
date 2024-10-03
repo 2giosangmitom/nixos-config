@@ -91,6 +91,17 @@ in
           no_hardware_cursors = true;
           hide_on_key_press = false;
         };
+        windowrule = [
+          "float,title:^(Open File)(.*)$"
+          "float,title:^(Select a File)(.*)$"
+          "float,title:^(File Upload)(.*)$"
+        ];
+        layerrule = [
+          "animation fade,selection"
+          "animation fade,waybar"
+          "ignorezero,waybar"
+          "noanim, slurp"
+        ];
         animations = {
           enabled = true;
           bezier = [
