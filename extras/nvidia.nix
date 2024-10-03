@@ -20,13 +20,12 @@
     vdpauinfo
   ];
 
-  boot.kernelModules =
-    [
-    ];
-
-  boot.kernelParams =
-    [
-    ];
+  boot.kernelModules = [
+    "nvidia"
+    "nvidia_modeset"
+    "nvidia_uvm"
+    "nvidia_drm"
+  ];
 
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;

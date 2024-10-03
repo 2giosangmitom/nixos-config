@@ -61,6 +61,7 @@
           ../extras/ssd.nix
           ../extras/asus.nix
           ../extras/battery.nix
+          ../extras/nvidia.nix
         ];
       }
     ];
