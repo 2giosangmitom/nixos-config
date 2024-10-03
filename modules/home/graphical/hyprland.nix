@@ -89,7 +89,7 @@ in
         };
         cursor = {
           no_hardware_cursors = true;
-          hide_on_key_press = true;
+          hide_on_key_press = false;
         };
         animations = {
           enabled = true;
