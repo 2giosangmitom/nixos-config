@@ -68,10 +68,10 @@ run_cmd() {
       systemctl suspend
       ;;
     "--logout")
-      swaymsg exit
+      hyprctl dispatch exit
       ;;
     "--lock")
-      swaylock
+      hyprlock
       ;;
     *)
       echo "Invalid action: $action"
