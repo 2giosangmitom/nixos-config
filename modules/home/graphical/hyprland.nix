@@ -54,15 +54,9 @@ in
         ];
         decoration = {
           rounding = 1;
-          drop_shadow = true;
-          shadow_range = 2;
-          shadow_ignore_window = true;
-          "col.shadow" = "rgba(E6353535)";
+          drop_shadow = false;
           blur = {
-            enabled = true;
-            size = 5;
-            passes = 1;
-            new_optimizations = true;
+            enabled = false;
           };
         };
         input = {
