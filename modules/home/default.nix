@@ -15,6 +15,7 @@
     ./programs/zoxide.nix
     ./programs/dunst.nix
     ./programs/fish.nix
+    ./programs/bash.nix
 
     ./graphical/hyprland.nix
     ./theme.nix

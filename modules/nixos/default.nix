@@ -82,5 +82,7 @@
     setSocketVariable = true;
   };
 
+  xdg.mime.enable = true;
+
   system.stateVersion = "24.11";
 }
